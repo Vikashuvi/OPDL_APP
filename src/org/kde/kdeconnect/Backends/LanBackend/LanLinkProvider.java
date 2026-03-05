@@ -248,6 +248,9 @@ public class LanLinkProvider extends BaseLinkProvider {
     private void configureSocket(Socket socket) {
         try {
             socket.setKeepAlive(true);
+            socket.setTcpNoDelay(true);
+            socket.setSendBufferSize(256 * 1024);
+            socket.setReceiveBufferSize(256 * 1024);
         } catch (SocketException e) {
             Log.e("LanLink", "Exception", e);
         }

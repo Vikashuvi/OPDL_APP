@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opdl_jni::@6890427a1f51a3e7e1df": {
+      "artifactName": "opdl_jni",
+      "abi": "x86_64",
+      "output": "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86_64/libopdl_jni.so",
+      "runtimeFiles": []
+    }
+  }
+}

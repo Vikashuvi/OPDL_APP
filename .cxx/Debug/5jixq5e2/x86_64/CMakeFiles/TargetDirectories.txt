@@ -1,0 +1,3 @@
+/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64/CMakeFiles/opdl_jni.dir
+/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64/CMakeFiles/edit_cache.dir
+/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64/CMakeFiles/rebuild_cache.dir

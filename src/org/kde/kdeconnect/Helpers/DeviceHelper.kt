@@ -17,6 +17,7 @@ import com.univocity.parsers.csv.CsvParser
 import com.univocity.parsers.csv.CsvParserSettings
 import org.kde.kdeconnect.DeviceInfo
 import org.kde.kdeconnect.DeviceType
+import org.kde.kdeconnect.Helpers.OpdlKernelBridge.shouldAdvertiseFastPath
 import org.kde.kdeconnect.Helpers.SecurityHelpers.SslHelper
 import org.kde.kdeconnect.Plugins.PluginFactory
 import java.io.BufferedReader
@@ -151,7 +152,8 @@ object DeviceHelper {
             deviceType,
             PROTOCOL_VERSION,
             PluginFactory.incomingCapabilities,
-            PluginFactory.outgoingCapabilities
+            PluginFactory.outgoingCapabilities,
+            shouldAdvertiseFastPath()
         )
     }
 

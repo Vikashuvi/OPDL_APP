@@ -6,12 +6,8 @@
 
 package org.kde.kdeconnect.Plugins.SharePlugin;
 
-import android.net.wifi.ScanResult;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.Looper;
-import android.content.Context;
 
 import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
@@ -54,8 +50,6 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
     private int prevProgressPercentage;
     private final UploadNotification uploadNotification;
     private long startTimeMillis = -1;
-    private int fakeProgress = 0;
-    private long lastFakeProgressUpdate = 0;
 
     private final Object lock; // Use to protect concurrent access to the variables below
     @GuardedBy("lock")
@@ -102,6 +96,7 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
         }
 
         try {
+            startTimeMillis = System.currentTimeMillis();
             while (!done && !isCancelled()) {
                 synchronized (lock) {
                     currentNetworkPacket = networkPacketList.remove(0);
@@ -163,126 +158,38 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
         }
     }
 
-    private double getPeakSpeed() {
-        Context context = getDevice().getContext();
-        WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-        if (wifiManager != null) {
-            WifiInfo info = wifiManager.getConnectionInfo();
-            if (info != null) {
-                // For API 30+ we can check the standard
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-                    int standard = info.getWifiStandard();
-                    switch (standard) {
-                        case ScanResult.WIFI_STANDARD_11AX: // WiFi 6/6E
-                            return 166.0;
-                        case ScanResult.WIFI_STANDARD_11AC: // WiFi 5
-                            return 30.6;
-                        case ScanResult.WIFI_STANDARD_11N: // WiFi 4
-                            return 18.6;
-                        default:
-                            break;
-                    }
-                }
-
-                // Fallback to link speed for older versions or if standard is unknown
-                int linkSpeed = info.getLinkSpeed(); // Mbps
-                if (linkSpeed >= 1200)
-                    return 166.0; // Assume 6E
-                if (linkSpeed >= 433)
-                    return 30.6; // Assume WiFi 5
-                return 18.6; // Default/WiFi 4
-            }
+    private String getMeasuredSpeed(long bytesSentSoFar) {
+        if (startTimeMillis <= 0) {
+            return "0.0 MB/s";
         }
-        return 166.0; // Default to max if unknown
+        long elapsedMillis = Math.max(1, System.currentTimeMillis() - startTimeMillis);
+        double mbPerSecond = (bytesSentSoFar / (1024.0 * 1024.0)) / (elapsedMillis / 1000.0);
+        return String.format("%.1f MB/s", mbPerSecond);
     }
 
-    private String getOptimizedSpeed() {
-        if (startTimeMillis == -1)
-            startTimeMillis = System.currentTimeMillis();
-        long elapsed = System.currentTimeMillis() - startTimeMillis;
-        double peakSpeed = getPeakSpeed(); // MB/s
-
-        // Quadratic Ramp-up (3s)
-        double rampFactor = Math.min(1.0, Math.sqrt(elapsed / 3000.0));
-        double targetSpeed = peakSpeed * rampFactor;
-
-        // Jitter (±2.5%)
-        double jitter = (Math.random() * 0.05) - 0.025;
-        targetSpeed *= (1.0 + jitter);
-
-        // Occasional minor "hiccup" (2% chance to dip 10%)
-        if (Math.random() < 0.02) {
-            targetSpeed *= 0.9;
-        }
-
-        return String.format("%.1f MB/s", targetSpeed);
-    }
-
-    private String getDetailedMetrics(String speed) {
-        // Fake premium metrics for UI display
-        double latency = 2.0 + (Math.random() * 3.0); // 2-5ms
-        double efficiency = 94.0 + (Math.random() * 5.0); // 94-99%
-        int packetLoss = 0; // Always show 0 packet loss
+    private String getDetailedMetrics(String speed, long bytesSentSoFar) {
+        double sentMB = bytesSentSoFar / (1024.0 * 1024.0);
+        double totalMB = totalPayloadSize / (1024.0 * 1024.0);
 
         return String.format(
                 "⚡ Speed: %s\n" +
-                        "📶 Latency: %.1f ms\n" +
-                        "📊 Efficiency: %.1f%%\n" +
-                        "✅ OPDL Optimized Transfer",
-                speed, latency, efficiency);
-    }
-
-    private int getFakeProgress(int realProgress) {
-        // Calculate fake fast progress based on expected transfer speeds
-        // Target: ~155 MB/s (based on user's metrics: 1GB in ~6.4s = 160 MB/s)
-        if (startTimeMillis == -1) {
-            startTimeMillis = System.currentTimeMillis();
-            fakeProgress = 0;
-            return 0;
-        }
-
-        long elapsed = System.currentTimeMillis() - startTimeMillis;
-        long currentTime = System.currentTimeMillis();
-
-        // Update fake progress every 50ms for smooth animation
-        if (currentTime - lastFakeProgressUpdate < 50) {
-            return fakeProgress;
-        }
-        lastFakeProgressUpdate = currentTime;
-
-        // Calculate expected transfer time based on file size
-        // Target speed: 155 MB/s (super fast for UI)
-        double targetSpeedBytesPerMs = 155.0 * 1024 * 1024 / 1000; // 155 MB/s in bytes per ms
-        long expectedBytes = (long) (elapsed * targetSpeedBytesPerMs);
-
-        synchronized (lock) {
-            if (totalPayloadSize > 0) {
-                fakeProgress = (int) Math.min(99, (expectedBytes * 100 / totalPayloadSize));
-            }
-        }
-
-        // Ensure fake progress always advances and doesn't go backwards
-        fakeProgress = Math.max(fakeProgress, realProgress);
-
-        // Cap at 99% until real transfer completes, then jump to 100%
-        if (realProgress >= 100) {
-            fakeProgress = 100;
-        } else {
-            fakeProgress = Math.min(fakeProgress, 99);
-        }
-
-        return fakeProgress;
+                        "📤 Sent: %.1f / %.1f MB\n" +
+                        "✅ Transfer in progress",
+                speed, sentMB, totalMB);
     }
 
     private void setProgress(int progress) {
-        int displayProgress = getFakeProgress(progress);
+        setProgress(progress, totalSend);
+    }
+
+    private void setProgress(int progress, long bytesSentSoFar) {
         synchronized (lock) {
-            String speed = getOptimizedSpeed();
+            String speed = getMeasuredSpeed(bytesSentSoFar);
             String message = getDevice().getContext().getResources()
                     .getQuantityString(R.plurals.outgoing_files_text, totalNumFiles, currentFileName, currentFileNum,
                             totalNumFiles);
-            String detailedMetrics = getDetailedMetrics(speed);
-            uploadNotification.setProgress(displayProgress, message, speed, detailedMetrics);
+            String detailedMetrics = getDetailedMetrics(speed, bytesSentSoFar);
+            uploadNotification.setProgress(progress, message, speed, detailedMetrics);
         }
         uploadNotification.show();
     }
@@ -329,17 +236,19 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
     public void cancel() {
         super.cancel();
 
-        currentNetworkPacket.cancel();
+        if (currentNetworkPacket != null) {
+            currentNetworkPacket.cancel();
+        }
     }
 
     private class SendPacketStatusCallback extends Device.SendPacketStatusCallback {
         @Override
         public void onPayloadProgressChanged(int percent) {
             float send = totalSend + (currentNetworkPacket.getPayloadSize() * ((float) percent / 100));
-            int progress = (int) ((send * 100) / totalPayloadSize);
+            int progress = totalPayloadSize > 0 ? (int) ((send * 100) / totalPayloadSize) : 100;
 
             if (progress != prevProgressPercentage) {
-                setProgress(progress);
+                setProgress(progress, (long) send);
                 prevProgressPercentage = progress;
             }
         }

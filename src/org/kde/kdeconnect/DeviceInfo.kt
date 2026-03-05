@@ -29,6 +29,7 @@ class DeviceInfo(
     @JvmField var protocolVersion: Int = 0,
     @JvmField var incomingCapabilities: Set<String>? = null,
     @JvmField var outgoingCapabilities: Set<String>? = null,
+    @JvmField var supportsOpdlFastPath: Boolean = false,
 ) {
 
     /**
@@ -65,6 +66,7 @@ class DeviceInfo(
             np["deviceType"] = type.toString()
             np["incomingCapabilities"] = incomingCapabilities!!
             np["outgoingCapabilities"] = outgoingCapabilities!!
+            np["opdlFastPathV1"] = supportsOpdlFastPath
         }
 
     companion object {
@@ -99,7 +101,8 @@ class DeviceInfo(
                     certificate = certificate,
                     protocolVersion = getInt("protocolVersion"),
                     incomingCapabilities = getStringSet("incomingCapabilities"),
-                    outgoingCapabilities = getStringSet("outgoingCapabilities")
+                    outgoingCapabilities = getStringSet("outgoingCapabilities"),
+                    supportsOpdlFastPath = getBoolean("opdlFastPathV1", false)
                 )
             }
 

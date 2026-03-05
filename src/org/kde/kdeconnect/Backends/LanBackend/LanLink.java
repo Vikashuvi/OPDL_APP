@@ -18,6 +18,7 @@ import org.kde.kdeconnect.Backends.BaseLink;
 import org.kde.kdeconnect.Backends.BaseLinkProvider;
 import org.kde.kdeconnect.Device;
 import org.kde.kdeconnect.DeviceInfo;
+import org.kde.kdeconnect.Helpers.OpdlKernelBridge;
 import org.kde.kdeconnect.Helpers.SecurityHelpers.SslHelper;
 import org.kde.kdeconnect.Helpers.ThreadHelper;
 import org.kde.kdeconnect.NetworkPacket;
@@ -39,6 +40,8 @@ import javax.net.ssl.SSLSocket;
 import kotlin.text.Charsets;
 
 public class LanLink extends BaseLink {
+    private static final int PAYLOAD_IO_BUFFER_SIZE = 64 * 1024;
+    private static final int PAYLOAD_SOCKET_BUFFER_SIZE = 256 * 1024;
 
     public enum ConnectionStarted {
         Locally, Remotely
@@ -130,6 +133,7 @@ public class LanLink extends BaseLink {
         }
 
         try {
+            final boolean canAttemptOpdlFastPath = np.hasPayload() && OpdlKernelBridge.canAttemptFastPath(deviceInfo);
 
             //Prepare socket for the payload
             final ServerSocket server;
@@ -137,6 +141,9 @@ public class LanLink extends BaseLink {
                 server = LanLinkProvider.openServerSocketOnFreePort(LanLinkProvider.PAYLOAD_TRANSFER_MIN_PORT);
                 JSONObject payloadTransferInfo = new JSONObject();
                 payloadTransferInfo.put("port", server.getLocalPort());
+                if (canAttemptOpdlFastPath) {
+                    payloadTransferInfo.put(OpdlKernelBridge.PAYLOAD_TRANSFER_MODE_KEY, OpdlKernelBridge.PAYLOAD_TRANSFER_MODE_FAST_PATH);
+                }
                 np.setPayloadTransferInfo(payloadTransferInfo);
             } else {
                 server = null;
@@ -159,6 +166,9 @@ public class LanLink extends BaseLink {
 
             //Send payload
             if (server != null) {
+                if (canAttemptOpdlFastPath && OpdlKernelBridge.trySendPayloadViaKernel(getDeviceId(), np.getPayload())) {
+                    callback.onPayloadProgressChanged(100);
+                } else
                 if (sendPayloadFromSameThread) {
                     sendPayload(np, callback, server);
                 } else {
@@ -201,12 +211,15 @@ public class LanLink extends BaseLink {
 
                 //Convert to SSL if needed
                 payloadSocket = SslHelper.convertToSslSocket(context, payloadSocket, getDeviceId(), true, false);
+                payloadSocket.setTcpNoDelay(true);
+                payloadSocket.setSendBufferSize(PAYLOAD_SOCKET_BUFFER_SIZE);
+                payloadSocket.setReceiveBufferSize(PAYLOAD_SOCKET_BUFFER_SIZE);
 
                 outputStream = payloadSocket.getOutputStream();
                 inputStream = np.getPayload().getInputStream();
 
                 Log.i("KDE/LanLink", "Beginning to send payload for " + np.getType());
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[PAYLOAD_IO_BUFFER_SIZE];
                 int bytesRead;
                 long size = np.getPayloadSize();
                 long progress = 0;
@@ -244,6 +257,16 @@ public class LanLink extends BaseLink {
     private void receivedNetworkPacket(NetworkPacket np) {
 
         if (np.hasPayloadTransferInfo()) {
+            String transferMode = np.getPayloadTransferInfo().optString(OpdlKernelBridge.PAYLOAD_TRANSFER_MODE_KEY, "");
+            if (OpdlKernelBridge.PAYLOAD_TRANSFER_MODE_FAST_PATH.equals(transferMode)) {
+                NetworkPacket.Payload payload = OpdlKernelBridge.tryReceivePayloadViaKernel(getDeviceId(), np.getPayloadSize());
+                if (payload != null) {
+                    np.setPayload(payload);
+                    packetReceived(np);
+                    return;
+                }
+            }
+
             Socket payloadSocket = new Socket();
             try {
                 int tcpPort = np.getPayloadTransferInfo().getInt("port");

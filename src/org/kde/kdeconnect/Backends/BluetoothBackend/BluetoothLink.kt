@@ -129,7 +129,7 @@ class BluetoothLink(
             if (transferUuid != null) {
                 try {
                     connection.getChannelOutputStream(transferUuid).use { payloadStream ->
-                        val BUFFER_LENGTH = 1024
+                        val BUFFER_LENGTH = 16 * 1024
                         val buffer = ByteArray(BUFFER_LENGTH)
                         var bytesRead: Int
                         var progress: Long = 0

@@ -50,6 +50,11 @@ android {
         versionCode = 13404
         versionName = "1.34.4"
         proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        externalNativeBuild {
+            cmake {
+                cppFlags += ""
+            }
+        }
     }
     buildFeatures {
         viewBinding = true
@@ -107,6 +112,11 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
         }
     }
     lint {
