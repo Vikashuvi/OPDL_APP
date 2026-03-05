@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/opdl_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Dashboard Header -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/opdl_surface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OPDL Performance Dashboard"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/opdl_on_surface"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Network Summary -->
+                    <TextView
+                        android:id="@+id/network_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Devices: 0 | Optimal: 0 | Avg Speed: 0.0 MB/s"
+                        android:textSize="14sp"
+                        android:textColor="@color/opdl_on_surface"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Performance Summary -->
+                    <TextView
+                        android:id="@+id/performance_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Network Efficiency: 0.0% | Avg Latency: 0.0 ms"
+                        android:textSize="14sp"
+                        android:textColor="@color/opdl_on_surface"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- WiFi Info -->
+                    <TextView
+                        android:id="@+id/wifi_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Network: Unknown | Dominant Standard: Unknown"
+                        android:textSize="14sp"
+                        android:textColor="@color/opdl_text_secondary"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/loading_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="32dp"
+                android:visibility="gone" />
+
+            <!-- Device Container -->
+            <LinearLayout
+                android:id="@+id/device_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Device cards will be added programmatically -->
+
+            </LinearLayout>
+
+            <!-- Empty State -->
+            <LinearLayout
+                android:id="@+id/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_wifi"
+                    android:tint="@color/opdl_text_secondary"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Connected Peers"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/opdl_on_surface"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect to devices on your network to see performance metrics"
+                    android:textSize="14sp"
+                    android:textColor="@color/opdl_text_secondary"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

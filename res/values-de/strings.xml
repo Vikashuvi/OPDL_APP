@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Connect</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">An Gerät senden</string>
   <string name="foreground_notification_no_devices">Keine bestehenden Verbindungen</string>
   <string name="foreground_notification_devices">Verbunden mit %s</string>
@@ -41,7 +41,7 @@
   <string name="open_settings">Einstellungen öffnen</string>
   <string name="no_permissions">Sie müssen die Erlaubnis zum Zugriff auf die Benachrichtigungen erteilen</string>
   <string name="no_permission_mprisreceiver">Um die Medienwiedergabe zu steuern, muss der Zugriff auf die Benachrichtigungen gewährt werden</string>
-  <string name="no_permissions_remotekeyboard">Um Tastatureingaben empfangen zu können, muss die KDE-Connect-Tastatur aktiviert werden</string>
+  <string name="no_permissions_remotekeyboard">Um Tastatureingaben empfangen zu können, muss die OPDL-Connect-Tastatur aktiviert werden</string>
   <string name="send_ping">Ping senden</string>
   <string name="open_mpris_controls">Medienkontrolle</string>
   <string name="remotekeyboard_editing_only_title">Tastatureingaben nur empfangen wenn ein Textfeld ausgewählt ist</string>
@@ -187,7 +187,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Benachrichtigungen müssen erlaubt sein, um entfernte Medien im Benachrichtigungsfenster zu zeigen.</string>
   <string name="mpris_notification_settings_title">Benachrichtigung zur Medienkontrolle anzeigen</string>
-  <string name="mpris_notification_settings_summary">Die Steuerung der Medienwiedergabe auch dann erlauben wenn KDE Connect nicht geöffnet ist</string>
+  <string name="mpris_notification_settings_summary">Die Steuerung der Medienwiedergabe auch dann erlauben wenn OPDL nicht geöffnet ist</string>
   <string name="share_to">Freigeben für …</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">URLs, die mit einem nicht erreichbaren Gerät geteilt werden, werden zugestellt sobald es erreichbar wird.\n\n</string>
@@ -227,7 +227,7 @@
   <string name="sftp_action_mode_menu_delete">Löschen</string>
   <string name="sftp_no_storage_locations_configured">Keine Speicherorte ausgewählt</string>
   <string name="sftp_saf_permission_explanation">Um von außerhalb auf Ihre Dateien zugreifen zu können, muss mindestens ein Speicherort vorhanden sein</string>
-  <string name="sftp_manage_storage_permission_explanation">Um den Fernzugriff auf Dateien auf diesem Gerät zu erlauben, müssen Sie KDE Connect erlauben den Speicher zu verwalten.</string>
+  <string name="sftp_manage_storage_permission_explanation">Um den Fernzugriff auf Dateien auf diesem Gerät zu erlauben, müssen Sie OPDL erlauben den Speicher zu verwalten.</string>
   <string name="no_players_connected">Keine Medienspieler gefunden</string>
   <string name="send_files">Dateien senden</string>
   <string-array name="digitizer_preference_entries_draw_button_side">
@@ -238,8 +238,8 @@
   </string-array>
   <string name="block_notification_contents">Benachrichtigungsinhalte blockieren</string>
   <string name="block_notification_images">Bilder in Benachrichtigungen blockieren</string>
-  <string name="pairing_title">KDE-Connect-Geräte</string>
-  <string name="pairing_description">Andere Geräte im selben Netzwerk, auf denen KDE Connect läuft, sollten hier angezeigt werden</string>
+  <string name="pairing_title">OPDL-Connect-Geräte</string>
+  <string name="pairing_description">Andere Geräte im selben Netzwerk, auf denen OPDL läuft, sollten hier angezeigt werden</string>
   <string name="device_rename_title">Geräte umbenennen</string>
   <string name="device_rename_confirm">Umbenennen</string>
   <string name="refresh">Aktualisieren</string>
@@ -250,7 +250,7 @@
   <string name="pref_plugin_telepathy">SMS senden</string>
   <string name="pref_plugin_telepathy_desc">SMS von Ihrer Arbeitsfläche senden</string>
   <string name="pref_plugin_telepathy_mms">MMS senden</string>
-  <string name="pref_plugin_telepathy_mms_desc">Um MMS von KDE Connect aus versenden zu können, müssen Sie es als Standard-SMS-App festlegen.</string>
+  <string name="pref_plugin_telepathy_mms_desc">Um MMS von OPDL aus versenden zu können, müssen Sie es als Standard-SMS-App festlegen.</string>
   <string name="findmyphone_title">Mein Telefon suchen</string>
   <string name="findmyphone_title_tablet">Mein Tablet suchen</string>
   <string name="findmyphone_title_tv">Meinen Fernseher suchen</string>
@@ -269,7 +269,7 @@
   <string name="telephony_permission_explanation">Um eingehende Anrufe auf der Arbeitsfläche anzuzeigen, muss der Zugriff auf die Anrufliste und den Telefonstatus gewährt werden</string>
   <string name="telephony_optional_permission_explanation">Um einen Namen anstelle der Telefonnummer anzuzeigen, muss der Zugriff auf das Adressbuch gewährt werden</string>
   <string name="contacts_permission_explanation">Um Ihre Kontakte mit der Arbeitsfläche zu teilen, muss der Zugriff auf die Kontakte gewährt werden</string>
-  <string name="contacts_per_device_confirmation">Ihre Telefonkontakte werden auf dieses Gerät übertragen, damit sie von der KDE Connect SMS App und anderen Apps verwendet werden können.</string>
+  <string name="contacts_per_device_confirmation">Ihre Telefonkontakte werden auf dieses Gerät übertragen, damit sie von der OPDL SMS App und anderen Apps verwendet werden können.</string>
   <string name="select_ringtone">Einen Klingelton auswählen</string>
   <string name="telephony_pref_blocked_title">Unterdrückte Nummern</string>
   <string name="telephony_pref_blocked_dialog_desc">Keine Anrufe und SMS von diesen Telefonnummern anzeigen (Bitte geben Sie eine Nummer pro Zeile ein)</string>
@@ -280,7 +280,7 @@
   <string name="presenter_lock_tip">Sie können Ihr Gerät sperren und mit Hilfe der Lauter-/Leiser-Taste zur vorherigen/nächsten Folie wechseln</string>
   <string name="add_command">Einen Befehl hinzufügen</string>
   <string name="addcommand_explanation">Es sind keine Befehle vorhanden</string>
-  <string name="addcommand_explanation2">Sie können neue Befehle in den Systemeinstellungen für KDE Connect hinzufügen</string>
+  <string name="addcommand_explanation2">Sie können neue Befehle in den Systemeinstellungen für OPDL hinzufügen</string>
   <string name="add_command_description">Sie können neue Befehle auf der Arbeitsfläche hinzufügen</string>
   <string name="pref_plugin_mprisreceiver">Steuerung der Medienwiedergabe</string>
   <string name="pref_plugin_mprisreceiver_desc">Ein verbundenes Gerät zum Steuern der lokalen Medienwiedergabe verwenden</string>
@@ -321,7 +321,7 @@
   <string name="block_images">Bilder in Benachrichtigungen blockieren</string>
   <string name="notification_channel_receivenotification">Benachrichtigungen verbundener Geräte</string>
   <string name="no_app_for_opening">Es wurde keine passende App zum Öffnen dieser Datei gefunden</string>
-  <string name="remote_keyboard_service">Entfernte Tastatur für KDE Connect</string>
+  <string name="remote_keyboard_service">Entfernte Tastatur für OPDL</string>
   <string name="presenter_pointer">Laserpointer</string>
   <string name="trusted_networks">Vertrauenswürdiges Netzwerk</string>
   <string name="trusted_networks_desc">Automatische Erkennung auf bekannte Netzwerke beschränken</string>
@@ -329,7 +329,7 @@
   <string name="empty_trusted_networks_list_text">Sie haben bisher noch kein vertrauenswürdiges Netzwerk hinzugefügt</string>
   <string name="allow_all_networks_text">Alle erlauben</string>
   <string name="location_permission_needed_title">Berechtigung erforderlich</string>
-  <string name="location_permission_needed_desc">KDE connect benötigt die Berechtigung für die Verwendung des Standorts im Hintergrund, um festzustellen, mit welchem WLAN-Netzwerk Sie verbunden sind, auch wenn die App im Hintergrund ist. Dies ist notwendig, da die Name der WLAN-Netzwerke verwendet werden können, um Ihren Standort zu bestimmen, auch wenn KDE Connect dies nicht tut.</string>
+  <string name="location_permission_needed_desc">OPDL benötigt die Berechtigung für die Verwendung des Standorts im Hintergrund, um festzustellen, mit welchem WLAN-Netzwerk Sie verbunden sind, auch wenn die App im Hintergrund ist. Dies ist notwendig, da die Name der WLAN-Netzwerke verwendet werden können, um Ihren Standort zu bestimmen, auch wenn OPDL dies nicht tut.</string>
   <string name="clipboard_android_x_incompat">In Android 10 wurde der Zugriff auf die Zwischenablage für alle Apps entfernt. Diese Modul wird deaktiviert.</string>
   <string name="mpris_open_url">Wiedergabe hier fortsetzen</string>
   <string name="cant_open_url">Die URL zum Fortsetzen der Wiedergabe kann nicht geöffnet werden</string>
@@ -380,9 +380,9 @@
   <string name="email_contributor">E-Mail an den Mitwirkenden senden\n%s</string>
   <string name="visit_contributors_homepage">Internetseite des Mitwirkenden besuchen\n%s</string>
   <string name="version">Version %s</string>
-  <string name="about_kde">Über KDE</string>
-  <string name="kde_be_free">KDE - Freiheit genießen.</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">Über OPDL</string>
+  <string name="kde_be_free">OPDL - Freiheit genießen.</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="click_here_to_type">Hier tippen, um zu schreiben</string>
   <string name="clear_compose">Leeren</string>
@@ -390,7 +390,7 @@
   <string name="open_compose_send">Text schreiben</string>
   <string name="double_tap_to_drag">Doppelklicken um zu ziehen</string>
   <string name="hold_to_drag">Halten um zu ziehen</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Fehler und Wünsche melden&lt;/h1&gt; &lt;p&gt;Software kann immer verbessert werden und das KDE-Team ist immer bereit das zu tun. Jedoch müssen Sie - der Benutzer - uns sagen, wenn etwas nicht wie erwartet funktioniert oder verbessert werden könnte.&lt;/p&gt; &lt;p&gt;KDE hat ein Bug-Tracking-System. Besuchen Sie &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; oder verwenden Sie den Knopf „Probleme und Wünsche berichten“ auf dem Über-Bildschirm, um Bugs zu melden.&lt;/p&gt; Wenn Sie Vorschläge für Verbesserungen haben, können Sie gerne das Bug-Tracking-System nutzen, um Ihren Wunsch zu melden. Verwenden Sie hierzu den Schweregrad „Wunschliste“.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Fehler und Wünsche melden&lt;/h1&gt; &lt;p&gt;Software kann immer verbessert werden und das OPDL-Team ist immer bereit das zu tun. Jedoch müssen Sie - der Benutzer - uns sagen, wenn etwas nicht wie erwartet funktioniert oder verbessert werden könnte.&lt;/p&gt; &lt;p&gt;OPDL hat ein Bug-Tracking-System. Besuchen Sie &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; oder verwenden Sie den Knopf „Probleme und Wünsche berichten“ auf dem Über-Bildschirm, um Bugs zu melden.&lt;/p&gt; Wenn Sie Vorschläge für Verbesserungen haben, können Sie gerne das Bug-Tracking-System nutzen, um Ihren Wunsch zu melden. Verwenden Sie hierzu den Schweregrad „Wunschliste“.</string>
   <string name="maintainer_and_developer">Betreuer und Entwickler</string>
   <string name="developer">Entwickler</string>
   <string name="apple_support">macOS-Unterstützung. Arbeit an der macOS-Unterstützung</string>
@@ -398,7 +398,7 @@
   <string name="aniket_kumar_task">Verbesserungen am SMS-Modul</string>
   <string name="alex_fiestas_task">Verbesserungen am Kontakte-Modul</string>
   <string name="maxim_leshchenko_task">UI-Verbesserungen und diese Infoseite</string>
-  <string name="everyone_else">Jeder, der über die Jahre noch zu KDE Connect beigetragen hat</string>
+  <string name="everyone_else">Jeder, der über die Jahre noch zu OPDL beigetragen hat</string>
   <string name="send_clipboard">Zwischenablage senden</string>
   <string name="tap_to_execute">Tippen um auszuführen</string>
   <string name="plugin_stats">Modul-Statistik</string>

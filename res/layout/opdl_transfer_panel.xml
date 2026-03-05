@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/transfer_panel_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/opdl_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:tint="@color/opdl_primary"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OPDL Transfer"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_on_surface" />
+
+            <TextView
+                android:id="@+id/wifi_generation_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi 5"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_on_primary"
+                android:background="@drawable/opdl_badge_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+        </LinearLayout>
+
+        <!-- File Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dataset.tar.gz"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_on_surface"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/file_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Size: 1.2 GB"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_text_secondary" />
+
+        </LinearLayout>
+
+        <!-- Progress Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <ProgressBar
+                android:id="@+id/transfer_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="45"
+                android:progressTint="@color/opdl_primary"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/progress_percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="45%"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/opdl_primary" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏱ 2:34"
+                    android:textSize="14sp"
+                    android:textColor="@color/opdl_text_secondary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Speed Metrics Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="16dp">
+
+            <!-- Live Speed -->
+            <TextView
+                android:id="@+id/live_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Speed:"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/live_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡ 245.8 MB/s"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_metric_throughput"
+                android:layout_row="0"
+                android:layout_column="1" />
+
+            <!-- Expected Speed -->
+            <TextView
+                android:id="@+id/expected_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected:"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="1"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/expected_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected: 245.0 MB/s (100% of expected)"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_on_surface"
+                android:layout_row="1"
+                android:layout_column="1" />
+
+        </GridLayout>
+
+        <!-- Performance Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/opdl_status_background">
+
+            <TextView
+                android:id="@+id/performance_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✓ Optimal Performance"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_performance_optimal"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Integrity Check -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_baseline_check_24"
+                android:tint="@color/opdl_performance_optimal"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/integrity_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ SHA-256 Verified"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_performance_optimal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

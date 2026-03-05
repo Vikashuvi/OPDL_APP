@@ -89,7 +89,7 @@ class KdeConnect : Application() {
     private fun setupSL4JLogging() {
         HandroidLoggerAdapter.DEBUG = BuildConfig.DEBUG
         HandroidLoggerAdapter.ANDROID_API_LEVEL = Build.VERSION.SDK_INT
-        HandroidLoggerAdapter.APP_NAME = "KDEConnect"
+        HandroidLoggerAdapter.APP_NAME = "OPDL"
     }
 
     override fun onTerminate() {

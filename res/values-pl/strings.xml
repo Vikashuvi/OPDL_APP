@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Connect</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">Wyślij na urządzenie</string>
   <string name="foreground_notification_no_devices">Niepołączony z żadnym urządzeniem</string>
   <string name="foreground_notification_devices">Połączony z: %s</string>
@@ -44,11 +44,11 @@
   <string name="open_settings">Otwórz ustawienia</string>
   <string name="no_permissions">Aby uzyskać dostęp do powiadomień, należy przydzielić uprawnienia</string>
   <string name="no_permission_mprisreceiver">Aby móc sterować odtwarzaczami na tym urządzeniu, należy udzielić dostępu do powiadomień</string>
-  <string name="no_permissions_remotekeyboard">Aby otrzymywać naciśnięcia klawiszy, należy włączyć zdalną klawiaturę KDE Connect</string>
+  <string name="no_permissions_remotekeyboard">Aby otrzymywać naciśnięcia klawiszy, należy włączyć zdalną klawiaturę OPDL</string>
   <string name="send_ping">Wyślij ping</string>
   <string name="open_mpris_controls">Sterowanie odtwarzaczem</string>
   <string name="remotekeyboard_editing_only_title">Obsługuj zdalne naciśnięcia klawiszy tylko podczas edycji</string>
-  <string name="remotekeyboard_not_connected">Nie istnieje połączenie zdalnej klawiatury, nawiąż takie połączenie w kdeconnect</string>
+  <string name="remotekeyboard_not_connected">Nie istnieje połączenie zdalnej klawiatury, nawiąż takie połączenie w OPDL</string>
   <string name="remotekeyboard_connected">Połączenie zdalnej klawiatury jest nawiązane</string>
   <string name="remotekeyboard_multiple_connections">Nawiązano więcej niż jedno połączenie zdalnej klawiatury, wybierz urządzenie do ustawienia</string>
   <string name="open_mousepad">Zdalne sterowanie</string>
@@ -211,7 +211,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Uprawnienia powiadomień są potrzebne, aby móc pokazywać zdalne odtwarzacze na belce powiadomień</string>
   <string name="mpris_notification_settings_title">Pokaż powiadomienia sterowania mediami</string>
-  <string name="mpris_notification_settings_summary">Steruje odtwarzaczami bez otwierania KDE Connect</string>
+  <string name="mpris_notification_settings_summary">Steruje odtwarzaczami bez otwierania OPDL</string>
   <string name="share_to">Udostępnij urządzeniu...</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">Adres URL udostępniony nieosiągalnemu urządzeniu zostanie do niego dostarczony zaraz po tym jak stanie się osiągalne.\n\n</string>
@@ -252,7 +252,7 @@
   <string name="sftp_action_mode_menu_delete">Usuń</string>
   <string name="sftp_no_storage_locations_configured">Nie ustawiono miejsc w pamięci</string>
   <string name="sftp_saf_permission_explanation">Aby przeglądać pliki zdalnie, należy ustawić miejsca w pamięci</string>
-  <string name="sftp_manage_storage_permission_explanation">Aby zezwolić na zdalny dostęp do plików tego urządzenia, musisz zezwolić na zarządzanie pamięcią przez KDE Connect.</string>
+  <string name="sftp_manage_storage_permission_explanation">Aby zezwolić na zdalny dostęp do plików tego urządzenia, musisz zezwolić na zarządzanie pamięcią przez OPDL.</string>
   <string name="sftp_missing_permission_error">Brakuje uprawnień: dostęp do systemu plików</string>
   <string name="no_players_connected">Nie znaleziono żadnych odtwarzaczy</string>
   <string name="send_files">Wysyłanie plików</string>
@@ -264,8 +264,8 @@
   </string-array>
   <string name="block_notification_contents">Blokuj treść powiadomień</string>
   <string name="block_notification_images">Blokuj obrazy powiadomień</string>
-  <string name="pairing_title">Urządzenia KDE Connect</string>
-  <string name="pairing_description">Tu powinny pojawić się urządzenia podłączone do tej samej sieci i które także mają uruchomione KDE Connect.</string>
+  <string name="pairing_title">Urządzenia OPDL</string>
+  <string name="pairing_description">Tu powinny pojawić się urządzenia podłączone do tej samej sieci i które także mają uruchomione OPDL Connect.</string>
   <string name="device_rename_title">Zmień nazwę urządzenia</string>
   <string name="device_rename_confirm">Zmień nazwę</string>
   <string name="refresh">Odśwież</string>
@@ -276,7 +276,7 @@
   <string name="pref_plugin_telepathy">Wysyłanie SMSów</string>
   <string name="pref_plugin_telepathy_desc">Wysyła wiadomości tekstowe tym urządzeniem z innego urządzenia</string>
   <string name="pref_plugin_telepathy_mms">Wyślij MMSa</string>
-  <string name="pref_plugin_telepathy_mms_desc">Aby móc wysyłać MMSa z KDE Connect, musisz ustawić go jako domyślny program do SMSów</string>
+  <string name="pref_plugin_telepathy_mms_desc">Aby móc wysyłać MMSa z OPDL, musisz ustawić go jako domyślny program do SMSów</string>
   <string name="findmyphone_title">Poszukiwania tego telefonu</string>
   <string name="findmyphone_title_tablet">Poszukiwania tego tabletu</string>
   <string name="findmyphone_title_tv">Poszukiwania tego telewizora</string>
@@ -295,7 +295,7 @@
   <string name="telephony_permission_explanation">Aby widzieć rozmowy telefoniczne na innym urządzeniu, należy nadać uprawnienia do dziennika rozmów i stanu telefonu</string>
   <string name="telephony_optional_permission_explanation">Aby widzieć nazwę kontaktu zamiast numeru telefonu, należy zezwolić na dostęp do kontaktów telefonu</string>
   <string name="contacts_permission_explanation">Aby współdzielić swoją książkę adresową z innym urządzeniem, musisz nadać uprawnienia do kontaktów</string>
-  <string name="contacts_per_device_confirmation">Twoje kontakty telefoniczne zostaną skopiowane na to urządzenie, aby aplikacja do SMSów KDE Connect i inne mogły ich używać.</string>
+  <string name="contacts_per_device_confirmation">Twoje kontakty telefoniczne zostaną skopiowane na to urządzenie, aby aplikacja do SMSów OPDL i inne mogły ich używać.</string>
   <string name="select_ringtone">Wybierz dzwonek</string>
   <string name="telephony_pref_blocked_title">Zablokowane numery</string>
   <string name="telephony_pref_blocked_dialog_desc">Nie pokazuj rozmów, ani SMSów z tych numerów. Podawaj jeden numer na wiersz</string>
@@ -306,7 +306,7 @@
   <string name="presenter_lock_tip">Możesz zablokować swoje urządzenie i używać przycisków głośności, aby przejść do kolejnej/poprzedniej strony</string>
   <string name="add_command">Dodaj polecenie</string>
   <string name="addcommand_explanation">Nie zarejestrowano żadnych poleceń</string>
-  <string name="addcommand_explanation2">Nowe polecenie można dodać w ustawieniach systemowych KDE Connect</string>
+  <string name="addcommand_explanation2">Nowe polecenie można dodać w ustawieniach systemowych OPDL</string>
   <string name="add_command_description">Możesz dodawać polecenia na pulpicie</string>
   <string name="pref_plugin_mprisreceiver">Sterowanie odtwarzaczem</string>
   <string name="pref_plugin_mprisreceiver_desc">Steruje odtwarzaczami innego urządzenia z tego urządzenia</string>
@@ -339,7 +339,7 @@
   <string name="devices">Urządzenia</string>
   <string name="settings_rename">Nazwa urządzenia</string>
   <string name="settings_dark_mode">Ciemny wygląd</string>
-  <string name="settings_export_logs">Wyeksportuj dziennik KDE Connect</string>
+  <string name="settings_export_logs">Wyeksportuj dziennik OPDL</string>
   <string name="settings_export_logs_text">Utwórz plik zawierający ślad wykonywania, który może pomóc w rozwiązywaniu błędów.</string>
   <string name="settings_more_settings_title">Więcej ustawień</string>
   <string name="settings_more_settings_text">Dodatkowe ustawienia, dotyczące danego urządzenia, można znaleźć po wejściu na nie i wybranie „Ustawienia wtyczek”.</string>
@@ -353,7 +353,7 @@
   <string name="block_images">Blokuj obrazy w powiadomieniach</string>
   <string name="notification_channel_receivenotification">Powiadomienia z innych urządzeń</string>
   <string name="no_app_for_opening">Nie znaleziono aplikacji do otwarcia tego pliku</string>
-  <string name="remote_keyboard_service">Zdalna klawiatura KDE Connect</string>
+  <string name="remote_keyboard_service">Zdalna klawiatura OPDL</string>
   <string name="presenter_pointer">Wskaźnik</string>
   <string name="trusted_networks">Sieci zaufane</string>
   <string name="trusted_networks_desc">Ogranicz samowykrywanie do znanych sieci</string>
@@ -361,8 +361,8 @@
   <string name="empty_trusted_networks_list_text">Nie dodałeś jeszcze żadnej zaufanej sieci</string>
   <string name="allow_all_networks_text">Zezwól wszystkim</string>
   <string name="location_permission_needed_title">Wymagana zgoda</string>
-  <string name="bluetooth_permission_needed_desc">KDE Connect wymaga pozwolenia na łączenie do sąsiednich urządzeń, aby urządzenia sparowane przy pomocy Bluetooth były widoczne w KDE Connect.</string>
-  <string name="location_permission_needed_desc">KDE Connect potrzebuje uprawnień do sprawdzania twojego położenia w tle, aby móc poznać sieć WiFi, do której jesteś podłączony także wtedy, gdy aplikacja działa w tle. Jest tak dlatego, że nazwy sieci WiFi wokół ciebie mogą zostać użyte do ustalenia twojego położenia, mimo że KDE Connect nie robi tego w ten sposób.</string>
+  <string name="bluetooth_permission_needed_desc">OPDL wymaga pozwolenia na łączenie do sąsiednich urządzeń, aby urządzenia sparowane przy pomocy Bluetooth były widoczne w OPDL.</string>
+  <string name="location_permission_needed_desc">OPDL potrzebuje uprawnień do sprawdzania twojego położenia w tle, aby móc poznać sieć WiFi, do której jesteś podłączony także wtedy, gdy aplikacja działa w tle. Jest tak dlatego, że nazwy sieci WiFi wokół ciebie mogą zostać użyte do ustalenia twojego położenia, mimo że OPDL nie robi tego w ten sposób.</string>
   <string name="clipboard_android_x_incompat">Android 10 odebrał dostęp do schowka wszystkim programom. Ta wtyczka pozostanie wyłączona.</string>
   <string name="mpris_open_url">Kontynuuj odtwarzanie tutaj</string>
   <string name="cant_open_url">Nie można otworzyć adresu URL, aby kontynuować odtwarzanie</string>
@@ -414,9 +414,9 @@
   <string name="email_contributor">Napisz do twórcy\n%s</string>
   <string name="visit_contributors_homepage">Odwiedź stronę twórcy\n%s</string>
   <string name="version">Wersja %s</string>
-  <string name="about_kde">O KDE</string>
-  <string name="kde_be_free">KDE - Bądź wolny!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">O OPDL</string>
+  <string name="kde_be_free">OPDL - Bądź wolny!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Podnieś</string>
   <string name="rise_down">Obniż</string>
@@ -427,10 +427,10 @@
   <string name="open_compose_send">Napisz tekst</string>
   <string name="double_tap_to_drag">Stuknij dwukrotnie, aby przeciągnąć</string>
   <string name="hold_to_drag">Przytrzymaj, aby przeciągnąć</string>
-  <string name="about_kde_about">"&lt;h1&gt;O programie&lt;/h1&gt; &lt;p&gt;KDE to światowa społeczność inżynierów oprogramowania, artystów, pisarzy, tłumaczy i twórców, którzy są częścią rozwoju &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Wolnego Oprogramowania&lt;/a&gt;. KDE tworzy środowisko pulpitu Plazmy, setki aplikacji  i wiele bibliotek programistycznych, aby je wspierać.&lt;/p&gt; &lt;p&gt;KDE jest przedsięwzięciem istniejącym ze współpracy; jego ruchami, czy produktami, nie steruje żaden pojedynczy byt. Pracujemy razem, aby osiągnąć wspólny cel, czyli budowę najlepszego Wolnego Oprogramowania na świecie. Każdy jest mile wiedziany, żeby &lt;a href=https://community.kde.org/Get_Involved&gt;dołączył i zaczął współtworzyć&lt;/a&gt; KDE, włączając w to ciebie.&lt;/p&gt; Odwiedź &lt; href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; po więcej szczegółów nt. społeczności KDE i oprogramowania, które tworzymy."</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Zgłaszaj błędy lub życzenia&lt;/h1&gt; &lt;p&gt;Oprogramowanie zawsze można ulepszyć, a zespół KDE jest gotowy, aby to robić. Jednakże ty - użytkownik - musisz nam powiedzieć o tym, co nie działa jak powinno lub co można zrobić lepiej.&lt;/p&gt; &lt;p&gt;KDE ma system obsługi błędów. Odwiedź &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; lub użyj przycisku \"Zgłoś błąd\" z ekranu o programie do zgłaszania błędów.&lt;/p&gt; Jeśli masz sugestie nt. usprawnień, to także możesz ją zarejestrować w naszym systemie obsługi błędów. Upewnij się, że użyjesz ważności o nazwie \"Lista życzeń\".</string>
-  <string name="about_kde_join_kde">&lt;h1&gt;Dołącz do KDE&lt;/h1&gt; &lt;p&gt;Nie musisz być programistą, aby być członkiem zespołu KDE. Możesz dołączyć do zespołów językowych, które tłumaczą oprogramowanie. Możesz dostarczać grafikę, zestawy wyglądu, dźwięki i ulepszać dokumentację. To ty decydujesz!&lt;/p&gt; &lt;p&gt;odwiedź &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; po szczegóły nt. projektów, w których możesz wziąć udział .&lt;/p&gt; Jeśli potrzebujesz więcej szczegółów lub dokumentacji, to odwiedziny na &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; dadzą ci to, czego chcesz.</string>
-  <string name="about_kde_support_kde">&lt;h1&gt;Wesprzyj KDE&lt;/h1&gt; &lt;p&gt;Oprogramowanie KDE jest i zawsze będzie dostępne za darmo, jednakże tworzenie go nie jest darmowe.&lt;/p&gt; &lt;p&gt;Aby wesprzeć rozwój, społeczność KDE założyła KDE e.V., organizację non-profit prawnie założoną w Niemczech. KDE e.V. stanowi społeczność KDE w sprawach prawnych i finansowych. Zajrzyj na &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; po więcej szczegółów o KDE e.V.&lt;/p&gt; &lt;p&gt;KDE korzysta z wielu rodzajów pomocy, w tym także finansowej. Używamy środków do zwracania członkom i innym wydatków, które ponoszą podczas tworzenia. Dalsze środki są używane na wsparcie prawne oraz organizowanie konferencji i spotkań.&lt;/p&gt; &lt;p&gt;Zachęcamy do wspierania naszego wysiłku poprzez darowizny, przy użyciu jednego ze sposobów wymienionych na &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Dzięki z góry za twoje wsparcie.</string>
+  <string name="about_kde_about">"&lt;h1&gt;O programie&lt;/h1&gt; &lt;p&gt;OPDL to światowa społeczność inżynierów oprogramowania, artystów, pisarzy, tłumaczy i twórców, którzy są częścią rozwoju &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Wolnego Oprogramowania&lt;/a&gt;. OPDL tworzy środowisko pulpitu Plazmy, setki aplikacji  i wiele bibliotek programistycznych, aby je wspierać.&lt;/p&gt; &lt;p&gt;OPDL jest przedsięwzięciem istniejącym ze współpracy; jego ruchami, czy produktami, nie steruje żaden pojedynczy byt. Pracujemy razem, aby osiągnąć wspólny cel, czyli budowę najlepszego Wolnego Oprogramowania na świecie. Każdy jest mile wiedziany, żeby &lt;a href=https://community.kde.org/Get_Involved&gt;dołączył i zaczął współtworzyć&lt;/a&gt; OPDL, włączając w to ciebie.&lt;/p&gt; Odwiedź &lt; href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; po więcej szczegółów nt. społeczności OPDL i oprogramowania, które tworzymy."</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Zgłaszaj błędy lub życzenia&lt;/h1&gt; &lt;p&gt;Oprogramowanie zawsze można ulepszyć, a zespół OPDL jest gotowy, aby to robić. Jednakże ty - użytkownik - musisz nam powiedzieć o tym, co nie działa jak powinno lub co można zrobić lepiej.&lt;/p&gt; &lt;p&gt;OPDL ma system obsługi błędów. Odwiedź &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; lub użyj przycisku \"Zgłoś błąd\" z ekranu o programie do zgłaszania błędów.&lt;/p&gt; Jeśli masz sugestie nt. usprawnień, to także możesz ją zarejestrować w naszym systemie obsługi błędów. Upewnij się, że użyjesz ważności o nazwie \"Lista życzeń\".</string>
+  <string name="about_kde_join_kde">&lt;h1&gt;Dołącz do OPDL&lt;/h1&gt; &lt;p&gt;Nie musisz być programistą, aby być członkiem zespołu OPDL. Możesz dołączyć do zespołów językowych, które tłumaczą oprogramowanie. Możesz dostarczać grafikę, zestawy wyglądu, dźwięki i ulepszać dokumentację. To ty decydujesz!&lt;/p&gt; &lt;p&gt;odwiedź &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; po szczegóły nt. projektów, w których możesz wziąć udział .&lt;/p&gt; Jeśli potrzebujesz więcej szczegółów lub dokumentacji, to odwiedziny na &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; dadzą ci to, czego chcesz.</string>
+  <string name="about_kde_support_kde">&lt;h1&gt;Wesprzyj OPDL&lt;/h1&gt; &lt;p&gt;Oprogramowanie OPDL jest i zawsze będzie dostępne za darmo, jednakże tworzenie go nie jest darmowe.&lt;/p&gt; &lt;p&gt;Aby wesprzeć rozwój, społeczność OPDL założyła OPDL e.V., organizację non-profit prawnie założoną w Niemczech. OPDL e.V. stanowi społeczność OPDL w sprawach prawnych i finansowych. Zajrzyj na &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; po więcej szczegółów o OPDL e.V.&lt;/p&gt; &lt;p&gt;OPDL korzysta z wielu rodzajów pomocy, w tym także finansowej. Używamy środków do zwracania członkom i innym wydatków, które ponoszą podczas tworzenia. Dalsze środki są używane na wsparcie prawne oraz organizowanie konferencji i spotkań.&lt;/p&gt; &lt;p&gt;Zachęcamy do wspierania naszego wysiłku poprzez darowizny, przy użyciu jednego ze sposobów wymienionych na &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Dzięki z góry za twoje wsparcie.</string>
   <string name="maintainer_and_developer">Opiekun i programista</string>
   <string name="developer">Programista</string>
   <string name="apple_support">Obsługa macOS. Praca nad obsługą iOS</string>
@@ -442,13 +442,13 @@
   <string name="holger_kaelberer_task">Wtyczka zdalnej klawiatury i usuwanie błędów</string>
   <string name="saikrishna_arcot_task">Wsparcie do obsługi klawiatury we wtyczce zdalnego wprowadzania, usuwanie błędów i ogólne usprawnienia</string>
   <string name="shellwen_chen_task">Polepszenie bezpieczeństwa SFTP, polepszenie łatwości w utrzymaniu tego projektu, poprawki błędów oraz ogólne ulepszenia</string>
-  <string name="everyone_else">Inni którzy współtworzyli KDE Connect na przestrzeni lat</string>
+  <string name="everyone_else">Inni którzy współtworzyli OPDL na przestrzeni lat</string>
   <string name="send_clipboard">Wysyłanie schowka</string>
   <string name="tap_to_execute">Stuknij, aby wykonać</string>
   <string name="plugin_stats">Statystyki wtyczek</string>
   <string name="enable_udp_broadcast">Włącz wykrywanie urządzeń UDP</string>
   <string name="enable_mdns_broadcast">Włącz wykrywanie urządzeń MDNS</string>
-  <string name="enable_mdns_broadcast_explanation">Wykrywanie MDNS jest przestarzałym sposobem. Zalecamy zgłoszenie błędu, jeśli KDE Connect działa tylko wtedy, gdy jest to włączone.</string>
+  <string name="enable_mdns_broadcast_explanation">Wykrywanie MDNS jest przestarzałym sposobem. Zalecamy zgłoszenie błędu, jeśli OPDL działa tylko wtedy, gdy jest to włączone.</string>
   <string name="enable_bluetooth">Włącz Bluetooth (beta)</string>
   <string name="receive_notifications_permission_explanation">Należy zezwolić na powiadomienia, aby móc je otrzymywać z innych urządzeń</string>
   <string name="findmyphone_notifications_explanation">Uprawnienia powiadomień są potrzebne, aby telefon mógł dzwonić, gdy aplikacja działa w tle</string>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/device_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/opdl_card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Device Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Device Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_on_surface" />
+
+            <TextView
+                android:id="@+id/device_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📱 Phone"
+                android:textSize="14sp"
+                android:textColor="@color/opdl_text_secondary" />
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/opdl_divider"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Device Information Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+            <!-- Chipset Information -->
+            <TextView
+                android:id="@+id/chipset_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chipset:"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/chipset_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qualcomm Atheros QCA9377"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_on_surface"
+                android:layout_row="0"
+                android:layout_column="1" />
+
+            <!-- WiFi Generation -->
+            <TextView
+                android:id="@+id/wifi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transport:"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="1"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/wifi_generation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi 5 (Verified)"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_wifi_5"
+                android:layout_row="1"
+                android:layout_column="1" />
+
+            <!-- Signal Strength -->
+            <TextView
+                android:id="@+id/rssi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signal:"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="2"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/signal_strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RSSI: -48 dBm (Good)"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_on_surface"
+                android:layout_row="2"
+                android:layout_column="1" />
+
+            <!-- Throughput -->
+            <TextView
+                android:id="@+id/throughput_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed:"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="3"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/throughput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Throughput: 245.0 MB/s"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_metric_throughput"
+                android:layout_row="3"
+                android:layout_column="1" />
+
+            <!-- Latency -->
+            <TextView
+                android:id="@+id/latency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latency:"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:layout_row="4"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/latency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latency: 30.6 ms"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_metric_latency"
+                android:layout_row="4"
+                android:layout_column="1" />
+
+        </GridLayout>
+
+        <!-- Additional Metrics Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/efficiency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Efficiency: 92.5%"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_metric_efficiency" />
+
+            <TextView
+                android:id="@+id/mesh_hops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mesh Hops: 0"
+                android:textSize="12sp"
+                android:textColor="@color/opdl_text_secondary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Status Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/connection_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✅ Connected"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/opdl_performance_optimal" />
+
+            <TextView
+                android:id="@+id/status_indicator"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/opdl_status_indicator"
+                android:backgroundTint="@color/opdl_performance_optimal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

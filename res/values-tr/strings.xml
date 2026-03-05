@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Bağlan</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">Aygıta Gönder</string>
   <string name="foreground_notification_no_devices">Hiçbir aygıta bağlı değil</string>
   <string name="foreground_notification_devices">Bağlı: %s</string>
@@ -46,11 +46,11 @@
   <string name="open_settings">Ayarları aç</string>
   <string name="no_permissions">Bildirimler erişebilmek için izine gereksiniminiz var</string>
   <string name="no_permission_mprisreceiver">Ortam oynatıcılarınızı denelemek için bildirimlere erişim izni vermeniz gerekir</string>
-  <string name="no_permissions_remotekeyboard">Düğmelere basmak için KDE Bağlan Uzak Klavye’yi etkinleştirmeniz gerekir</string>
+  <string name="no_permissions_remotekeyboard">Düğmelere basmak için OPDL Bağlan Uzak Klavye’yi etkinleştirmeniz gerekir</string>
   <string name="send_ping">Ping gönder</string>
   <string name="open_mpris_controls">Çoklu ortam denetimi</string>
   <string name="remotekeyboard_editing_only_title">Yalnızca düzenlerken uzaktan düğmeleri işle</string>
-  <string name="remotekeyboard_not_connected">Etkin bir uzak klavye bağlantısı yok, kdeconnect ile bir bağlantı kurun</string>
+  <string name="remotekeyboard_not_connected">Etkin bir uzak klavye bağlantısı yok, OPDL ile bir bağlantı kurun</string>
   <string name="remotekeyboard_connected">Uzak klavye bağlantısı etkin</string>
   <string name="remotekeyboard_multiple_connections">Birden çok uzak klavye bağlantısı mevcut, yapılandırmak istediğiniz aygıtı seçin</string>
   <string name="open_mousepad">Uzaktan giriş</string>
@@ -197,7 +197,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Bildirim izni, bildirim çekmecesinde uzak konum ortamını göstermek için gereklidir</string>
   <string name="mpris_notification_settings_title">Ortam denetim bildirimini göster</string>
-  <string name="mpris_notification_settings_summary">KDE Bağlan’ı açmadan ortam oynatıcılarınızı denetlemenize izin verin</string>
+  <string name="mpris_notification_settings_summary">OPDL Bağlan’ı açmadan ortam oynatıcılarınızı denetlemenize izin verin</string>
   <string name="share_to">Şuraya Paylaş…</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">Erişilemeyen bir aygıta gönderilen URL’ler, aygıt erişilebilir olduğunda teslim edilir.\n\n</string>
@@ -238,7 +238,7 @@
   <string name="sftp_action_mode_menu_delete">Sil</string>
   <string name="sftp_no_storage_locations_configured">Yapılandırılmış depolama yeri yok</string>
   <string name="sftp_saf_permission_explanation">Dosyalara uzaktan erişmek için depolama konumlarını yapılandırmanız gerekir</string>
-  <string name="sftp_manage_storage_permission_explanation">Bu aygıttaki dosyalara uzak erişime izin vermek için KDE Bağlan’a depolamayı yönetmesi için izin vermeniz gerekiyor.</string>
+  <string name="sftp_manage_storage_permission_explanation">Bu aygıttaki dosyalara uzak erişime izin vermek için OPDL Bağlan’a depolamayı yönetmesi için izin vermeniz gerekiyor.</string>
   <string name="sftp_missing_permission_error">Eksik izinler: Dosya sistemi erişimi</string>
   <string name="no_players_connected">Onatıcı bulunamadı</string>
   <string name="send_files">Dosyaları gönder</string>
@@ -257,8 +257,8 @@
   </string-array>
   <string name="block_notification_contents">Bildirim içeriğini engelle</string>
   <string name="block_notification_images">Bildirim görsellerini engelle</string>
-  <string name="pairing_title">KDE Bağlan Aygıtları</string>
-  <string name="pairing_description">KDE Bağlan’te çalışan, aynı ağdaki diğer aygıtlar burada gözükmelidir.</string>
+  <string name="pairing_title">OPDL Bağlan Aygıtları</string>
+  <string name="pairing_description">OPDL Bağlan’te çalışan, aynı ağdaki diğer aygıtlar burada gözükmelidir.</string>
   <string name="device_rename_title">Aygıtı yeniden adlandır</string>
   <string name="device_rename_confirm">Yeniden adlandır</string>
   <string name="refresh">Yenile</string>
@@ -269,7 +269,7 @@
   <string name="pref_plugin_telepathy">SMS Gönder</string>
   <string name="pref_plugin_telepathy_desc">Masaüstünden metin iletisi gönder</string>
   <string name="pref_plugin_telepathy_mms">MMS Gönder</string>
-  <string name="pref_plugin_telepathy_mms_desc">KDE Bağlan üzerinden MMS göndermek için onu öntanımlı SMS uygulaması olarak ayarlayın.</string>
+  <string name="pref_plugin_telepathy_mms_desc">OPDL Bağlan üzerinden MMS göndermek için onu öntanımlı SMS uygulaması olarak ayarlayın.</string>
   <string name="findmyphone_title">Telefonumu bul</string>
   <string name="findmyphone_title_tablet">Tabletimi bul</string>
   <string name="findmyphone_title_tv">TV’mi bul</string>
@@ -288,7 +288,7 @@
   <string name="telephony_permission_explanation">Masaüstünde telefon görüşmelerini görmek için telefon görüşmesi kayıtlarına ve telefon durumuna izin vermeniz gerekir</string>
   <string name="telephony_optional_permission_explanation">Telefon numarası yerine kişi adı görebilmek için telefonun kişilerine erişim gereklidir</string>
   <string name="contacts_permission_explanation">Kişilerinizi masaüstüyle paylaşmak için kişiler izni vermeniz gerekir</string>
-  <string name="contacts_per_device_confirmation">Telefondaki kişileriniz bu aygıta kopyalanacak; böylece KDE Bağlan ve başka uygulamalar tarafından kullanılabilecekler.</string>
+  <string name="contacts_per_device_confirmation">Telefondaki kişileriniz bu aygıta kopyalanacak; böylece OPDL Bağlan ve başka uygulamalar tarafından kullanılabilecekler.</string>
   <string name="select_ringtone">Bir zil sesi seç</string>
   <string name="telephony_pref_blocked_title">Engellenen numaralar</string>
   <string name="telephony_pref_blocked_dialog_desc">Bu numaralardan gelen aramaları ve SMS’leri göstermeyin. Lütfen her satıra bir numara belirtin</string>
@@ -299,7 +299,7 @@
   <string name="presenter_lock_tip">Bir önceki/bir sonraki slayta geçmek için aygıtınızı kilitleyebilir ve ses düzeyi düğmelerini kullanabilirsiniz</string>
   <string name="add_command">Komut ekle</string>
   <string name="addcommand_explanation">Kayıtlı komut yok</string>
-  <string name="addcommand_explanation2">KDE Bağlan Sistem Ayarlarında yeni komutlar ekleyebilirsiniz</string>
+  <string name="addcommand_explanation2">OPDL Bağlan Sistem Ayarlarında yeni komutlar ekleyebilirsiniz</string>
   <string name="add_command_description">Masaüstüne komut ekleyebilirsiniz</string>
   <string name="pref_plugin_mprisreceiver">Ortam Oynatıcısı Denetimi</string>
   <string name="pref_plugin_mprisreceiver_desc">Telefonunuzun ortam oynatıcılarını başka bir aygıttan denetleyin</string>
@@ -332,7 +332,7 @@
   <string name="devices">Aygıtlar</string>
   <string name="settings_rename">Aygıt adı</string>
   <string name="settings_dark_mode">Karanlık tema</string>
-  <string name="settings_export_logs">KDE Bağlan Günlüklerini Dışa Aktar</string>
+  <string name="settings_export_logs">OPDL Bağlan Günlüklerini Dışa Aktar</string>
   <string name="settings_export_logs_text">Sorun tanılama konusunda yandımcı olabilecek yürütme bilgisini içeren bir dosya üretin.</string>
   <string name="settings_more_settings_title">Daha fazla ayar</string>
   <string name="settings_more_settings_text">Aygıt başına ayarlar, bir aygıt içinden “Eklenti Ayarları” altında bulunabilir.</string>
@@ -346,7 +346,7 @@
   <string name="block_images">Bildirimlerde görüntüleri engelle</string>
   <string name="notification_channel_receivenotification">Diğer aygıtlardan gelen bildirimler</string>
   <string name="no_app_for_opening">Bu dosyayı açmak için uygun bir uygulama bulunamadı</string>
-  <string name="remote_keyboard_service">KDE Bağlan Uzaktan Klavye</string>
+  <string name="remote_keyboard_service">OPDL Bağlan Uzaktan Klavye</string>
   <string name="presenter_pointer">İşaretçi</string>
   <string name="trusted_networks">Güvenilir ağlar</string>
   <string name="trusted_networks_desc">Otomatik keşfi bilinen ağlarla kısıtla</string>
@@ -354,8 +354,8 @@
   <string name="empty_trusted_networks_list_text">Henüz herhangi bir güvenilen ağ eklemediniz</string>
   <string name="allow_all_networks_text">Hepsine izin ver</string>
   <string name="location_permission_needed_title">İzin gerekli</string>
-  <string name="bluetooth_permission_needed_desc">KDE Bağlan, Bluetooth kullanarak eşleştirilmiş aygıtların KDE Bağlan’da görülebilir olmasını sağlamak için yakındaki aygıtlara bağlanma iznine gereksinim duyar.</string>
-  <string name="location_permission_needed_desc">KDE Bağlan, uygulama arka planda olsa bile bağlı olduğunuz Wi-Fi ağını bilmek için arka plan konumu iznine gereksinim duyar. Bunun nedeni, çevrenizdeki Wi-Fi ağlarının adının, KDE Bağlan’ın yaptığı bu olmasa bile konumunuzu bulmak için kullanılabilmesidir.</string>
+  <string name="bluetooth_permission_needed_desc">OPDL Bağlan, Bluetooth kullanarak eşleştirilmiş aygıtların OPDL Bağlan’da görülebilir olmasını sağlamak için yakındaki aygıtlara bağlanma iznine gereksinim duyar.</string>
+  <string name="location_permission_needed_desc">OPDL Bağlan, uygulama arka planda olsa bile bağlı olduğunuz Wi-Fi ağını bilmek için arka plan konumu iznine gereksinim duyar. Bunun nedeni, çevrenizdeki Wi-Fi ağlarının adının, OPDL Bağlan’ın yaptığı bu olmasa bile konumunuzu bulmak için kullanılabilmesidir.</string>
   <string name="clipboard_android_x_incompat">Android 10, tüm uygulamalara pano erişimini kaldırdı. Bu eklenti devre dışı bırakılacak.</string>
   <string name="mpris_open_url">Oynamayı burada sürdürün</string>
   <string name="cant_open_url">Oynamayı sürdürmek için URL açılamıyor</string>
@@ -407,9 +407,9 @@
   <string name="email_contributor">E-posta katkıcısı\n%s</string>
   <string name="visit_contributors_homepage">Katkıcının web sayfasını ziyaret edin\n%s</string>
   <string name="version">Sürüm %s</string>
-  <string name="about_kde">KDE Hakkında</string>
-  <string name="kde_be_free">KDE — Özgür olun!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">OPDL Hakkında</string>
+  <string name="kde_be_free">OPDL — Özgür olun!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Kalk</string>
   <string name="rise_down">İndir</string>
@@ -420,10 +420,10 @@
   <string name="open_compose_send">Metin oluştur</string>
   <string name="double_tap_to_drag">Sürüklemek için çift dokunun</string>
   <string name="hold_to_drag">Sürüklemek için tutun</string>
-  <string name="about_kde_about">&lt;h1&gt;Hakkında&lt;/h1&gt; &lt;p&gt;KDE, &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Özgür Yazılım&lt;/a&gt; hareketine destek veren yazılım mühendislerinin, sanatçıların, yazarların, çevirmenlerin ve yaratıcıların bir araya geldiği dünya çapında bir topluluktur KDE, Plasma masaüstü ortamını, yüzlerce uygulamayı ve onları destekleyen sayısız yazılım kitaplığını üretir.&lt;/p&gt; &lt;p&gt;KDE, işbirliğine dayalı bir kuruluştur: yönünü veya ürünlerini tek başına denetleyen bir kuruluş yoktur. Bunun yerine, dünyanın en iyi Özgür Yazılımını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz de dahil olmak üzere herkes &lt;a href=https://community.kde.org/Get_Involved&gt;katılabilir&lt;/a&gt; ve katkıda bulunabilir.&lt;/p&gt; KDE topluluğu ve ürettiğimiz yazılımlar hakkında daha fazla bilgi için &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; adresini ziyaret edin.</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Hataları veya İsteklerinizi Bildirin&lt;/h1&gt; &lt;p&gt;Yazılımlar her zaman iyileştirilebilir ve KDE takımın bunu yapmaya hazırdır. Ancak siz de bir şey beklendiği gibi gitmezse veya hata verirse bize bildirin.&lt;/p&gt; &lt;p&gt;KDE’nin bir hata takip sistemi vardır. &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; adresini ziyaret edin veya hakkında ekranının ‘Hata Bildir’ düğmesini kullanarak hataları bildirin.&lt;/p&gt; Bir iyileştirme için öneriniz varsa bunu bildirmek için hata takip sistemini kullanabilirsiniz; yalnızca “Wishlist” önceliğini kullandığınızdan emin olun.</string>
-  <string name="about_kde_join_kde">"&lt;h1&gt;KDE’ye Katılın&lt;/h1&gt; &lt;p&gt;KDE takımının bir üyesi olmak için yazılım geliştirici olmanıza gerek yoktur. Program arayüzlerini çeviren dil takımlarına katılabilirsiniz. Grafikler, temalar, sesler ve iyileştirilmiş belgelendirme sağlayabilirsiniz. Karar sizin!&lt;/p&gt; &lt;p&gt;Katılabileceğiniz bazı projeler hakkında bilgi almak için  &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; sayfasını ziyaret edin.&lt;/p&gt; Daha fazla bilgiye veya belgeye gereksiniminiz varsa &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; sayfasında aradığınızı bulabilirsiniz."</string>
-  <string name="about_kde_support_kde">"&lt;h1&gt;KDE’yi Destekleyin&lt;/h1&gt; &lt;p&gt;KDE yazılımları her zaman ücretsiz kalmayı sürdürecektir; ancak bunu oluşturmak bedava değildir. &lt;/p&gt; &lt;p&gt;Geliştirmeyi desteklemek için KDE topluluğu, kar amacı gütmeyen bir kuruluş olan KDE e.V.’yi kurmuştur, bu topluluk KDE topluğunu yasal ve finansal konularda temsil eder. KDE e.V. hakkında daha fazla bilgi için  &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; adresini ziyaret edin.&lt;/p&gt; &lt;p&gt;KDE, finansal da dahil olmak üzere her türlü katkıdan yarar sağlar. Maddi kaynaklarımızla, geliştiricilerimizin ve diğerlerinin katkıda bulunurken oluşan masraflarını karşılıyoruz. Ayrıca yasal destek ve konferanslar ve toplantılar için de kullanılmaktadır.&lt;/p&gt; &lt;p&gt;Emeklerimizi, finansal destekle desteklemeniz için &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt; adresinde bulunan yollardan birini kullanabilirsiniz.&lt;/p&gt; Desteğiniz için şimdiden teşekkürler."</string>
+  <string name="about_kde_about">&lt;h1&gt;Hakkında&lt;/h1&gt; &lt;p&gt;OPDL, &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Özgür Yazılım&lt;/a&gt; hareketine destek veren yazılım mühendislerinin, sanatçıların, yazarların, çevirmenlerin ve yaratıcıların bir araya geldiği dünya çapında bir topluluktur OPDL, Plasma masaüstü ortamını, yüzlerce uygulamayı ve onları destekleyen sayısız yazılım kitaplığını üretir.&lt;/p&gt; &lt;p&gt;OPDL, işbirliğine dayalı bir kuruluştur: yönünü veya ürünlerini tek başına denetleyen bir kuruluş yoktur. Bunun yerine, dünyanın en iyi Özgür Yazılımını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz de dahil olmak üzere herkes &lt;a href=https://community.kde.org/Get_Involved&gt;katılabilir&lt;/a&gt; ve katkıda bulunabilir.&lt;/p&gt; OPDL topluluğu ve ürettiğimiz yazılımlar hakkında daha fazla bilgi için &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; adresini ziyaret edin.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Hataları veya İsteklerinizi Bildirin&lt;/h1&gt; &lt;p&gt;Yazılımlar her zaman iyileştirilebilir ve OPDL takımın bunu yapmaya hazırdır. Ancak siz de bir şey beklendiği gibi gitmezse veya hata verirse bize bildirin.&lt;/p&gt; &lt;p&gt;OPDL’nin bir hata takip sistemi vardır. &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; adresini ziyaret edin veya hakkında ekranının ‘Hata Bildir’ düğmesini kullanarak hataları bildirin.&lt;/p&gt; Bir iyileştirme için öneriniz varsa bunu bildirmek için hata takip sistemini kullanabilirsiniz; yalnızca “Wishlist” önceliğini kullandığınızdan emin olun.</string>
+  <string name="about_kde_join_kde">"&lt;h1&gt;OPDL’ye Katılın&lt;/h1&gt; &lt;p&gt;OPDL takımının bir üyesi olmak için yazılım geliştirici olmanıza gerek yoktur. Program arayüzlerini çeviren dil takımlarına katılabilirsiniz. Grafikler, temalar, sesler ve iyileştirilmiş belgelendirme sağlayabilirsiniz. Karar sizin!&lt;/p&gt; &lt;p&gt;Katılabileceğiniz bazı projeler hakkında bilgi almak için  &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; sayfasını ziyaret edin.&lt;/p&gt; Daha fazla bilgiye veya belgeye gereksiniminiz varsa &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; sayfasında aradığınızı bulabilirsiniz."</string>
+  <string name="about_kde_support_kde">"&lt;h1&gt;OPDL’yi Destekleyin&lt;/h1&gt; &lt;p&gt;OPDL yazılımları her zaman ücretsiz kalmayı sürdürecektir; ancak bunu oluşturmak bedava değildir. &lt;/p&gt; &lt;p&gt;Geliştirmeyi desteklemek için OPDL topluluğu, kar amacı gütmeyen bir kuruluş olan OPDL e.V.’yi kurmuştur, bu topluluk OPDL topluğunu yasal ve finansal konularda temsil eder. OPDL e.V. hakkında daha fazla bilgi için  &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; adresini ziyaret edin.&lt;/p&gt; &lt;p&gt;OPDL, finansal da dahil olmak üzere her türlü katkıdan yarar sağlar. Maddi kaynaklarımızla, geliştiricilerimizin ve diğerlerinin katkıda bulunurken oluşan masraflarını karşılıyoruz. Ayrıca yasal destek ve konferanslar ve toplantılar için de kullanılmaktadır.&lt;/p&gt; &lt;p&gt;Emeklerimizi, finansal destekle desteklemeniz için &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt; adresinde bulunan yollardan birini kullanabilirsiniz.&lt;/p&gt; Desteğiniz için şimdiden teşekkürler."</string>
   <string name="maintainer_and_developer">Bakımcı ve geliştirici</string>
   <string name="developer">Geliştirici</string>
   <string name="apple_support">macOS ve iOS desteği üzerinde çalışılmaktadır.</string>
@@ -435,13 +435,13 @@
   <string name="holger_kaelberer_task">Uzak klavye eklentisi ve hata düzeltmeleri</string>
   <string name="saikrishna_arcot_task">Uzaktan girdi eklentisinde klavye kullanımı desteği, hata düzeltmeleri ve genel iyileştirmeler</string>
   <string name="shellwen_chen_task">SFTP güvenliğini artır, projenin bakımını daha da kolaylaştır, hata düzeltmeleri ve genel iyileştirmeler</string>
-  <string name="everyone_else">KDE Bağlan’a yıllar boyunca katkıda bulunan herkes</string>
+  <string name="everyone_else">OPDL Bağlan’a yıllar boyunca katkıda bulunan herkes</string>
   <string name="send_clipboard">Pano Gönder</string>
   <string name="tap_to_execute">Yürütmek için Dokun</string>
   <string name="plugin_stats">Eklenti İstatistikleri</string>
   <string name="enable_udp_broadcast">UDP Aygıt Keşfini Etkinleştir</string>
   <string name="enable_mdns_broadcast">MDNS Aygıt Keşfini Etkinleştir</string>
-  <string name="enable_mdns_broadcast_explanation">MDNS ile bulma artık kullanılmıyor. KDE Bağlan yalnızca bu etkinken çalışıyorsa lütfen bir hata kaydı açın.</string>
+  <string name="enable_mdns_broadcast_explanation">MDNS ile bulma artık kullanılmıyor. OPDL Bağlan yalnızca bu etkinken çalışıyorsa lütfen bir hata kaydı açın.</string>
   <string name="enable_bluetooth">Bluetooth’u Etkinleştir (Beta)</string>
   <string name="receive_notifications_permission_explanation">Başka aygıtlardan gelen bildirimleri alabilmek için bildirimlere izin verilmesi gereklidir</string>
   <string name="findmyphone_notifications_explanation">Uygulama arka plandayken telefonun çalabilmesi için bildirim izni gereklidir</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Connect</string>
+  <string name="kde_connect">OPDL</string>
   <string name="foreground_notification_no_devices">Δεν είναι συνδεδεμένο σε συσκευή</string>
   <string name="foreground_notification_devices">Συνδεδεμένό σε: %s</string>
   <string name="foreground_notification_send_clipboard">Αποστολή προχείρου</string>
@@ -39,11 +39,11 @@
   <string name="open_settings">Ρυθμίσεις ανοίγματος</string>
   <string name="no_permissions">Απαιτείται παραχώρηση δικαιωμάτων για την πρόσβαση σε ειδοποιήσεις</string>
   <string name="no_permission_mprisreceiver">Για να ελέγξετε τους αναπαραγωγείς πολυμέσων απαιτείται να παραχωρήσετε πρόσβαση στις ειδοποιήσεις</string>
-  <string name="no_permissions_remotekeyboard">Για να λαμβάνετε πατήματα πλήκτρων απαιτείται να ενεργοποιήσετε το πληκτρολόγιο απομακρυσμένης σύνδεσης του KDE</string>
+  <string name="no_permissions_remotekeyboard">Για να λαμβάνετε πατήματα πλήκτρων απαιτείται να ενεργοποιήσετε το πληκτρολόγιο απομακρυσμένης σύνδεσης του OPDL</string>
   <string name="send_ping">Αποστολή ping</string>
   <string name="open_mpris_controls">Έλεγχος πολυμέσων</string>
   <string name="remotekeyboard_editing_only_title">Χειρισμός απομακρυσμένων πλήκτρων μόνο στην επεξεργασία</string>
-  <string name="remotekeyboard_not_connected">Δεν υπάρχει ενεργή σύνδεση με απομακρυσμένο πληκτρολόγιο, άνοιξε μία στο kdeconnect</string>
+  <string name="remotekeyboard_not_connected">Δεν υπάρχει ενεργή σύνδεση με απομακρυσμένο πληκτρολόγιο, άνοιξε μία στο OPDL</string>
   <string name="remotekeyboard_connected">Η σύνδεση με απομακρυσμένο πληκτρολόγιο είναι ενεργή</string>
   <string name="remotekeyboard_multiple_connections">Υπάρχουν περισσότερες της μίας συνδέσεις με απομακρυσμένο πληκτρολόγιο, επιλέξτε ποια συσκευή θα διαμορφώσετε</string>
   <string name="open_mousepad">Απομακρυσμένη είσοδος στοιχείων</string>
@@ -164,7 +164,7 @@
     <item>2 λεπτά</item>
   </string-array>
   <string name="mpris_notification_settings_title">Εμφάνιση ειδοποίησης κονσόλας πολυμέσων</string>
-  <string name="mpris_notification_settings_summary">Να επιτρέπεται ο έλεγχος των αναπαραφωγέων πολυμέσων χωρίς άνοιγμα του KDE Connect</string>
+  <string name="mpris_notification_settings_summary">Να επιτρέπεται ο έλεγχος των αναπαραφωγέων πολυμέσων χωρίς άνοιγμα του OPDL</string>
   <string name="protocol_version_newer">Η συσκευή αυτή χρησιμοποιεί νεότερη έκδοση πρωτοκόλλου</string>
   <string name="plugin_settings_with_name">%s ρυθμίσεις</string>
   <string name="invalid_device_name">Μη έγκυρο όνομα συσκευής</string>
@@ -206,8 +206,8 @@
     <item>Bottom left</item>
     <item>Bottom right</item>
   </string-array>
-  <string name="pairing_title">Συσκευές KDE Connect</string>
-  <string name="pairing_description">Άλλες συσκευές με KDE Connect στο ίδιο δίκτυο θα εμφανίζονται εδώ.</string>
+  <string name="pairing_title">Συσκευές OPDL</string>
+  <string name="pairing_description">Άλλες συσκευές με OPDL στο ίδιο δίκτυο θα εμφανίζονται εδώ.</string>
   <string name="device_rename_title">Μετονομασία συσκευής</string>
   <string name="device_rename_confirm">Μετονομασία</string>
   <string name="refresh">Ανανέωση</string>
@@ -218,7 +218,7 @@
   <string name="pref_plugin_telepathy">Αποστολή SMS</string>
   <string name="pref_plugin_telepathy_desc">Αποστολή μηνυμάτων κειμένου από τον υπολογιστή σας</string>
   <string name="pref_plugin_telepathy_mms">Αποστολή MMS</string>
-  <string name="pref_plugin_telepathy_mms_desc">Για να μπορείτε να στέλνετε MMS από το KDE Connect απαιτείται να το ρυθμίσετε ως την προκαθορισμένη εφαρμογή για SMS.</string>
+  <string name="pref_plugin_telepathy_mms_desc">Για να μπορείτε να στέλνετε MMS από το OPDL απαιτείται να το ρυθμίσετε ως την προκαθορισμένη εφαρμογή για SMS.</string>
   <string name="findmyphone_title">Αναζήτηση του κινητού μου</string>
   <string name="findmyphone_title_tablet">Αναζήτηση του πινακίου μου</string>
   <string name="findmyphone_title_tv">Αναζήτηση της τηλεόρασής μου</string>
@@ -244,7 +244,7 @@
   <string name="presenter_lock_tip">Μπορείτε να κλειδώσετε τη συσκευή σας και να χρησιμοποιήσετε τα πλήκτρα της έντασης για να μεταβείτε σε προηγούμενη/επόμενη διαφάνεια</string>
   <string name="add_command">Προσθήκη εντολής</string>
   <string name="addcommand_explanation">Δεν υπάρχουν καταχωρημένες εντολές</string>
-  <string name="addcommand_explanation2">Μπορείτε να προσθέσετε νέες εντολές στις ρυθμίσεις συστήματος του KDE Connect</string>
+  <string name="addcommand_explanation2">Μπορείτε να προσθέσετε νέες εντολές στις ρυθμίσεις συστήματος του OPDL</string>
   <string name="add_command_description">Μπορείτε να προσθέσετε εντολές στην επιφάνεια εργασίας</string>
   <string name="pref_plugin_mprisreceiver">Κονσόλα αναπαραγωγέα πολυμέσων</string>
   <string name="pref_plugin_mprisreceiver_desc">Ελέγξτε τους αναπαραγωγείς πολυμέσων του τηλεφώνου σας από άλλη συσκευή</string>
@@ -280,7 +280,7 @@
   <string name="block_images">Φραγή εικόνων σε ειδοποιήσεις</string>
   <string name="notification_channel_receivenotification">Ειδοποιήσεις από άλλες συσκευές</string>
   <string name="no_app_for_opening">Δεν βρέθηκε κατάλληλη εφαρμογή για το άνοιγμα αυτού του αρχείου</string>
-  <string name="remote_keyboard_service">Απομακρυσμένο πληκτρολόγιο KDE Connect</string>
+  <string name="remote_keyboard_service">Απομακρυσμένο πληκτρολόγιο OPDL</string>
   <string name="presenter_pointer">Δείκτης</string>
   <string name="trusted_networks">Έμπιστα δίκτυα</string>
   <string name="trusted_networks_desc">Να περιοριστεί η αυτόματη ανακάλυψη σε γνωστά δίκτυα</string>
@@ -338,15 +338,15 @@
   <string name="email_contributor">Email συμβαλλόμενου\n%s</string>
   <string name="visit_contributors_homepage">Επισκεφθείτε τη σελίδα του συμβαλλόμενου\n%s</string>
   <string name="version">Έκδοση %s</string>
-  <string name="about_kde">Σχετικά με το KDE</string>
-  <string name="kde_be_free">KDE - Απελευθερωθείτε!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">Σχετικά με το OPDL</string>
+  <string name="kde_be_free">OPDL - Απελευθερωθείτε!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Άνοδος</string>
   <string name="rise_down">Κάθοδος</string>
-  <string name="about_kde_about">&lt;h1&gt;Σχετικά&lt;/h1&gt; &lt;p&gt;Το KDE είναι μια παγκόσμια κοινότητα μηχανικών λογισμικού, καλλιτεχνών, συγγραφέων, μεταφραστών και δημιουργών οι οποίοι είναι αφοσιωμένοι στην ανάπτυξη του &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Ελεύθερου Λογισμικού&lt;/a&gt;. Το KDE παράγει το περιβάλλον γραφείου Plasma, εκατοντάδες εφαρμογές και πολλές βιβλιοθήκες που τις υποστηρίζουν.&lt;/p&gt; &lt;p&gt;Το KDE είναι ένα συνεργατικό εγχείρημα: καμιά οντότητα από μόνη της δεν ελέγχει την κατεύθυνση ή τα προϊόντα του. Αντίθετα, συνεργαζόμαστε για να επιτύχουμε τον κοινό στόχο της κατασκευής του πληρέστερου στον κόσμο Ελεύθερου Λογισμικού. Οποιοσδήποτε είναι ευπρόσδεκτος να &lt;a href=https://community.kde.org/Get_Involved&gt;γίνει μέλος και να συμβάλει&lt;/a&gt; στο KDE, και εσείς φυσικά.&lt;/p&gt; Επισκεφθείτε το &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; για περισσότερες πληροφορίες σχετικά με την κοινότητα του KDE και το λογισμικό που παράγουμε.</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Αναφέρετε σφάλματα ή επιθυμίες στο&lt;/h1&gt; &lt;p&gt;Το Λογισμικό μπορεί πάντα να βελτιώνεται και η ομάδα του KDE είναι έτοιμη γι\' αυτό. Ωστόσο, εσείς - ο χρήστης - πρέπει να μας ενημερώνετε αν κάτι δεν λειτουργεί όπως θα έπρεπε ή αν θα μπορούσε να γίνει καλύτερο.&lt;/p&gt; &lt;p&gt;Το KDE έχει ένα σύστημα ανίχνευσης σφαλμάτων. Επισκεφθείτε το &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ή χρησιμοποιήστε το κουμπί «Αναφορά σφάλματος» από την οθόνη Σχετικά για να αναφέρετε σφάλματα.&lt;/p&gt; Αν έχετε κάποια πρόταση για βελτίωση, χρησιμοποιήστε το σύστημα ανίχνευσης σφαλμάτων για να εγγράψετε την επιθυμία σας. Βεβαιωθείτε ότι χρησιμοποιείτε τη «Λίστα επιθυμιών».</string>
-  <string name="about_kde_support_kde">&lt;h1&gt;Υποστηρίξτε το KDE&lt;/h1&gt; &lt;p&gt;Το λογισμικό του KDE είναι και θα είναι πάντα διαθέσιμο δωρεάν, ωστόσο η δημιουργία του δεν είναι δωρεάν.&lt;/p&gt; &lt;p&gt;Για να υποστηρίξετε την ανάπτυξη η κοινότητα του KDE έχει δημιουργήσει στη Γερμανία το KDE e.V., έναν μη-κερδοσκοπικό οργανισμό. Το KDE e.V. εκπροσωπεί την κοινότητα του KDE σε νομικά και χρηματοοικονομικά θέματα. Δείτε το&lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; για πληροφορίες για το KDE e.V.&lt;/p&gt; &lt;p&gt;Το KDE ωφελείται από πολλά είδη συνεισφορών, και οικονομικών. Χρησιμοποιούμε τους οικονομικούς πόρους για αμοιβές μελών και άλλων για έξοδα που παρουσιάζονται όταν συμμετέχουν. Άλλα κονδύλια χρησιμοποιούνται για τη νομική υποστήριξη και τη διοργάνωση συνεδρίων και συναντήσεων.&lt;/p&gt; &lt;p&gt;Θα θέλαμε να σας ενθαρρύνουμε να υποστηρίξετε τις προσπάθειές μας με μια δωρεά, με έναν από τους τρόπους που περιγράφονται στο &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Σας ευχαριστούμε πολύ εκ των προτέρων για την υποστήριξή σας.</string>
+  <string name="about_kde_about">&lt;h1&gt;Σχετικά&lt;/h1&gt; &lt;p&gt;Το OPDL είναι μια παγκόσμια κοινότητα μηχανικών λογισμικού, καλλιτεχνών, συγγραφέων, μεταφραστών και δημιουργών οι οποίοι είναι αφοσιωμένοι στην ανάπτυξη του &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Ελεύθερου Λογισμικού&lt;/a&gt;. Το OPDL παράγει το περιβάλλον γραφείου Plasma, εκατοντάδες εφαρμογές και πολλές βιβλιοθήκες που τις υποστηρίζουν.&lt;/p&gt; &lt;p&gt;Το OPDL είναι ένα συνεργατικό εγχείρημα: καμιά οντότητα από μόνη της δεν ελέγχει την κατεύθυνση ή τα προϊόντα του. Αντίθετα, συνεργαζόμαστε για να επιτύχουμε τον κοινό στόχο της κατασκευής του πληρέστερου στον κόσμο Ελεύθερου Λογισμικού. Οποιοσδήποτε είναι ευπρόσδεκτος να &lt;a href=https://community.kde.org/Get_Involved&gt;γίνει μέλος και να συμβάλει&lt;/a&gt; στο OPDL, και εσείς φυσικά.&lt;/p&gt; Επισκεφθείτε το &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; για περισσότερες πληροφορίες σχετικά με την κοινότητα του OPDL και το λογισμικό που παράγουμε.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Αναφέρετε σφάλματα ή επιθυμίες στο&lt;/h1&gt; &lt;p&gt;Το Λογισμικό μπορεί πάντα να βελτιώνεται και η ομάδα του OPDL είναι έτοιμη γι\' αυτό. Ωστόσο, εσείς - ο χρήστης - πρέπει να μας ενημερώνετε αν κάτι δεν λειτουργεί όπως θα έπρεπε ή αν θα μπορούσε να γίνει καλύτερο.&lt;/p&gt; &lt;p&gt;Το OPDL έχει ένα σύστημα ανίχνευσης σφαλμάτων. Επισκεφθείτε το &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ή χρησιμοποιήστε το κουμπί «Αναφορά σφάλματος» από την οθόνη Σχετικά για να αναφέρετε σφάλματα.&lt;/p&gt; Αν έχετε κάποια πρόταση για βελτίωση, χρησιμοποιήστε το σύστημα ανίχνευσης σφαλμάτων για να εγγράψετε την επιθυμία σας. Βεβαιωθείτε ότι χρησιμοποιείτε τη «Λίστα επιθυμιών».</string>
+  <string name="about_kde_support_kde">&lt;h1&gt;Υποστηρίξτε το OPDL&lt;/h1&gt; &lt;p&gt;Το λογισμικό του OPDL είναι και θα είναι πάντα διαθέσιμο δωρεάν, ωστόσο η δημιουργία του δεν είναι δωρεάν.&lt;/p&gt; &lt;p&gt;Για να υποστηρίξετε την ανάπτυξη η κοινότητα του OPDL έχει δημιουργήσει στη Γερμανία το OPDL e.V., έναν μη-κερδοσκοπικό οργανισμό. Το OPDL e.V. εκπροσωπεί την κοινότητα του OPDL σε νομικά και χρηματοοικονομικά θέματα. Δείτε το&lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; για πληροφορίες για το OPDL e.V.&lt;/p&gt; &lt;p&gt;Το OPDL ωφελείται από πολλά είδη συνεισφορών, και οικονομικών. Χρησιμοποιούμε τους οικονομικούς πόρους για αμοιβές μελών και άλλων για έξοδα που παρουσιάζονται όταν συμμετέχουν. Άλλα κονδύλια χρησιμοποιούνται για τη νομική υποστήριξη και τη διοργάνωση συνεδρίων και συναντήσεων.&lt;/p&gt; &lt;p&gt;Θα θέλαμε να σας ενθαρρύνουμε να υποστηρίξετε τις προσπάθειές μας με μια δωρεά, με έναν από τους τρόπους που περιγράφονται στο &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Σας ευχαριστούμε πολύ εκ των προτέρων για την υποστήριξή σας.</string>
   <string name="maintainer_and_developer">Συντηρητής και προγραμματιστής</string>
   <string name="developer">Προγραμματιστής</string>
   <string name="apple_support">Υποστήριξη macos. Εργασία υποστήριξης iOS</string>
@@ -357,5 +357,5 @@
   <string name="maxim_leshchenko_task">Βελτιώσεις γραφικού περιβάλλοντος και της σελίδας του περιγράμματος</string>
   <string name="holger_kaelberer_task">Πρόσθετο απομακρυσμένου πληκτρολπγίου και διορθώσεις σφαλμάτων</string>
   <string name="saikrishna_arcot_task">Υποστήριξη της χρήσης του πληκτρολογίου στο πρόσθετο απομακρυσμένης σύνδεσης, διορθώσεις σφαλμάτων και γενικές βελτιώσεις</string>
-  <string name="everyone_else">Οποιοσδήποτε άλλος έχει συμβάλλει στο παρελθόν στο KDE Contact</string>
+  <string name="everyone_else">Οποιοσδήποτε άλλος έχει συμβάλλει στο παρελθόν στο OPDL Contact</string>
 </resources>

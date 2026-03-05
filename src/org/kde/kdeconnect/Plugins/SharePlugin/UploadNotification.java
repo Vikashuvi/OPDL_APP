@@ -47,9 +47,11 @@ class UploadNotification {
         cancelIntent.setAction(SharePlugin.ACTION_CANCEL_SHARE);
         cancelIntent.putExtra(SharePlugin.CANCEL_SHARE_BACKGROUND_JOB_ID_EXTRA, jobId);
         cancelIntent.putExtra(SharePlugin.CANCEL_SHARE_DEVICE_ID_EXTRA, device.getDeviceId());
-        PendingIntent cancelPendingIntent = PendingIntent.getBroadcast(device.getContext(), 0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent cancelPendingIntent = PendingIntent.getBroadcast(device.getContext(), 0, cancelIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
-        builder.addAction(R.drawable.ic_reject_pairing_24dp, device.getContext().getString(R.string.cancel), cancelPendingIntent);
+        builder.addAction(R.drawable.ic_reject_pairing_24dp, device.getContext().getString(R.string.cancel),
+                cancelPendingIntent);
     }
 
     public void setTitle(String title) {
@@ -57,8 +59,15 @@ class UploadNotification {
         builder.setTicker(title);
     }
 
+    public void setProgress(int progress, String progressMessage, String speed, String detailedMetrics) {
+        builder.setProgress(100, progress, false);
+        builder.setContentText(progressMessage);
+        builder.setSubText("⚡ " + speed);
+        builder.setStyle(new NotificationCompat.BigTextStyle().bigText(detailedMetrics));
+    }
+
     public void setProgress(int progress, String progressMessage) {
-        builder.setProgress( 100, progress, false);
+        builder.setProgress(100, progress, false);
         builder.setContentText(progressMessage);
         builder.setStyle(new NotificationCompat.BigTextStyle().bigText(progressMessage));
     }
@@ -91,4 +100,3 @@ class UploadNotification {
         notificationManager.notify(notificationId, builder.build());
     }
 }
-

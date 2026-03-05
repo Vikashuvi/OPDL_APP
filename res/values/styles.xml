@@ -1,7 +1,7 @@
 <!--
-SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
+SPDX-FileCopyrightText: 2025 OPDL Project Team
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <resources xmlns:tools="http://schemas.android.com/tools">
@@ -24,6 +24,36 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     </style>
 
     <style name="KdeConnectTheme.NoActionBar" parent="KdeConnectThemeBase.NoActionBar" />
+    
+    <!-- OPDL Theme Styles -->
+    <style name="OpdlTheme" parent="Theme.Material3.Dark">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/opdl_primary</item>
+        <item name="colorPrimaryVariant">@color/opdl_primary_variant</item>
+        <item name="colorOnPrimary">@color/opdl_on_primary</item>
+        
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/opdl_secondary</item>
+        <item name="colorSecondaryVariant">@color/opdl_secondary_variant</item>
+        <item name="colorOnSecondary">@color/opdl_on_secondary</item>
+        
+        <!-- Surface Colors -->
+        <item name="colorSurface">@color/opdl_surface</item>
+        <item name="colorOnSurface">@color/opdl_on_surface</item>
+        
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/opdl_background</item>
+        <item name="colorOnBackground">@color/opdl_on_background</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/opdl_background</item>
+        <item name="android:navigationBarColor">@color/opdl_background</item>
+    </style>
+    
+    <style name="OpdlTheme.NoActionBar" parent="OpdlTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
     <style name="KdeConnectTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
     </style>
@@ -75,4 +105,33 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <item name="android:gravity">center</item>
         <item name="android:textSize">12sp</item>
     </style>
+    
+    <!-- OPDL Specific Styles -->
+    <style name="OpdlMetricValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/opdl_on_surface</item>
+    </style>
+    
+    <style name="OpdlMetricLabel">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/opdl_text_secondary</item>
+    </style>
+    
+    <style name="OpdlPerformanceBadge">
+        <item name="android:background">@drawable/opdl_badge_background</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="OpdlDeviceCardTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/opdl_on_surface</item>
+    </style>
+    
 </resources>

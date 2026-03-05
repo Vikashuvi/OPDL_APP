@@ -43,12 +43,13 @@ import org.kde.kdeconnect.KdeConnect
 import org.kde.kdeconnect.Plugins.SharePlugin.ShareSettingsFragment
 import org.kde.kdeconnect.UserInterface.About.AboutFragment
 import org.kde.kdeconnect.UserInterface.About.getApplicationAboutData
+import org.kde.kdeconnect.UserInterface.SpeedMetricsFragment
 import org.kde.kdeconnect_tp.R
 import org.kde.kdeconnect_tp.databinding.ActivityMainBinding
 
 private const val MENU_ENTRY_ADD_DEVICE = 1 //0 means no-selection
 private const val MENU_ENTRY_SETTINGS = 2
-private const val MENU_ENTRY_ABOUT = 3
+private const val MENU_ENTRY_SPEED_METRICS = 3
 private const val MENU_ENTRY_DEVICE_FIRST_ID = 1000 //All subsequent ids are devices in the menu
 private const val MENU_ENTRY_DEVICE_UNKNOWN = 9999 //It's still a device, but we don't know which one yet
 private const val STORAGE_LOCATION_CONFIGURED = 2020
@@ -66,8 +67,8 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private var mCurrentMenuEntry = 0
         set(value) {
             field = value
-            //Enabling "go to default fragment on back" callback when user in settings or "about" fragment
-            mainFragmentCallback.isEnabled = value == MENU_ENTRY_SETTINGS || value == MENU_ENTRY_ABOUT
+            //Enabling "go to default fragment on back" callback when user in settings or "speed metrics" fragment
+            mainFragmentCallback.isEnabled = value == MENU_ENTRY_SETTINGS || value == MENU_ENTRY_SPEED_METRICS
         }
     private val preferences: SharedPreferences by lazy { getSharedPreferences("stored_menu_selection", MODE_PRIVATE) }
     private val mMapMenuToDeviceId = HashMap<MenuItem, String>()
@@ -129,9 +130,9 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
                     setContentFragment(SettingsFragment())
                 }
 
-                MENU_ENTRY_ABOUT -> {
+                MENU_ENTRY_SPEED_METRICS -> {
                     preferences.edit { putString(STATE_SELECTED_DEVICE, null) }
-                    setContentFragment(AboutFragment.newInstance(getApplicationAboutData(this)))
+                    setContentFragment(SpeedMetricsFragment())
                 }
 
                 else -> {
@@ -196,7 +197,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
         } else {
             when (mCurrentMenuEntry) {
                 MENU_ENTRY_SETTINGS -> setContentFragment(SettingsFragment())
-                MENU_ENTRY_ABOUT -> setContentFragment(AboutFragment.newInstance(getApplicationAboutData(this)))
+                MENU_ENTRY_SPEED_METRICS -> setContentFragment(SpeedMetricsFragment())
                 else -> setContentFragment(PairingFragment())
             }
         }
@@ -277,9 +278,9 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
         val settingsItem = menu.add(Menu.FIRST, MENU_ENTRY_SETTINGS, 1000, R.string.settings)
         settingsItem.setIcon(R.drawable.ic_settings_white_32dp)
         settingsItem.isCheckable = true
-        val aboutItem = menu.add(Menu.FIRST, MENU_ENTRY_ABOUT, 1000, R.string.about)
-        aboutItem.setIcon(R.drawable.ic_baseline_info_24)
-        aboutItem.isCheckable = true
+        val speedMetricsItem = menu.add(Menu.FIRST, MENU_ENTRY_SPEED_METRICS, 1000, R.string.speed_metrics)
+        speedMetricsItem.setIcon(R.drawable.ic_baseline_info_24)
+        speedMetricsItem.isCheckable = true
 
         //Ids might have changed
         if (mCurrentMenuEntry >= MENU_ENTRY_DEVICE_FIRST_ID) {

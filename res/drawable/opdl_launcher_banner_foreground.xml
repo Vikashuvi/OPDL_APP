@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="432dp"
+    android:height="216dp"
+    android:viewportWidth="432"
+    android:viewportHeight="216">
+  <group android:scaleX="1.5"
+      android:scaleY="1.5"
+      android:translateX="108"
+      android:translateY="27">
+    <!-- Banner text "OPDL" -->
+    <path
+        android:pathData="M120,80L140,80L140,120L135,120L135,95L125,95L125,120L120,120Z"
+        android:fillColor="#FFFFFF"/>
+    <path
+        android:pathData="M150,80L170,80L170,85L155,85L155,95L168,95L168,100L155,100L155,115L170,115L170,120L150,120Z"
+        android:fillColor="#FFFFFF"/>
+    <path
+        android:pathData="M180,80L200,80L200,85L185,85L185,120L180,120Z"
+        android:fillColor="#FFFFFF"/>
+    <path
+        android:pathData="M210,80L230,80L230,85L215,85L215,105L228,105L228,110L215,110L215,120L210,120Z"
+        android:fillColor="#FFFFFF"/>
+    
+    <!-- Small network icon -->
+    <path
+        android:pathData="M250,90m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="#03DAC6"/>
+    <path
+        android:pathData="M270,90m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="#03DAC6"/>
+    <path
+        android:pathData="M260,110m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="#03DAC6"/>
+    <path
+        android:pathData="M255,90L265,90"
+        android:strokeWidth="2"
+        android:strokeColor="#03DAC6"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M260,95L260,105"
+        android:strokeWidth="2"
+        android:strokeColor="#03DAC6"
+        android:strokeLineCap="round"/>
+  </group>
+</vector>

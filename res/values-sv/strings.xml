@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE-anslut</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">Skicka till apparat</string>
   <string name="foreground_notification_no_devices">Inte ansluten till någon apparat</string>
   <string name="foreground_notification_devices">Ansluten till: %s</string>
@@ -44,11 +44,11 @@
   <string name="open_settings">Öppna inställningarna</string>
   <string name="no_permissions">Du måste ge rättighet att komma åt underrättelser</string>
   <string name="no_permission_mprisreceiver">För att kunna styra mediaspelare måste du ge tillgång till underrättelser</string>
-  <string name="no_permissions_remotekeyboard">KDE-ansluts fjärrtangentbord måste aktiveras för att ta emot tangentnedtryckningar</string>
+  <string name="no_permissions_remotekeyboard">OPDL-ansluts fjärrtangentbord måste aktiveras för att ta emot tangentnedtryckningar</string>
   <string name="send_ping">Skicka ping</string>
   <string name="open_mpris_controls">Kontroll av multimedia</string>
   <string name="remotekeyboard_editing_only_title">Hantera bara externa tangenter vid redigering</string>
-  <string name="remotekeyboard_not_connected">Det finns ingen aktiv anslutning till externt tangentbord, upprätta en i KDE-anslut</string>
+  <string name="remotekeyboard_not_connected">Det finns ingen aktiv anslutning till externt tangentbord, upprätta en i OPDL-anslut</string>
   <string name="remotekeyboard_connected">Anslutning till externt tangentbord är aktiv</string>
   <string name="remotekeyboard_multiple_connections">Det finns mer än en anslutning till externt tangentbord, välj apparat att anpassa</string>
   <string name="open_mousepad">Extern inmatning</string>
@@ -195,7 +195,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Underrättelserättigheter krävs för att visa fjärrmedia i underrättelselådan</string>
   <string name="mpris_notification_settings_title">Visa underrättelser om mediastyrning</string>
-  <string name="mpris_notification_settings_summary">Tillåt att styra mediaspelare utan att KDE-anslut öppnas</string>
+  <string name="mpris_notification_settings_summary">Tillåt att styra mediaspelare utan att OPDL-anslut öppnas</string>
   <string name="share_to">Dela med…</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">Webbadress som delas med en apparat som inte kan nås levereras till den när den väl blir möjlig att nå.\n\n</string>
@@ -236,7 +236,7 @@
   <string name="sftp_action_mode_menu_delete">Ta bort</string>
   <string name="sftp_no_storage_locations_configured">Inga lagringsplatser inställda</string>
   <string name="sftp_saf_permission_explanation">För att komma åt filer från en annan apparat måste lagringsplatser ställas in</string>
-  <string name="sftp_manage_storage_permission_explanation">För att tillåta åtkomst av filer på den här apparaten från en annan apparat måste du låta KDE-anslut hantera lagringsenheten.</string>
+  <string name="sftp_manage_storage_permission_explanation">För att tillåta åtkomst av filer på den här apparaten från en annan apparat måste du låta OPDL-anslut hantera lagringsenheten.</string>
   <string name="sftp_missing_permission_error">Rättigheter saknas: filsystemåtkomst</string>
   <string name="no_players_connected">Inga spelare hittades</string>
   <string name="send_files">Skicka filer</string>
@@ -248,8 +248,8 @@
   </string-array>
   <string name="block_notification_contents">Blockera underrättelseinnehåll</string>
   <string name="block_notification_images">Blockera underrättelsebilder</string>
-  <string name="pairing_title">KDE-anslut apparater</string>
-  <string name="pairing_description">Andra apparater som kör KDE-anslut i samma nätverk ska synas här.</string>
+  <string name="pairing_title">OPDL-anslut apparater</string>
+  <string name="pairing_description">Andra apparater som kör OPDL-anslut i samma nätverk ska synas här.</string>
   <string name="device_rename_title">Byt namn på apparat</string>
   <string name="device_rename_confirm">Byt namn</string>
   <string name="refresh">Uppdatera</string>
@@ -260,7 +260,7 @@
   <string name="pref_plugin_telepathy">Skicka SMS</string>
   <string name="pref_plugin_telepathy_desc">Skicka textmeddelanden från skrivbordet</string>
   <string name="pref_plugin_telepathy_mms">Skicka MMS</string>
-  <string name="pref_plugin_telepathy_mms_desc">För att kunna skicka MMS från KDE-anslut måste det anges som standardprogram för SMS.</string>
+  <string name="pref_plugin_telepathy_mms_desc">För att kunna skicka MMS från OPDL-anslut måste det anges som standardprogram för SMS.</string>
   <string name="findmyphone_title">Hitta min telefon</string>
   <string name="findmyphone_title_tablet">Hitta min surfplatta</string>
   <string name="findmyphone_title_tv">Hitta min tv</string>
@@ -279,7 +279,7 @@
   <string name="telephony_permission_explanation">För att se telefonsamtal på skrivbordet måste du ge rättigheter för telefonsamtalsloggar och telefontillstånd</string>
   <string name="telephony_optional_permission_explanation">För att se ett kontaktnamn istället för ett telefonnummer måste du ge tillgång till telefonens kontakter</string>
   <string name="contacts_permission_explanation">För att dela kontaktlistan med skrivbordet måste du ge rättigheter för kontakter</string>
-  <string name="contacts_per_device_confirmation">Dina telefonkontakter kopieras över till den här apparaten, så att de kan användas av SMS-programmet i KDE-anslut och andra program.</string>
+  <string name="contacts_per_device_confirmation">Dina telefonkontakter kopieras över till den här apparaten, så att de kan användas av SMS-programmet i OPDL-anslut och andra program.</string>
   <string name="select_ringtone">Välj en ringsignal</string>
   <string name="telephony_pref_blocked_title">Blockerade nummer</string>
   <string name="telephony_pref_blocked_dialog_desc">Visa inte samtal och SMS från dessa nummer. Ange ett nummer per rad.</string>
@@ -290,7 +290,7 @@
   <string name="presenter_lock_tip">Apparaten kan låsas och volymtangenterna användas för att gå till föregående eller nästa bild</string>
   <string name="add_command">Lägg till ett kommando</string>
   <string name="addcommand_explanation">Det finns inga kommandon registrerade</string>
-  <string name="addcommand_explanation2">Du kan lägga till nya kommandon i KDE-ansluts systeminställningar</string>
+  <string name="addcommand_explanation2">Du kan lägga till nya kommandon i OPDL-ansluts systeminställningar</string>
   <string name="add_command_description">Du kan lägga till kommandon på skrivbordet</string>
   <string name="pref_plugin_mprisreceiver">Styrning av mediaspelare</string>
   <string name="pref_plugin_mprisreceiver_desc">Styr telefonens mediaspelare från en annan apparat</string>
@@ -322,7 +322,7 @@
   <string name="devices">Apparater</string>
   <string name="settings_rename">Apparatnamn</string>
   <string name="settings_dark_mode">Mörkt tema</string>
-  <string name="settings_export_logs">Exportera loggar från KDE anslut</string>
+  <string name="settings_export_logs">Exportera loggar från OPDL anslut</string>
   <string name="settings_export_logs_text">Generera en fil med körinformation som kan hjälpa till att felsöka problem.</string>
   <string name="settings_more_settings_title">Fler inställningar</string>
   <string name="settings_more_settings_text">Inställningar per apparat hittas i \'Insticksprograminställningar\' på apparaten.</string>
@@ -336,7 +336,7 @@
   <string name="block_images">Blockera bilder i underrättelser</string>
   <string name="notification_channel_receivenotification">Underrättelser från andra apparater</string>
   <string name="no_app_for_opening">Inget lämpligt program hittades för att öppna filen</string>
-  <string name="remote_keyboard_service">KDE-anslut fjärrtangentbord</string>
+  <string name="remote_keyboard_service">OPDL-anslut fjärrtangentbord</string>
   <string name="presenter_pointer">Pekare</string>
   <string name="trusted_networks">Pålitliga nätverk</string>
   <string name="trusted_networks_desc">Begränsar automatisk upptäckt till kända nätverk</string>
@@ -344,8 +344,8 @@
   <string name="empty_trusted_networks_list_text">Du har inte lagt till några pålitliga nätverk ännu</string>
   <string name="allow_all_networks_text">Tillåt alla</string>
   <string name="location_permission_needed_title">Rättighet krävs</string>
-  <string name="bluetooth_permission_needed_desc">KDE-anslut behöver behörighet för att ansluta till närliggande apparater för att göra apparater som är parkopplade med Blåtand tillgängliga i KDE-anslut.</string>
-  <string name="location_permission_needed_desc">KDE-anslut behöver rättigheter för bakgrundsplats för att känna till WIFI-nätverket du är ansluten med även när programmet är i bakgrunden. Det beror på att namnen på WIFI-nätverk omkring dig skulle kunna användas för att ta reda på var du befinner dig, även om det inte är vad KDE-anslut gör.</string>
+  <string name="bluetooth_permission_needed_desc">OPDL-anslut behöver behörighet för att ansluta till närliggande apparater för att göra apparater som är parkopplade med Blåtand tillgängliga i OPDL-anslut.</string>
+  <string name="location_permission_needed_desc">OPDL-anslut behöver rättigheter för bakgrundsplats för att känna till WIFI-nätverket du är ansluten med även när programmet är i bakgrunden. Det beror på att namnen på WIFI-nätverk omkring dig skulle kunna användas för att ta reda på var du befinner dig, även om det inte är vad OPDL-anslut gör.</string>
   <string name="clipboard_android_x_incompat">Android 10 har tagit bort åtkomst till klippbordet för alla applikationer. Det här insticksprogrammet kommer att inaktiveras.</string>
   <string name="mpris_open_url">Fortsätt spela här</string>
   <string name="cant_open_url">Kan inte öppna webbadress för att sluta spela</string>
@@ -397,9 +397,9 @@
   <string name="email_contributor">E-postbidragsgivare\n%s</string>
   <string name="visit_contributors_homepage">Besök bidragsgivarens hemsida\n%s</string>
   <string name="version">Version %s</string>
-  <string name="about_kde">Om KDE</string>
-  <string name="kde_be_free">KDE - Lev fri!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">Om OPDL</string>
+  <string name="kde_be_free">OPDL - Lev fri!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Höj upp</string>
   <string name="rise_down">Höj ner</string>
@@ -410,10 +410,10 @@
   <string name="open_compose_send">Skriv text</string>
   <string name="double_tap_to_drag">Dubbeltryck för att dra</string>
   <string name="hold_to_drag">Håll för att dra</string>
-  <string name="about_kde_about">&lt;h1&gt;Om&lt;/h1&gt; &lt;p&gt;KDE är ett världsomspännande nätverk av programvaruingenjörer, grafiker, författare, översättare och kreatörer som är engagerade i utveckling av &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;fri programvara&lt;/a&gt;. KDE producerar skrivbordsmiljön Plasma, hundratals program, och de talrika programvarubibliotek som stöder dem.&lt;/p&gt; &lt;p&gt;KDE är ett kooperativ, där ingen enskild person styr inriktningen eller produkterna. Istället arbetar vi tillsammans för att uppnå det gemensamma målet att skapa värdens finaste fria programvara. Alla är välkomna att &lt;a href=https://community.kde.org/Get_Involved&gt;gå med och bidra&lt;/a&gt; till KDE, inklusive du själv.&lt;/p&gt; Besök &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; för ytterligare information om KDE-gemenskapen och programvaran vi skapar.</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Rapportera fel eller önskemål&lt;/h1&gt; &lt;p&gt;Programvara kan alltid förbättras, och KDE-gruppen är beredd att göra det. Men du - användaren - måste berätta för oss om något inte fungerar som förväntat eller kunde ha gjorts bättre.&lt;/p&gt; &lt;p&gt;KDE har ett felrapporteringssystem. Besök &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; eller använd dialogrutan \"Rapportera fel...\" från om-skärmen för att rapportera fel.&lt;/p&gt; Om du har ett förslag på en förbättring kan du använda felrapporteringssystemet för att registrera din önskan. Se då till att du använder allvarlighetsgraden \"Önskan\".</string>
-  <string name="about_kde_join_kde">&lt;h1&gt;Gå med i KDE&lt;/h1&gt; &lt;p&gt;Du behöver inte vara en programutvecklare för att bli medlem i KDE-gruppen. Du kan gå med i de nationella grupperna som översätter programmens gränssnitt. Du kan bidra med grafik, teman, ljud och förbättrad dokumentation. Det är upp till dig!&lt;/p&gt; &lt;p&gt;Besök &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; för information om några projekt som du kan delta i.&lt;/p&gt;Om du behöver mer information eller dokumentation kommer ett besök på &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; att ge dig det du behöver.</string>
-  <string name="about_kde_support_kde">&lt;h1&gt;Stöd KDE&lt;/h1&gt; &lt;p&gt;KDE är och kommer alltid att vara tillgängligt utan avgift, dock är det inte gratis att ta fram det.&lt;/p&gt; &lt;p&gt;För att stödja utvecklingen upprättade KDE-gruppen KDE e.V., en ideell organisation som juridiskt grundats i Tyskland. KDE e.V. representerar KDE-gemenskapen i juridiska och ekonomiska angelägenheter. Se &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; för information om KDE e.V.&lt;/p&gt; &lt;p&gt;KDE gagnas av många olika typer av bidrag, inklusive ekonomiska. Medlen används för att ersätta medlemmar och andra för utgifter som de åsamkas när de bidrar till KDE. Ytterligare medel används för juridiskt stöd och för att organisera konferenser och möten.&lt;/p&gt; &lt;p&gt;Vi vill gärna uppmuntra dig att stödja vårt arbete med en donation, på något av sätten som beskrivs på &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt;Tack på förhand för ditt stöd.</string>
+  <string name="about_kde_about">&lt;h1&gt;Om&lt;/h1&gt; &lt;p&gt;OPDL är ett världsomspännande nätverk av programvaruingenjörer, grafiker, författare, översättare och kreatörer som är engagerade i utveckling av &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;fri programvara&lt;/a&gt;. OPDL producerar skrivbordsmiljön Plasma, hundratals program, och de talrika programvarubibliotek som stöder dem.&lt;/p&gt; &lt;p&gt;OPDL är ett kooperativ, där ingen enskild person styr inriktningen eller produkterna. Istället arbetar vi tillsammans för att uppnå det gemensamma målet att skapa värdens finaste fria programvara. Alla är välkomna att &lt;a href=https://community.kde.org/Get_Involved&gt;gå med och bidra&lt;/a&gt; till OPDL, inklusive du själv.&lt;/p&gt; Besök &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; för ytterligare information om OPDL-gemenskapen och programvaran vi skapar.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Rapportera fel eller önskemål&lt;/h1&gt; &lt;p&gt;Programvara kan alltid förbättras, och OPDL-gruppen är beredd att göra det. Men du - användaren - måste berätta för oss om något inte fungerar som förväntat eller kunde ha gjorts bättre.&lt;/p&gt; &lt;p&gt;OPDL har ett felrapporteringssystem. Besök &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; eller använd dialogrutan \"Rapportera fel...\" från om-skärmen för att rapportera fel.&lt;/p&gt; Om du har ett förslag på en förbättring kan du använda felrapporteringssystemet för att registrera din önskan. Se då till att du använder allvarlighetsgraden \"Önskan\".</string>
+  <string name="about_kde_join_kde">&lt;h1&gt;Gå med i OPDL&lt;/h1&gt; &lt;p&gt;Du behöver inte vara en programutvecklare för att bli medlem i OPDL-gruppen. Du kan gå med i de nationella grupperna som översätter programmens gränssnitt. Du kan bidra med grafik, teman, ljud och förbättrad dokumentation. Det är upp till dig!&lt;/p&gt; &lt;p&gt;Besök &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; för information om några projekt som du kan delta i.&lt;/p&gt;Om du behöver mer information eller dokumentation kommer ett besök på &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt; att ge dig det du behöver.</string>
+  <string name="about_kde_support_kde">&lt;h1&gt;Stöd OPDL&lt;/h1&gt; &lt;p&gt;OPDL är och kommer alltid att vara tillgängligt utan avgift, dock är det inte gratis att ta fram det.&lt;/p&gt; &lt;p&gt;För att stödja utvecklingen upprättade OPDL-gruppen OPDL e.V., en ideell organisation som juridiskt grundats i Tyskland. OPDL e.V. representerar OPDL-gemenskapen i juridiska och ekonomiska angelägenheter. Se &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; för information om OPDL e.V.&lt;/p&gt; &lt;p&gt;OPDL gagnas av många olika typer av bidrag, inklusive ekonomiska. Medlen används för att ersätta medlemmar och andra för utgifter som de åsamkas när de bidrar till OPDL. Ytterligare medel används för juridiskt stöd och för att organisera konferenser och möten.&lt;/p&gt; &lt;p&gt;Vi vill gärna uppmuntra dig att stödja vårt arbete med en donation, på något av sätten som beskrivs på &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt;Tack på förhand för ditt stöd.</string>
   <string name="maintainer_and_developer">Underhåll och utvecklare</string>
   <string name="developer">Utvecklare</string>
   <string name="apple_support">Stöd för macOS, arbete på stöd för iOS</string>
@@ -425,7 +425,7 @@
   <string name="holger_kaelberer_task">Insticksprogram för fjärrtangentbord och felrättningar</string>
   <string name="saikrishna_arcot_task">Stöd för användning av tangentbordet i insticksprogrammet för fjärrinmatning, felrättningar och allmänna förbättringar</string>
   <string name="shellwen_chen_task">Förbättra säkerheten för SFTP, förbättra projektets underhållbarhet, felrättningar och allmänna förbättringar</string>
-  <string name="everyone_else">Alla andra som har bidragit till KDE-anslut under alla år</string>
+  <string name="everyone_else">Alla andra som har bidragit till OPDL-anslut under alla år</string>
   <string name="send_clipboard">Skicka klippbord</string>
   <string name="tap_to_execute">Rör för att köra</string>
   <string name="plugin_stats">Insticksprogramstatistik</string>

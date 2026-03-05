@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Connect</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">Poslano na napravo</string>
   <string name="foreground_notification_no_devices">Ni povezan z nobeno napravo</string>
   <string name="foreground_notification_devices">Povezan na: %s</string>
@@ -46,11 +46,11 @@
   <string name="open_settings">Odpri nastavitve</string>
   <string name="no_permissions">Za dostop do obvestil morate odobriti dovoljenje</string>
   <string name="no_permission_mprisreceiver">Če želite upravljati svoje predvajalnike medijev, morate odobriti dostop do obvestil</string>
-  <string name="no_permissions_remotekeyboard">Za sprejem pritiskov tipk morate aktivirati oddaljeno tipkovnico KDE Connect</string>
+  <string name="no_permissions_remotekeyboard">Za sprejem pritiskov tipk morate aktivirati oddaljeno tipkovnico OPDL</string>
   <string name="send_ping">Pošlji ping</string>
   <string name="open_mpris_controls">Upravljanje večpredstavnosti</string>
   <string name="remotekeyboard_editing_only_title">Oddaljene tipke uporabljajte samo med urejanjem</string>
-  <string name="remotekeyboard_not_connected">Ni dejavne povezave z oddaljeno tipkovnico, vzpostavite jo v kdeconnectu</string>
+  <string name="remotekeyboard_not_connected">Ni dejavne povezave z oddaljeno tipkovnico, vzpostavite jo v OPDLu</string>
   <string name="remotekeyboard_connected">Povezava z oddaljeno tipkovnico je dejavna</string>
   <string name="remotekeyboard_multiple_connections">Obstaja več kot ena povezava na oddaljeno tipkovnico, izberite napravo in nastavitve</string>
   <string name="open_mousepad">Oddaljeni input</string>
@@ -215,7 +215,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Dovoljenje za obvestila je potrebno za prikaz oddaljenih medijev v predalu za obvestila</string>
   <string name="mpris_notification_settings_title">Pokaži obvestilo o nadzoru medija</string>
-  <string name="mpris_notification_settings_summary">Dovoli nadzor nad predvajalniki medijev, ne da bi odprli KDE Connect</string>
+  <string name="mpris_notification_settings_summary">Dovoli nadzor nad predvajalniki medijev, ne da bi odprli OPDL</string>
   <string name="share_to">Deli z…</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">URL-ji, ki so v skupni rabi z nedosegljivo napravo, ji bodo dostavljeni, ko postane dosegljiva.\n\n</string>
@@ -256,7 +256,7 @@
   <string name="sftp_action_mode_menu_delete">Briši</string>
   <string name="sftp_no_storage_locations_configured">Lokacije shranjevanja niso nastavljene</string>
   <string name="sftp_saf_permission_explanation">Za dostop do datotek na daljavo morate nastaviti lokacije za shranjevanje</string>
-  <string name="sftp_manage_storage_permission_explanation">Da bi dovolili oddaljeni dostop do datotek na tej napravi, morate dovoliti, da KDE Connect upravlja s hrambo.</string>
+  <string name="sftp_manage_storage_permission_explanation">Da bi dovolili oddaljeni dostop do datotek na tej napravi, morate dovoliti, da OPDL upravlja s hrambo.</string>
   <string name="sftp_missing_permission_error">Manjkajoča dovoljenja: dostop do datotečnega sistema</string>
   <string name="no_players_connected">Ni najdenih predvajalnikov</string>
   <string name="send_files">Pošlji datoteke</string>
@@ -275,8 +275,8 @@
   </string-array>
   <string name="block_notification_contents">Blokiraj vsebine obvestil</string>
   <string name="block_notification_images">Blokiraj slike v obvestilih</string>
-  <string name="pairing_title">Naprave KDE Connect</string>
-  <string name="pairing_description">Tu bi se morale prikazati druge naprave, ki poganjajo KDE Connect v istem omrežju.</string>
+  <string name="pairing_title">Naprave OPDL</string>
+  <string name="pairing_description">Tu bi se morale prikazati druge naprave, ki poganjajo OPDL v istem omrežju.</string>
   <string name="device_rename_title">Preimenuj napravo</string>
   <string name="device_rename_confirm">Preimenuj</string>
   <string name="refresh">Osveži</string>
@@ -287,7 +287,7 @@
   <string name="pref_plugin_telepathy">Pošlji SMS</string>
   <string name="pref_plugin_telepathy_desc">Pošlji besedilna sporočila z namizja</string>
   <string name="pref_plugin_telepathy_mms">Pošlji MMS</string>
-  <string name="pref_plugin_telepathy_mms_desc">Če želite pošiljati MMS iz KDE Connect, ga morate nastaviti kot privzeto aplikacijo za SMS.</string>
+  <string name="pref_plugin_telepathy_mms_desc">Če želite pošiljati MMS iz OPDL, ga morate nastaviti kot privzeto aplikacijo za SMS.</string>
   <string name="findmyphone_title">Poišči moj telefon</string>
   <string name="findmyphone_title_tablet">Poišči mojo tablico</string>
   <string name="findmyphone_title_tv">Poišči moj TV</string>
@@ -306,7 +306,7 @@
   <string name="telephony_permission_explanation">Če želite videti telefonske klice na namizju, morate dati dovoljenje za dnevnike klicev in stanje telefona</string>
   <string name="telephony_optional_permission_explanation">Če želite namesto telefonske številke videti ime stika, morate omogočiti dostop do stikov telefona</string>
   <string name="contacts_permission_explanation">Če želite knjigo stikov deliti z namizjem, morate dati dovoljenje za dostop do stikov</string>
-  <string name="contacts_per_device_confirmation">Vaši telefonski stiki bodo prekopirani na to napravo, da jih lahko uporablja KDE Connect SMS in druge aplikacije.</string>
+  <string name="contacts_per_device_confirmation">Vaši telefonski stiki bodo prekopirani na to napravo, da jih lahko uporablja OPDL SMS in druge aplikacije.</string>
   <string name="select_ringtone">Izberite melodijo zvonjenja</string>
   <string name="telephony_pref_blocked_title">Blokirane številke</string>
   <string name="telephony_pref_blocked_dialog_desc">Ne prikazuj klicev in SMS s teh številk. Navedite po eno telefonsko številko v vsaki vrsti</string>
@@ -317,7 +317,7 @@
   <string name="presenter_lock_tip">Napravo lahko zaklenete in s tipkami za glasnost prehajate na prejšnjo/naslednjo sliko</string>
   <string name="add_command">Dodaj ukaz</string>
   <string name="addcommand_explanation">Nobenih ukazov ni registriranih</string>
-  <string name="addcommand_explanation2">Nove ukaze lahko dodate v sistemskih nastavitvah KDE Connect</string>
+  <string name="addcommand_explanation2">Nove ukaze lahko dodate v sistemskih nastavitvah OPDL</string>
   <string name="add_command_description">Ukaze lahko dodate na namizju</string>
   <string name="pref_plugin_mprisreceiver">Nadzor predvajalnika medijev</string>
   <string name="pref_plugin_mprisreceiver_desc">Upravljajte predstavnostne predvajalnike telefona iz druge naprave</string>
@@ -350,7 +350,7 @@
   <string name="devices">Naprave</string>
   <string name="settings_rename">Ime naprave</string>
   <string name="settings_dark_mode">Temna tema</string>
-  <string name="settings_export_logs">Izvozi dnevnike KDE Connect</string>
+  <string name="settings_export_logs">Izvozi dnevnike OPDL</string>
   <string name="settings_export_logs_text">Ustvari datoteko z informacijami o izvajanju, ki lahko pomagajo pri odpravljanju težav.</string>
   <string name="settings_more_settings_title">Več nastavitev</string>
   <string name="settings_more_settings_text">Nastavitve posamezne naprave najdete v razdelku \'Nastavitve vtičnikov\' v napravi.</string>
@@ -364,7 +364,7 @@
   <string name="block_images">Blokiraj slike v obvestilih</string>
   <string name="notification_channel_receivenotification">Obvestila ostalih naprav</string>
   <string name="no_app_for_opening">Ni primerne aplikacije za odpiranje te datoteke</string>
-  <string name="remote_keyboard_service">Oddaljena tipkovnica KDE Connect</string>
+  <string name="remote_keyboard_service">Oddaljena tipkovnica OPDL</string>
   <string name="presenter_pointer">Kazalec</string>
   <string name="trusted_networks">Zaupanje vredna omrežja</string>
   <string name="trusted_networks_desc">Omejite samodejno odkrivanje na znana omrežja</string>
@@ -372,8 +372,8 @@
   <string name="empty_trusted_networks_list_text">Niste še dodali nobenega zaupanja vrednega omrežja</string>
   <string name="allow_all_networks_text">Dovoli vse</string>
   <string name="location_permission_needed_title">Zahtevano dovoljenje</string>
-  <string name="bluetooth_permission_needed_desc">KDE Connect potrebuje dovoljenje za povezavo z bližnjimi napravami, da bodo naprave, seznanjene z Bluetoothom, na voljo v KDE Connect.</string>
-  <string name="location_permission_needed_desc">"KDE Connect potrebuje dovoljenje omrežja, da pozna WiFi omrežje, s katerim ste povezani, tudi če je aplikacija v ozadju. To je zato, ker se ime omrežja wifi  lahko uporabi za iskanje svoje lokacije, četudi to ne počne KDE Connect."</string>
+  <string name="bluetooth_permission_needed_desc">OPDL potrebuje dovoljenje za povezavo z bližnjimi napravami, da bodo naprave, seznanjene z Bluetoothom, na voljo v OPDL.</string>
+  <string name="location_permission_needed_desc">"OPDL potrebuje dovoljenje omrežja, da pozna WiFi omrežje, s katerim ste povezani, tudi če je aplikacija v ozadju. To je zato, ker se ime omrežja wifi  lahko uporabi za iskanje svoje lokacije, četudi to ne počne OPDL."</string>
   <string name="clipboard_android_x_incompat">Android 10 je odstranil dostop do odložišča za vse aplikacije. Ta vtičnik bo onemogočen.</string>
   <string name="mpris_open_url">Nadaljuj s predvajanjem tukaj</string>
   <string name="cant_open_url">Ne morem odpreti spletnega naslova za nadaljevanje predvajanja</string>
@@ -426,9 +426,9 @@
   <string name="email_contributor">E-pošta sodelavca\n%s</string>
   <string name="visit_contributors_homepage">Obiščite spletno stran sodelavca\n%s</string>
   <string name="version">Različica %s</string>
-  <string name="about_kde">O KDE</string>
-  <string name="kde_be_free">KDE - Bodite svobodni!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">O OPDL</string>
+  <string name="kde_be_free">OPDL - Bodite svobodni!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Dvigni</string>
   <string name="rise_down">Spusti</string>
@@ -439,10 +439,10 @@
   <string name="open_compose_send">Sestavite besedilo</string>
   <string name="double_tap_to_drag">Dvakrat tapnite za povlek</string>
   <string name="hold_to_drag">Držite za povlek</string>
-  <string name="about_kde_about">&lt;h1&gt;O programu&lt;/h1&gt; &lt;p&gt;KDE je svetovna skupnost programskih inženirjev, umetnikov, piscev, prevajalcev in ustvarjalcev, ki so podporniki razvoja &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Prostega programja&lt;/a&gt;. KDE izdeluje Namizno okolje Plasma, stotine aplikacij in veliko programskih knjižnic, ki jih podpirajo. &lt;/p&gt; &lt;p&gt;KDE je zadružno podjetje: noben deležnik posamično ne obvladuje smeri razvoja ali izdelka. Namesto tega delamo skupaj, da bi dosegli skupni cilj razvoja, da bi prišli do najboljšega prostega programja na svetu. Vsakdo je dobrodošel v skupnost &lt;a href=https://community.kde.org/Get_Involved&gt;da se pridruži in prispeva &lt;/a&gt; v KDE vključno z vami. &lt;/p&gt; Obiščite &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; za več informacij o skupnosti KDE community in programju, ki ga razvijamo.</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Poročajte o napakah in željah&lt;/h1&gt; &lt;p&gt;Programje je vedno mogoče izboljšati in skupina KDE je vedno pripravljena na izboljšave. Vendar, vi - kot uporabnica ali uporabnik - nam morate povedati, kadar nekaj ne deluje kot pričakujete ali bi bilo lahko izdelano bolje. &lt;/p&gt; &lt;p&gt;KDE ima sistem sledenja napak. Obiščite &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ali uporabite gumb \"Poročaj o napaki\" na zaslonu O programu za poročanje napak.&lt;/p&gt; Če imate sugestijo za izboljšanje ste povabljeni, da uporabite sistem za sledenje napakam in zabeležite vašo željo. Zagotovite, da boste resnost napake označili kot \"Seznam želja - Wishlist\".</string>
-  <string name="about_kde_join_kde">&lt;h1&gt;Pridružite se KDE&lt;/h1&gt; &lt;p&gt;Ni treba, da ste razvijalci programov, da bi bili člani skupnosti KDE. Lahko se pridružite jezikovnim skupinam za prevajanje uporabniških vmesnikov. Lahko prispevate risbe, teme, zvoke in izboljšano dokumentacijo. Sami se odločite!&lt;/p&gt; &lt;p&gt;Obiščite &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; za informacije o projektih, katerim lahko prispevate.&lt;/p&gt; Če potrebujete več informacij ali dokumentacije, potem obiščite &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt;, kjer boste dobili potrebna navodila.</string>
-  <string name="about_kde_support_kde">&lt;h1&gt;Podprite KDE&lt;/h1&gt; &lt;p&gt;KDE programje je in bo vedno zastonj, a razvoj tega ni brez stroškov.&lt;/p&gt; &lt;p&gt;Za podporo razvoju je skupnost KDE ustanovila KDE e.V., neprofitno organizacijo legalno ustanovljeno v Nemčiji. KDE e.V. predstavlja skupnost KDE glede pravnih in finančnih vprašanj. Glejte &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; za informacije o KDE e.V.&lt;/p&gt; &lt;p&gt;KDE prejema različne vrste prispevkov vključno finančne. Te prispevke uporabljamo, da članom in ostalim povrnemo stroške, ki nastajajo ob njihovih prispevkih. We use the funds to reimburse members and others for expenses they incur when contributing. Denarna sredstva se uporabljajo tudi za pravno podporo in organiziranje konferenc in srečanj.&lt;/p&gt; &lt;p&gt;Radi bi vas spodbudili, da podprete naša prizadevanja s finančno donacijo, z uporabo enega od načinov, ki so opisani na &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Najlepša hvala vnaprej za vašo podporo.</string>
+  <string name="about_kde_about">&lt;h1&gt;O programu&lt;/h1&gt; &lt;p&gt;OPDL je svetovna skupnost programskih inženirjev, umetnikov, piscev, prevajalcev in ustvarjalcev, ki so podporniki razvoja &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Prostega programja&lt;/a&gt;. OPDL izdeluje Namizno okolje Plasma, stotine aplikacij in veliko programskih knjižnic, ki jih podpirajo. &lt;/p&gt; &lt;p&gt;OPDL je zadružno podjetje: noben deležnik posamično ne obvladuje smeri razvoja ali izdelka. Namesto tega delamo skupaj, da bi dosegli skupni cilj razvoja, da bi prišli do najboljšega prostega programja na svetu. Vsakdo je dobrodošel v skupnost &lt;a href=https://community.kde.org/Get_Involved&gt;da se pridruži in prispeva &lt;/a&gt; v OPDL vključno z vami. &lt;/p&gt; Obiščite &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; za več informacij o skupnosti OPDL community in programju, ki ga razvijamo.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Poročajte o napakah in željah&lt;/h1&gt; &lt;p&gt;Programje je vedno mogoče izboljšati in skupina OPDL je vedno pripravljena na izboljšave. Vendar, vi - kot uporabnica ali uporabnik - nam morate povedati, kadar nekaj ne deluje kot pričakujete ali bi bilo lahko izdelano bolje. &lt;/p&gt; &lt;p&gt;OPDL ima sistem sledenja napak. Obiščite &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ali uporabite gumb \"Poročaj o napaki\" na zaslonu O programu za poročanje napak.&lt;/p&gt; Če imate sugestijo za izboljšanje ste povabljeni, da uporabite sistem za sledenje napakam in zabeležite vašo željo. Zagotovite, da boste resnost napake označili kot \"Seznam želja - Wishlist\".</string>
+  <string name="about_kde_join_kde">&lt;h1&gt;Pridružite se OPDL&lt;/h1&gt; &lt;p&gt;Ni treba, da ste razvijalci programov, da bi bili člani skupnosti OPDL. Lahko se pridružite jezikovnim skupinam za prevajanje uporabniških vmesnikov. Lahko prispevate risbe, teme, zvoke in izboljšano dokumentacijo. Sami se odločite!&lt;/p&gt; &lt;p&gt;Obiščite &lt;a href=https://community.kde.org/Get_Involved&gt;https://community.kde.org/Get_Involved&lt;/a&gt; za informacije o projektih, katerim lahko prispevate.&lt;/p&gt; Če potrebujete več informacij ali dokumentacije, potem obiščite &lt;a href=https://techbase.kde.org/&gt;https://techbase.kde.org/&lt;/a&gt;, kjer boste dobili potrebna navodila.</string>
+  <string name="about_kde_support_kde">&lt;h1&gt;Podprite OPDL&lt;/h1&gt; &lt;p&gt;OPDL programje je in bo vedno zastonj, a razvoj tega ni brez stroškov.&lt;/p&gt; &lt;p&gt;Za podporo razvoju je skupnost OPDL ustanovila OPDL e.V., neprofitno organizacijo legalno ustanovljeno v Nemčiji. OPDL e.V. predstavlja skupnost OPDL glede pravnih in finančnih vprašanj. Glejte &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; za informacije o OPDL e.V.&lt;/p&gt; &lt;p&gt;OPDL prejema različne vrste prispevkov vključno finančne. Te prispevke uporabljamo, da članom in ostalim povrnemo stroške, ki nastajajo ob njihovih prispevkih. We use the funds to reimburse members and others for expenses they incur when contributing. Denarna sredstva se uporabljajo tudi za pravno podporo in organiziranje konferenc in srečanj.&lt;/p&gt; &lt;p&gt;Radi bi vas spodbudili, da podprete naša prizadevanja s finančno donacijo, z uporabo enega od načinov, ki so opisani na &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Najlepša hvala vnaprej za vašo podporo.</string>
   <string name="maintainer_and_developer">Vzdrževalec in razvijalec</string>
   <string name="developer">Razvijalec</string>
   <string name="apple_support">podpora za macOS. Delo na podpori za iOS</string>
@@ -454,13 +454,13 @@
   <string name="holger_kaelberer_task">Vtičnik za oddaljeno tipkovnico in popravki napak</string>
   <string name="saikrishna_arcot_task">Podpora za uporabo tipkovnice vtičnika za oddaljen vnos, popravki napak in splošne izboljšave</string>
   <string name="shellwen_chen_task">Izboljšanje varnosti SFTP, izboljšanje vzdržljivosti tega projekta, popravki napak in splošne izboljšave</string>
-  <string name="everyone_else">Vsi ostali, ki so prispevali za KDE Connect v letih razvoja</string>
+  <string name="everyone_else">Vsi ostali, ki so prispevali za OPDL v letih razvoja</string>
   <string name="send_clipboard">Pošlji odložišče</string>
   <string name="tap_to_execute">Tapkajte za izvedbo</string>
   <string name="plugin_stats">Stanje vtičnikov</string>
   <string name="enable_udp_broadcast">Omogoči odkrivanje naprav UDP</string>
   <string name="enable_mdns_broadcast">Omogoči odkrivanje naprav MDNS</string>
-  <string name="enable_mdns_broadcast_explanation">Odkrivanje MDNS je zastarelo. Prosimo, prijavite napako, če KDE Connect deluje samo, če je to omogočeno.</string>
+  <string name="enable_mdns_broadcast_explanation">Odkrivanje MDNS je zastarelo. Prosimo, prijavite napako, če OPDL deluje samo, če je to omogočeno.</string>
   <string name="enable_bluetooth">Omogoči bluetooth (beta)</string>
   <string name="receive_notifications_permission_explanation">Morate imeti dovoljenje za obvestila, če jih želite sprejemati iz drugih naprav</string>
   <string name="findmyphone_notifications_explanation">Potrebno je dovoljenje za obvestila, da lahko telefon zazvoni, ko je aplikacija v ozadju</string>

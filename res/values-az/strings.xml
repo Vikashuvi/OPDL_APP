@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">KDE Connect</string>
+  <string name="kde_connect">OPDL</string>
   <string name="manifest_label_share">Cihaza göndərin</string>
   <string name="foreground_notification_no_devices">Hər hansı bir cihaz qoşulmayıb</string>
   <string name="foreground_notification_devices">Qoşulub: %s</string>
@@ -40,11 +40,11 @@
   <string name="open_settings">Ayarları açmaq</string>
   <string name="no_permissions">Bildirişlər almağa icazə verməniz lazımdır</string>
   <string name="no_permission_mprisreceiver">Media oynadıcını idarə etmək üçün bildirişlərə girişə icazə verməniz lazımdır</string>
-  <string name="no_permissions_remotekeyboard">Düymə basılmalarını almaq üçün KDE Connect Klaviaturasını aktiv etməlisiniz</string>
+  <string name="no_permissions_remotekeyboard">Düymə basılmalarını almaq üçün OPDL Klaviaturasını aktiv etməlisiniz</string>
   <string name="send_ping">Dümsükləmək</string>
   <string name="open_mpris_controls">Multimedia idarə edilməsi</string>
   <string name="remotekeyboard_editing_only_title">Məsafədəki düymələri yalnız redaktə edərkən idarə edin</string>
-  <string name="remotekeyboard_not_connected">Aktiv bir uzaq klaviatura bağlantısı yoxdur, onu kdeconnect-də yaradın</string>
+  <string name="remotekeyboard_not_connected">Aktiv bir uzaq klaviatura bağlantısı yoxdur, onu OPDL-də yaradın</string>
   <string name="remotekeyboard_connected">Uzaq klaviatura bağlantısını aktiv edin</string>
   <string name="remotekeyboard_multiple_connections">Birdən çox uzaq klaviatura bağlantısı var, tənzimləmək üçün cihazı seçin</string>
   <string name="open_mousepad">Məsafədən giriş</string>
@@ -84,7 +84,7 @@
   <string name="sendkeystrokes_textbox_hint">Düyməyə vurulmanı ana komputerə göndərin</string>
   <string name="sendkeystrokes_disabled_toast">Düymə vuruşun göndərilməsi söndürülüb - onu ayarlardan aktiv edin</string>
   <string name="sendkeystrokes_wrong_data">Səhv mime növü - \'text/x-keystrokes\' üçün lazımdır</string>
-  <string name="sendkeystrokes_sent_text">%2s cihazına %1s göndərildi</string>
+  <string name="sendkeystrokes_sent_text" formatted="false">%2s cihazına %1s göndərildi</string>
   <string name="sendkeystrokes_pref_category_summary">Bu modul, düyməyə vurmaqla, qoşulmuş ana komputerə göndərərərk başqa tətbiqlərin mətn hissəsininlərini mübadilə etməyə imkan verir</string>
   <string name="sendkeystrokes_pref_category_title">Düymələrə vuruşları göndərin</string>
   <string name="sendkeystrokes_pref_enabled">Düyməyə vuruşun göndərilməsini aktiv edin</string>
@@ -180,7 +180,7 @@
   </string-array>
   <string name="mpris_notifications_explanation">Bildirişlər çəkməcəsində məsafədəki medianı göstərmək üçün bildiriş icazələri lazımdır</string>
   <string name="mpris_notification_settings_title">Media idarəetmə bildirişlərini göstərmək</string>
-  <string name="mpris_notification_settings_summary">KDE Connect açmadan media oynadıcınızın idarəsinə icazə vermək</string>
+  <string name="mpris_notification_settings_summary">OPDL açmadan media oynadıcınızın idarəsinə icazə vermək</string>
   <string name="protocol_version_newer">Bu cihaz yeni protokol versiyası istifadə edir</string>
   <string name="plugin_settings_with_name">%s ayarları</string>
   <string name="invalid_device_name">Səhv cihaz adı</string>
@@ -215,7 +215,7 @@
   <string name="sftp_action_mode_menu_delete">Silmək</string>
   <string name="sftp_no_storage_locations_configured">Saxlama yeri tənzimlənməyib</string>
   <string name="sftp_saf_permission_explanation">Fayllara uzaqdan daxil olmaq üçün saxlama yerlərini konfiqurasiya etməlisiniz</string>
-  <string name="sftp_manage_storage_permission_explanation">Bu cihazdakı fayllara giriş əldə etmək üçün KDE Connect-ə yaddaşı idarə etməyə icazə vermək lazımdır.</string>
+  <string name="sftp_manage_storage_permission_explanation">Bu cihazdakı fayllara giriş əldə etmək üçün OPDL-ə yaddaşı idarə etməyə icazə vermək lazımdır.</string>
   <string name="no_players_connected">Pleyer tapılmadı</string>
   <string name="send_files">Faylları göndərmək</string>
   <string-array name="digitizer_preference_entries_draw_button_side">
@@ -226,8 +226,8 @@
   </string-array>
   <string name="block_notification_contents">Bildirilərin tərkiblərini kilidləmək</string>
   <string name="block_notification_images">Bildiriş şəlkillərini kilidləmək</string>
-  <string name="pairing_title">KDE Connect Cihazları</string>
-  <string name="pairing_description">Eyni şəbəkədəki KDE Connect işləyən digər cihazlar burada görünməlidir</string>
+  <string name="pairing_title">OPDL Cihazları</string>
+  <string name="pairing_description">Eyni şəbəkədəki OPDL işləyən digər cihazlar burada görünməlidir</string>
   <string name="device_rename_title">Cihazın adını dəyişmək</string>
   <string name="device_rename_confirm">Adını Dəyişmək</string>
   <string name="refresh">Təzələmək</string>
@@ -238,7 +238,7 @@
   <string name="pref_plugin_telepathy">SMS göndərmək</string>
   <string name="pref_plugin_telepathy_desc">İş Masanızdan mətn ismarıcı göndərin</string>
   <string name="pref_plugin_telepathy_mms">MMS göndərmək</string>
-  <string name="pref_plugin_telepathy_mms_desc">KDE Connect\'dən MMS göndərmək üçün, onu standart SMS tətbiqi kimi təyin etməniz lazımdır.</string>
+  <string name="pref_plugin_telepathy_mms_desc">OPDL\'dən MMS göndərmək üçün, onu standart SMS tətbiqi kimi təyin etməniz lazımdır.</string>
   <string name="findmyphone_title">Telefonumu tapmaq</string>
   <string name="findmyphone_title_tablet">Planşetimi tapmaq</string>
   <string name="findmyphone_title_tv">TV-ni tapmaq</string>
@@ -257,7 +257,7 @@
   <string name="telephony_permission_explanation">İş Masanızda telefon zənglərini görmək üçün Zəng Tarixçəsinə və Zəng yığımı vəziyyətinə icazə verməlisiniz</string>
   <string name="telephony_optional_permission_explanation">Telefon nömrəsi əvəzinə əlaqənin adını görmək üçün Əlaqə Kitabçasına girişə icazə verməlisiniz</string>
   <string name="contacts_permission_explanation">İş masası vasitəsi ilə əlaqələr kitabçasını paylaşmaq üçün əlaqələra girişə icazə verməlisiniz</string>
-  <string name="contacts_per_device_confirmation">Telefon əlaqələriniz bu cihaza kopyalanacaq, belə ki, onlar KDE Connect SMS və başqa tətbiqlər tərəfindən istifadə oluna bilər.</string>
+  <string name="contacts_per_device_confirmation">Telefon əlaqələriniz bu cihaza kopyalanacaq, belə ki, onlar OPDL SMS və başqa tətbiqlər tərəfindən istifadə oluna bilər.</string>
   <string name="select_ringtone">Zəng səsini seçmək</string>
   <string name="telephony_pref_blocked_title">Əngəllənmiş nömrələr</string>
   <string name="telephony_pref_blocked_dialog_desc">Bu nömrədən SMS və zənglər göstərilməsin. Hər sətirdə bir nömrə göstərin</string>
@@ -268,7 +268,7 @@
   <string name="presenter_lock_tip">Siz cihazınızı kilidləyə və səs düymələri ilə əvvəlki/sonrakı slayda keçid edə bilərsiniz</string>
   <string name="add_command">Əmr əlavə etmək</string>
   <string name="addcommand_explanation">Əmrlər qeyd edilməyib</string>
-  <string name="addcommand_explanation2">Sİz KDE Connect sistem ayarlarında yeni əmrlər əlavə edə bilərsiniz</string>
+  <string name="addcommand_explanation2">Sİz OPDL sistem ayarlarında yeni əmrlər əlavə edə bilərsiniz</string>
   <string name="add_command_description">İş masasında yeni əmr əlavə edə bilərsiniz</string>
   <string name="pref_plugin_mprisreceiver">Media Pleyer İdarəsi</string>
   <string name="pref_plugin_mprisreceiver_desc">Telefonunuzun media pleyerlərini digər cihazdan idarə edin</string>
@@ -312,7 +312,7 @@
   <string name="block_images">Bildirişlərin şəkillərini bloklamaq</string>
   <string name="notification_channel_receivenotification">Digar cihazlardan bilsirişlər</string>
   <string name="no_app_for_opening">Bu faylı açmaq üçün uyğun tətbiq tapılmadı</string>
-  <string name="remote_keyboard_service">KDE Connect Uzaq Klaviaturası</string>
+  <string name="remote_keyboard_service">OPDL Uzaq Klaviaturası</string>
   <string name="presenter_pointer">Kursor</string>
   <string name="trusted_networks">Etibarlı şəbəkələr</string>
   <string name="trusted_networks_desc">Bilinən şəbəkələrin avtomatik aşkar edilməsini məhdudlaşdırmaq</string>
@@ -320,7 +320,7 @@
   <string name="empty_trusted_networks_list_text">Hələlik hər hansı bir etibarlı şəbəkə əlavə edilməyib</string>
   <string name="allow_all_networks_text">Hamısına icazə vermək</string>
   <string name="location_permission_needed_title">İcazə tələb edlir</string>
-  <string name="location_permission_needed_desc">KDE connect üçün, hətta tətbiq arxa fonda işlədikdə belə qoşulduğunuz WiFi şəbəkəsini tanımaq üçün ona arxa planda məkandan istifadə etmə icazəsi tələb olunur. Bu onunla bağlıdır ki, hətta KDE Connect bunu istifadə etməsə də ətrafınızdakı WiFi şəbəkəsi ilə yerinizi təyin etmək üçün istifadə edə biləsiniz.</string>
+  <string name="location_permission_needed_desc">OPDL üçün, hətta tətbiq arxa fonda işlədikdə belə qoşulduğunuz WiFi şəbəkəsini tanımaq üçün ona arxa planda məkandan istifadə etmə icazəsi tələb olunur. Bu onunla bağlıdır ki, hətta OPDL bunu istifadə etməsə də ətrafınızdakı WiFi şəbəkəsi ilə yerinizi təyin etmək üçün istifadə edə biləsiniz.</string>
   <string name="clipboard_android_x_incompat">Android 10 bütün tətbiqlər üçün mübadilə buferinə girişi aradan qaldırıb. Bu qoşma söndürüləcək.</string>
   <string name="mpris_open_url">Burada oxutmağa davam edin</string>
   <string name="cant_open_url">Oxutmanı davam etdirmək üçün URL açıla bilmir</string>
@@ -371,9 +371,9 @@
   <string name="email_contributor">Əməkdaşın e-poçt ünvanı\n%s</string>
   <string name="visit_contributors_homepage">Əməkdaşın ev səhifəsinə baxın\n%s</string>
   <string name="version">Versiya %s</string>
-  <string name="about_kde">KDE haqqında</string>
-  <string name="kde_be_free">KDE - Sərbəst olun!</string>
-  <string name="kde">KDE</string>
+  <string name="about_kde">OPDL haqqında</string>
+  <string name="kde_be_free">OPDL - Sərbəst olun!</string>
+  <string name="kde">OPDL</string>
   <string name="konqi">Konqi</string>
   <string name="rise_up">Qalxmaq</string>
   <string name="rise_down">Aşağı enmək</string>
@@ -382,9 +382,9 @@
   <string name="send_compose">Göndərin</string>
   <string name="compose_send_title">Yazın göndərin</string>
   <string name="open_compose_send">Mətn yazın</string>
-  <string name="about_kde_about">&lt;h1&gt;Haqqında&lt;/h1&gt; &lt;p&gt;KDE, özlərini &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Azad Proqram Təminatı&lt;/a&gt; tərtibatına həsr etmiş, proqram təminatı üzrə mühəndislərdən, rəssamlardan, yazıçılardan, tərcüməçilərdən və yaradıcılardan ibarət dünya miqyasında bir cəmiyyətdir. KDE, Plasma İş masası mühiti, yüzlərlə tətbiqlər və onları dəstəkləyən proqram təminatı kitabxanaları nəşr edir. &lt;/p&gt; &lt;p&gt;KDE kooperativ bir müəssisədir: heç bir müəssisə onun işinə və məhsullarına nəzarət etmir. Bunun əvəzinə, dünyanın ən yaxşı Proqram Təminatını yaratmaq məsədimizə çatmaq üçün birlikdə çalışırıq. &lt;a href=https://community.kde.org/Get_Involved&gt;KDE\'yə qoşulmaq və işimizə töhvə vermək istəyən, &lt;/a&gt; siz də daxil olmaqla&lt;/p&gt; hər kəsi salamlayırıq. &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; saytına daxil olun ki, KDE cəmiyyəti və bizim proqram təminatı və məhsullarımız haqqında daha çox məlumat əldə edə biləsiniz.</string>
-  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Səhvləri və Arzularınızı bildirin&lt;/h1&gt; &lt;p&gt;Proqram təminatı hər zaman təkmilləşdirilə bilər və KDE komandası buna hazırdır. Lakin siz - istifadəçi - , nə isə gözlənildiyi kimi düzgün işləmədikdə və ya bundan daha yaxşısını yaratmaq barədə təklifiniz olduqda bizə bildirməlisiniz.&lt;/p&gt; &lt;p&gt;KDE\'nin xətaları izləmə sistemi var. &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ziyarət edin və ya xətalar haqında hesabat vermək üçün ekrandakı \"Xətaları bildirin\" düyməsindən istifadə edin.&lt;/p&gt; Əgər təkmilləşdirmə üçün bir təklifiniz varsa, bu istəyinizi bildirmək üçün xətaları izləmə sistemində qeyd edə bilərsiniz. \"İstəklər siyahısı\" ciddilik səviyyəsindən istifadə etdiyinizə əmin olun.</string>
-  <string name="about_kde_support_kde">&lt;h1&gt;KDE\'yə dəstək&lt;/h1&gt; &lt;p&gt;KDE tətbiqləri pulsuzdur və bu hər zaman belə olacaqdır, lakin onların yaradılması pulsuz deyil.&lt;/p&gt; &lt;p&gt;KDE Cəmiyyətini dəstəkləmək üçün Almaniyada qanuni olaraq yaradılmış, qeyri-kommersiya təşkilatı olan KDE e.V formalaşdırlıb. KDE e.V., KDE Cəmiyyətinə maddi və hüquqi yardım göstərir. Da çox məlumat üçün: &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; KDE e.V. baxın&lt;/p&gt; &lt;p&gt;KDE ona göstərilən malliyə da daxil olmaqla bir çox yardımlardan faydalanır. Vəsaitlər, üzvlərə və başqalarına töhfə verərkən çəkdikləri xərcləri ödəmək üçün xərclənir. Əlavə vəsait, hüquqi dəstək üçün və konfrans və görüşlərin təşkili üçün istifadə olunur.&lt;/p&gt; &lt;p&gt;Biz sizi, aşağıda göstərilən yollardan istifadə etməklə bizə maddi dəstəyinizi göztərməyə dəvət edirik: &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Göstərdiyiniz və göstərəcəyiniz hər hansı dəstək üçün sizə təşəkkür edirik.</string>
+  <string name="about_kde_about">&lt;h1&gt;Haqqında&lt;/h1&gt; &lt;p&gt;OPDL, özlərini &lt;a href=https://www.gnu.org/philosophy/free-sw.html&gt;Azad Proqram Təminatı&lt;/a&gt; tərtibatına həsr etmiş, proqram təminatı üzrə mühəndislərdən, rəssamlardan, yazıçılardan, tərcüməçilərdən və yaradıcılardan ibarət dünya miqyasında bir cəmiyyətdir. OPDL, Plasma İş masası mühiti, yüzlərlə tətbiqlər və onları dəstəkləyən proqram təminatı kitabxanaları nəşr edir. &lt;/p&gt; &lt;p&gt;OPDL kooperativ bir müəssisədir: heç bir müəssisə onun işinə və məhsullarına nəzarət etmir. Bunun əvəzinə, dünyanın ən yaxşı Proqram Təminatını yaratmaq məsədimizə çatmaq üçün birlikdə çalışırıq. &lt;a href=https://community.kde.org/Get_Involved&gt;OPDL\'yə qoşulmaq və işimizə töhvə vermək istəyən, &lt;/a&gt; siz də daxil olmaqla&lt;/p&gt; hər kəsi salamlayırıq. &lt;a href=https://www.kde.org/&gt;https://www.kde.org/&lt;/a&gt; saytına daxil olun ki, OPDL cəmiyyəti və bizim proqram təminatı və məhsullarımız haqqında daha çox məlumat əldə edə biləsiniz.</string>
+  <string name="about_kde_report_bugs_or_wishes">&lt;h1&gt;Səhvləri və Arzularınızı bildirin&lt;/h1&gt; &lt;p&gt;Proqram təminatı hər zaman təkmilləşdirilə bilər və OPDL komandası buna hazırdır. Lakin siz - istifadəçi - , nə isə gözlənildiyi kimi düzgün işləmədikdə və ya bundan daha yaxşısını yaratmaq barədə təklifiniz olduqda bizə bildirməlisiniz.&lt;/p&gt; &lt;p&gt;OPDL\'nin xətaları izləmə sistemi var. &lt;a href=https://bugs.kde.org/&gt;https://bugs.kde.org/&lt;/a&gt; ziyarət edin və ya xətalar haqında hesabat vermək üçün ekrandakı \"Xətaları bildirin\" düyməsindən istifadə edin.&lt;/p&gt; Əgər təkmilləşdirmə üçün bir təklifiniz varsa, bu istəyinizi bildirmək üçün xətaları izləmə sistemində qeyd edə bilərsiniz. \"İstəklər siyahısı\" ciddilik səviyyəsindən istifadə etdiyinizə əmin olun.</string>
+  <string name="about_kde_support_kde">&lt;h1&gt;OPDL\'yə dəstək&lt;/h1&gt; &lt;p&gt;OPDL tətbiqləri pulsuzdur və bu hər zaman belə olacaqdır, lakin onların yaradılması pulsuz deyil.&lt;/p&gt; &lt;p&gt;OPDL Cəmiyyətini dəstəkləmək üçün Almaniyada qanuni olaraq yaradılmış, qeyri-kommersiya təşkilatı olan OPDL e.V formalaşdırlıb. OPDL e.V., OPDL Cəmiyyətinə maddi və hüquqi yardım göstərir. Da çox məlumat üçün: &lt;a href=https://ev.kde.org/&gt;https://ev.kde.org/&lt;/a&gt; OPDL e.V. baxın&lt;/p&gt; &lt;p&gt;OPDL ona göstərilən malliyə da daxil olmaqla bir çox yardımlardan faydalanır. Vəsaitlər, üzvlərə və başqalarına töhfə verərkən çəkdikləri xərcləri ödəmək üçün xərclənir. Əlavə vəsait, hüquqi dəstək üçün və konfrans və görüşlərin təşkili üçün istifadə olunur.&lt;/p&gt; &lt;p&gt;Biz sizi, aşağıda göstərilən yollardan istifadə etməklə bizə maddi dəstəyinizi göztərməyə dəvət edirik: &lt;a href=https://www.kde.org/community/donations/&gt;https://www.kde.org/community/donations/&lt;/a&gt;.&lt;/p&gt; Göstərdiyiniz və göstərəcəyiniz hər hansı dəstək üçün sizə təşəkkür edirik.</string>
   <string name="maintainer_and_developer">Müşayətçi və tərtibatçı</string>
   <string name="developer">Tərtibatçı</string>
   <string name="apple_support">macOS dəstəyi. İOS dəstəklənməsi üzərində işləyirik</string>
@@ -395,7 +395,7 @@
   <string name="maxim_leshchenko_task">İİ yaxşılaşdırmaları və bu haqda səhifə</string>
   <string name="holger_kaelberer_task">Uzaq klaviatura əlavəsi və xəta sazlamaları</string>
   <string name="saikrishna_arcot_task">Uzaq daxiletmə əlavəsində klaviaturanın istifadəsini dəstəklənməsi, xəta sazlamaları və əsas yaxşılaşdırmalar</string>
-  <string name="everyone_else">İllər boyu KDE Connect\'ə töhfə verən hər kəs</string>
+  <string name="everyone_else">İllər boyu OPDL\'ə töhfə verən hər kəs</string>
   <string name="send_clipboard">Mübadilə yaddaşını göndərin</string>
   <string name="tap_to_execute">İcra etmək üçün vurun</string>
   <string name="plugin_stats">Plaqin statistikası</string>
