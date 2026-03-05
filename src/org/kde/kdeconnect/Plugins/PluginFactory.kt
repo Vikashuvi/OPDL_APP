@@ -15,6 +15,7 @@ object PluginFactory {
     private val fileTransferPlugins = setOf(
         "SharePlugin",
         "SftpPlugin",
+        "ClipboardPlugin",
     )
 
     private var pluginInfo: Map<String, PluginInfo> = mapOf()
