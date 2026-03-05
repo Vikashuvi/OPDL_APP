@@ -76,7 +76,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
                     R.drawable.ic_next_black, R.drawable.ic_previous_black,
                     R.drawable.ic_presenter_24dp, R.drawable.ic_key,
                     R.drawable.ic_keyboard_return_black_24dp, R.drawable.ic_keyboard_hide_36dp,
-                    R.drawable.ic_kde_24dp, R.drawable.ic_album_art_placeholder,
+                    R.drawable.ic_opdl_24dp, R.drawable.ic_album_art_placeholder,
                     R.drawable.ic_arrow_back_black_24dp, R.drawable.share_plugin_action_24dp
             ).random()
 

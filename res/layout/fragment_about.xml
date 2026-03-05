@@ -51,7 +51,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                         android:paddingTop="@dimen/nav_header_vertical_spacing"
                         android:paddingBottom="4dp"
                         android:importantForAccessibility="no"
-                        tools:src="@drawable/icon" />
+                        tools:src="@drawable/opdl_app_icon" />
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -132,7 +132,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
 
                 <TextView
                     android:text="@string/about_kde"
-                    app:drawableTopCompat="@drawable/ic_kde_24dp"
+                    app:drawableTopCompat="@drawable/ic_opdl_24dp"
                     style="@style/AboutButton.TextView" />
             </FrameLayout>
 
@@ -181,7 +181,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:paddingStart="4dp"
-                    tools:text="Everyone else who has contributed to KDE Connect over the years"
+                    tools:text="Everyone else who has contributed to OPDL Transfer over the years"
                     tools:ignore="RtlSymmetry" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

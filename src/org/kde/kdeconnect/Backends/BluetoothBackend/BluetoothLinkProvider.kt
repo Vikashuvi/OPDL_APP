@@ -129,7 +129,7 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
             try {
                 IOUtils.close(serverSocket)
             } catch (e: IOException) {
-                Log.e("KDEConnect", "Exception", e)
+                Log.e("OPDL Transfer", "Exception", e)
             }
         }
 
@@ -137,10 +137,10 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
             serverSocket = try {
                 bluetoothAdapter!!.listenUsingRfcommWithServiceRecord("OPDL", SERVICE_UUID)
             } catch (e: IOException) {
-                Log.e("KDEConnect", "Exception", e)
+                Log.e("OPDL Transfer", "Exception", e)
                 return
             } catch (e: SecurityException) {
-                Log.e("KDEConnect", "Security Exception for CONNECT", e)
+                Log.e("OPDL Transfer", "Security Exception for CONNECT", e)
 
                 PreferenceManager.getDefaultSharedPreferences(context).edit {
                     putBoolean(SettingsFragment.KEY_BLUETOOTH_ENABLED, false)
@@ -347,7 +347,7 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
                 socket.connect()
                 synchronized(sockets) { sockets.put(device, socket) }
             } catch (e: IOException) {
-                Log.e("BTLinkProvider/Client", "Could not connect to KDE Connect service on " + device!!.address, e)
+                Log.e("BTLinkProvider/Client", "Could not connect to OPDL Transfer service on " + device!!.address, e)
                 return
             } catch (e: SecurityException) {
                 Log.e("BTLinkProvider/Client", "Security Exception connecting to " + device!!.address, e)

@@ -66,10 +66,10 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/opdl_app_icon"
+        android:roundIcon="@drawable/opdl_app_icon"
         android:label="@string/kde_connect"
-        android:banner="@mipmap/ic_launcher_banner"
+        android:banner="@drawable/opdl_app_banner"
         android:supportsRtl="true"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -99,7 +99,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <service
             android:name="org.kde.kdeconnect.BackgroundService"
             android:foregroundServiceType="connectedDevice"
-            android:icon="@drawable/icon"
+            android:icon="@drawable/ic_opdl_24dp"
             android:enabled="true" />
         <service
             android:name="org.kde.kdeconnect.Plugins.RemoteKeyboardPlugin.RemoteKeyboardService"

@@ -13,7 +13,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
         a performance-aware P2P system focused on optimized transport and real-time metrics.
         Translations are community-maintained through standard localization channels.
   -->
-    <string name="kde_connect">OPDL</string>
+    <string name="kde_connect">OPDL Transfer</string>
     <string name="manifest_label_share">Send to Device</string>
     <string name="foreground_notification_no_devices">Not connected to any device</string>
     <string name="foreground_notification_devices">Connected to: %s</string>

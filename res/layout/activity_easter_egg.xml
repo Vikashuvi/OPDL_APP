@@ -19,7 +19,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         android:id="@+id/logo"
         android:layout_width="396dp"
         android:layout_height="396dp"
-        android:src="@drawable/ic_kde_48dp"
+        android:src="@drawable/ic_opdl_48dp"
         android:contentDescription="@string/easter_egg" />
 
     <TextView

@@ -15,5 +15,5 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-msgid "KDE Connect integrates your smartphone and computer"
-msgstr "KDE Connect łączy twojego smartfona z twoim komputerem"
+msgid "OPDL Transfer integrates your smartphone and computer"
+msgstr "OPDL Transfer łączy twojego smartfona z twoim komputerem"

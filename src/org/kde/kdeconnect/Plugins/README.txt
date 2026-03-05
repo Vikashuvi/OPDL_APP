@@ -1,4 +1,4 @@
-Writing a plugin for KDE Connect
+Writing a plugin for OPDL Transfer
 =================================
 
 For Android (this project):
@@ -36,7 +36,7 @@ For the desktop client (project kdeconnect-kde):
   A. Replace "ping" with "findmyphone".
   B. Change name, description, icon, author, email, version, website, license info.
   C. Remove all the translations
-  D. Set X-KDEConnect-SupportedPacketType and X-KDEConnect-OutgoingPacketType to the packet type your plugin will receive
+  D. Set X-OPDL Transfer-SupportedPacketType and X-OPDL Transfer-OutgoingPacketType to the packet type your plugin will receive
      and send, respectively. In this example this is "kdeconnect.findmyphone". Make sure that this matches what is defined in
      the findmyplugin.h file (in the line "#define PACKET_TYPE_..."), and also in Android.
 10. Now you have an empty skeleton to implement your new plugin logic.

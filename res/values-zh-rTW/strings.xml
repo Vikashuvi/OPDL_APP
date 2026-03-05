@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">OPDL</string>
+  <string name="kde_connect">OPDL Transfer</string>
   <string name="manifest_label_share">傳送到裝置</string>
   <string name="foreground_notification_no_devices">未與任何裝置產生連結</string>
   <string name="foreground_notification_devices">已連結：%s</string>

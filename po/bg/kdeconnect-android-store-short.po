@@ -15,5 +15,5 @@ msgstr ""
 "X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-msgid "KDE Connect integrates your smartphone and computer"
-msgstr "KDE Connect интегрира вашия смартфон и компютър"
+msgid "OPDL Transfer integrates your smartphone and computer"
+msgstr "OPDL Transfer интегрира вашия смартфон и компютър"

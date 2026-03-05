@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">OPDL</string>
+  <string name="kde_connect">OPDL Transfer</string>
   <string name="manifest_label_share">Wyślij na urządzenie</string>
   <string name="foreground_notification_no_devices">Niepołączony z żadnym urządzeniem</string>
   <string name="foreground_notification_devices">Połączony z: %s</string>

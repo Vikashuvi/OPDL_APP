@@ -65,7 +65,7 @@ public class SystemVolumePlugin extends Plugin {
                     sinks.put(sink.getName(), sink);
                 }
             } catch (JSONException e) {
-                Log.e("KDEConnect", "Exception", e);
+                Log.e("OPDL Transfer", "Exception", e);
             }
 
             synchronized(listeners) {
