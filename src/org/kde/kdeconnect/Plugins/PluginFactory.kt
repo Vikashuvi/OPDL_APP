@@ -12,6 +12,11 @@ import org.kde.kdeconnect.Device
 object PluginFactory {
     annotation class LoadablePlugin  //Annotate plugins with this so PluginFactory finds them
 
+    private val fileTransferPlugins = setOf(
+        "SharePlugin",
+        "SftpPlugin",
+    )
+
     private var pluginInfo: Map<String, PluginInfo> = mapOf()
 
     fun initPluginInfo(context: Context) {
@@ -20,6 +25,7 @@ object PluginFactory {
                 .asSequence()
                 .map { it.java.getDeclaredConstructor().newInstance() as Plugin }
                 .onEach { it.setContext(context, null) }
+                .filter { it.pluginKey in fileTransferPlugins }
                 .associate { Pair(it.pluginKey, PluginInfo(it)) }
         } catch (e: Exception) {
             throw RuntimeException(e)
