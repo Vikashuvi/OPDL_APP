@@ -75,7 +75,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/OpdlTheme.NoActionBar"
-        android:name="org.kde.kdeconnect.KdeConnect"
+        android:name="org.opdl.transfer.OpdlTransfer"
         android:enableOnBackInvokedCallback="true"
         android:requestLegacyExternalStorage="true"> <!-- requestLegacyExternalStorage is only used in Android 10: https://developer.android.com/training/data-storage/use-cases#opt-out-in-production-app -->
 
@@ -97,12 +97,12 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:exported="true" />
 
         <service
-            android:name="org.kde.kdeconnect.BackgroundService"
+            android:name="org.opdl.transfer.BackgroundService"
             android:foregroundServiceType="connectedDevice"
             android:icon="@drawable/ic_opdl_24dp"
             android:enabled="true" />
         <service
-            android:name="org.kde.kdeconnect.Plugins.RemoteKeyboardPlugin.RemoteKeyboardService"
+            android:name="org.opdl.transfer.Plugins.RemoteKeyboardPlugin.RemoteKeyboardService"
             android:label="@string/remote_keyboard_service"
             android:exported="true"
             android:permission="android.permission.BIND_INPUT_METHOD">
@@ -116,7 +116,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </service>
 
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.MainActivity"
+            android:name="org.opdl.transfer.UserInterface.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -134,34 +134,34 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.PluginSettingsActivity"
+            android:name="org.opdl.transfer.UserInterface.PluginSettingsActivity"
             android:label="@string/device_menu_plugins"
             android:exported="false"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.CustomDevicesActivity"
+            android:name="org.opdl.transfer.UserInterface.CustomDevicesActivity"
             android:label="@string/custom_devices_settings"
             android:exported="false"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.SharePlugin.SendFileActivity"
+            android:name="org.opdl.transfer.Plugins.SharePlugin.SendFileActivity"
             android:label="@string/kde_connect"
             android:exported="true"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
-        <receiver android:name="org.kde.kdeconnect.KdeConnectBroadcastReceiver"
+        <receiver android:name="org.opdl.transfer.OpdlTransferBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
@@ -178,37 +178,37 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </receiver>
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.FindMyPhonePlugin.FindMyPhoneActivity"
+            android:name="org.opdl.transfer.Plugins.FindMyPhonePlugin.FindMyPhoneActivity"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:label="@string/findmyphone_title"
             android:launchMode="singleInstance" />
 
-        <receiver android:name="org.kde.kdeconnect.Plugins.FindMyPhonePlugin.FindMyPhoneReceiver"
+        <receiver android:name="org.opdl.transfer.Plugins.FindMyPhonePlugin.FindMyPhoneReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="org.kde.kdeconnect.Plugins.FindMyPhonePlugin.foundIt" />
+                <action android:name="org.opdl.transfer.Plugins.FindMyPhonePlugin.foundIt" />
             </intent-filter>
         </receiver>
 
         <!-- Plugin-related activities and services -->
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.ClipboardPlugin.ClipboardFloatingActivity"
+            android:name="org.opdl.transfer.Plugins.ClipboardPlugin.ClipboardFloatingActivity"
             android:theme="@style/Theme.Transparent"
             android:excludeFromRecents="true"/>
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.MprisPlugin.MprisActivity"
+            android:name="org.opdl.transfer.Plugins.MprisPlugin.MprisActivity"
             android:label="@string/open_mpris_controls"
             android:launchMode="singleTop"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
-        <receiver android:name="org.kde.kdeconnect.Plugins.MprisPlugin.MprisMediaNotificationReceiver"
+        <receiver android:name="org.opdl.transfer.Plugins.MprisPlugin.MprisMediaNotificationReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
@@ -216,16 +216,16 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </receiver>
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.RunCommandActivity"
+            android:name="org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandActivity"
             android:label="@string/pref_plugin_runcommand"
             android:exported="false"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.RunCommandWidgetConfigActivity"
+            android:name="org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandWidgetConfigActivity"
             android:excludeFromRecents="true"
             android:label="@string/pref_plugin_runcommand"
             android:launchMode="singleTask"
@@ -233,12 +233,12 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:screenOrientation="user"/>
 
         <service
-            android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.CommandsRemoteViewsService"
+            android:name="org.opdl.transfer.Plugins.RunCommandPlugin.CommandsRemoteViewsService"
             android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <receiver
-            android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.RunCommandWidgetProvider"
+            android:name="org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandWidgetProvider"
             android:label="@string/pref_plugin_runcommand"
             android:exported="true">
             <intent-filter>
@@ -253,7 +253,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 android:resource="@xml/remotecommandplugin_widget" />
         </receiver>
 
-        <activity android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.RunCommandUrlActivity"
+        <activity android:name="org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandUrlActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -264,49 +264,49 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
 
                 <data
                     android:host="runcommand"
-                    android:scheme="kdeconnect" />
+                    android:scheme="opdl" />
             </intent-filter>
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.MousePadPlugin.BigscreenActivity"
+            android:name="org.opdl.transfer.Plugins.MousePadPlugin.BigscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/pref_plugin_bigscreen"
             android:exported="true"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity"
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.MousePadPlugin.MousePadActivity"
+            android:name="org.opdl.transfer.Plugins.MousePadPlugin.MousePadActivity"
             android:label="@string/pref_plugin_mousepad"
             android:exported="false"
             android:launchMode="singleTop"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.MousePadPlugin.ComposeSendActivity"
+            android:name="org.opdl.transfer.Plugins.MousePadPlugin.ComposeSendActivity"
             android:label="@string/compose_send_title"
             android:exported="false"
-            android:parentActivityName="org.kde.kdeconnect.Plugins.MousePadPlugin.MousePadActivity"
+            android:parentActivityName="org.opdl.transfer.Plugins.MousePadPlugin.MousePadActivity"
             android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.Plugins.MousePadPlugin.MousePadActivity" />
+                android:value="org.opdl.transfer.Plugins.MousePadPlugin.MousePadActivity" />
         </activity>
         <!-- TODO: Remove? This is only used by https://github.com/andOTP/andOTP, which is unmaintained since 2021. Do people use forks or can we remove this? -->
         <activity
-            android:name="org.kde.kdeconnect.Plugins.MousePadPlugin.SendKeystrokesToHostActivity"
+            android:name="org.opdl.transfer.Plugins.MousePadPlugin.SendKeystrokesToHostActivity"
             android:label="@string/pref_plugin_mousepad_send_keystrokes"
             android:exported="true"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
             <!-- Accept data with "text/x-keystrokes" to send the text to the connected host and emulate keystrokes -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
@@ -315,18 +315,18 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             </intent-filter>
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.PresenterPlugin.PresenterActivity"
+            android:name="org.opdl.transfer.Plugins.PresenterPlugin.PresenterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/pref_plugin_presenter"
             android:exported="false"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity"
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
         <activity
-            android:name="org.kde.kdeconnect.Plugins.SharePlugin.ShareActivity"
+            android:name="org.opdl.transfer.Plugins.SharePlugin.ShareActivity"
             android:exported="true"
             android:label="@string/manifest_label_share">
             <intent-filter>
@@ -346,13 +346,13 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
 
             <meta-data
                 android:name="android.service.chooser.chooser_target_service"
-                android:value="org.kde.kdeconnect.Plugins.SharePlugin.ShareChooserTargetService" />
+                android:value="org.opdl.transfer.Plugins.SharePlugin.ShareChooserTargetService" />
         </activity>
 
-        <receiver android:name="org.kde.kdeconnect.Plugins.SharePlugin.ShareBroadcastReceiver"
+        <receiver android:name="org.opdl.transfer.Plugins.SharePlugin.ShareBroadcastReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="org.kde.kdeconnect.Plugins.SharePlugin.CancelShare" />
+                <action android:name="org.opdl.transfer.Plugins.SharePlugin.CancelShare" />
             </intent-filter>
         </receiver>
 
@@ -367,7 +367,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </provider>
 
         <service
-            android:name="org.kde.kdeconnect.Plugins.NotificationsPlugin.NotificationReceiver"
+            android:name="org.opdl.transfer.Plugins.NotificationsPlugin.NotificationReceiver"
             android:exported="true"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
@@ -375,7 +375,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             </intent-filter>
         </service>
         <service
-            android:name="org.kde.kdeconnect.Plugins.SharePlugin.ShareChooserTargetService"
+            android:name="org.opdl.transfer.Plugins.SharePlugin.ShareChooserTargetService"
             android:exported="true"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
@@ -383,7 +383,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             </intent-filter>
         </service>
         <service
-            android:name="org.kde.kdeconnect.Plugins.MouseReceiverPlugin.MouseReceiverService"
+            android:name="org.opdl.transfer.Plugins.MouseReceiverPlugin.MouseReceiverService"
             android:exported="true"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
@@ -395,64 +395,64 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </service>
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.NotificationsPlugin.NotificationFilterActivity"
+            android:name="org.opdl.transfer.Plugins.NotificationsPlugin.NotificationFilterActivity"
             android:label="@string/title_activity_notification_filter"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.PluginSettingsActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.PluginSettingsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.PluginSettingsActivity" />
+                android:value="org.opdl.transfer.UserInterface.PluginSettingsActivity" />
         </activity>
 
         <activity
-            android:name="org.kde.kdeconnect.Plugins.DigitizerPlugin.DigitizerActivity"
+            android:name="org.opdl.transfer.Plugins.DigitizerPlugin.DigitizerActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/pref_plugin_digitizer"
             android:exported="false"
             android:launchMode="singleTop"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.TrustedNetworksActivity"
+            android:name="org.opdl.transfer.UserInterface.TrustedNetworksActivity"
             android:label="@string/trusted_networks"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.About.EasterEggActivity"
+            android:name="org.opdl.transfer.UserInterface.About.EasterEggActivity"
             android:label="@string/easter_egg"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.About.AboutKDEActivity"
+            android:name="org.opdl.transfer.UserInterface.About.AboutKDEActivity"
             android:label="@string/about_kde"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
         <activity
-            android:name="org.kde.kdeconnect.UserInterface.About.LicensesActivity"
+            android:name="org.opdl.transfer.UserInterface.About.LicensesActivity"
             android:label="@string/licenses"
-            android:parentActivityName="org.kde.kdeconnect.UserInterface.MainActivity">
+            android:parentActivityName="org.opdl.transfer.UserInterface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.kde.kdeconnect.UserInterface.MainActivity" />
+                android:value="org.opdl.transfer.UserInterface.MainActivity" />
         </activity>
 
         <service
-            android:name="org.kde.kdeconnect.Plugins.ClipboardPlugin.ClipboardTileService"
+            android:name="org.opdl.transfer.Plugins.ClipboardPlugin.ClipboardTileService"
             android:icon="@drawable/ic_baseline_content_paste_24"
             android:exported="true"
             android:label="@string/send_clipboard"
@@ -462,7 +462,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             </intent-filter>
         </service>
 
-        <service android:name="org.kde.kdeconnect.Plugins.RunCommandPlugin.RunCommandControlsProviderService"
+        <service android:name="org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandControlsProviderService"
             android:label="@string/kde_connect"
             android:exported="true"
             android:permission="android.permission.BIND_CONTROLS">

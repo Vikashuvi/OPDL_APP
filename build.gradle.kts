@@ -41,10 +41,10 @@ kotlin {
 }
 
 android {
-    namespace = "org.kde.kdeconnect_tp"
+    namespace = "org.opdl.transfer"
     compileSdk = 36
     defaultConfig {
-        applicationId = "org.kde.kdeconnect_tp"
+        applicationId = "org.opdl.transfer"
         minSdk = 22
         targetSdk = 35
         versionCode = 13404
@@ -232,7 +232,7 @@ abstract class FixCollectionsClassVisitorFactory :
                         descriptor: String?,
                         isInterface: Boolean
                     ) {
-                        val backportClass = "org/kde/kdeconnect/Helpers/CollectionsBackport"
+                        val backportClass = "org/opdl/transfer/Helpers/CollectionsBackport"
 
                         if (opcode == INVOKESTATIC && type == "java/util/Collections") {
                             val replaceRules = mapOf(
@@ -262,7 +262,7 @@ abstract class FixCollectionsClassVisitorFactory :
 }
 
 ksp {
-    arg("com.albertvaka.classindexksp.annotations", "org.kde.kdeconnect.Plugins.PluginFactory.LoadablePlugin")
+    arg("com.albertvaka.classindexksp.annotations", "org.opdl.transfer.Plugins.PluginFactory.LoadablePlugin")
 }
 
 androidComponents {
