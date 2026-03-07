@@ -20,8 +20,8 @@ import org.opdl.transfer.UserInterface.List.ListAdapter
 import org.opdl.transfer.base.BaseFragment
 import org.opdl.transfer.extensions.getParcelableCompat
 import org.opdl.transfer.extensions.setupBottomPadding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.FragmentAboutBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.FragmentAboutBinding
 
 class AboutFragment : BaseFragment<FragmentAboutBinding>() {
 

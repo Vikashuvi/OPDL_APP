@@ -20,9 +20,9 @@ import org.opdl.transfer.Plugins.MprisPlugin.VolumeKeyListener
 import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumePlugin.SinkListener
 import org.opdl.transfer.base.BaseFragment
 import org.opdl.transfer.extensions.setupBottomPadding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ListItemSystemvolumeBinding
-import org.opdl.transfer_tp.databinding.SystemVolumeFragmentBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ListItemSystemvolumeBinding
+import org.opdl.transfer.databinding.SystemVolumeFragmentBinding
 
 class SystemVolumeFragment : BaseFragment<SystemVolumeFragmentBinding>(),
     Sink.UpdateListener, SinkListener, VolumeKeyListener {

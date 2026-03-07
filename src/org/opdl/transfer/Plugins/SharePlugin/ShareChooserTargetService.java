@@ -16,7 +16,7 @@ import android.util.Log;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.OpdlTransfer;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 import java.util.List;

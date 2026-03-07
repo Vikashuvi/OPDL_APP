@@ -42,8 +42,8 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 
 import org.opdl.transfer.Helpers.ThreadHelper;
 import org.opdl.transfer.base.BaseActivity;
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.ActivityNotificationFilterBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.ActivityNotificationFilterBinding;
 
 import java.util.ArrayList;
 import java.util.HashSet;

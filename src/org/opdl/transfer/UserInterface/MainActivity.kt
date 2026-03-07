@@ -44,8 +44,8 @@ import org.opdl.transfer.Plugins.SharePlugin.ShareSettingsFragment
 import org.opdl.transfer.UserInterface.About.AboutFragment
 import org.opdl.transfer.UserInterface.About.getApplicationAboutData
 import org.opdl.transfer.UserInterface.SpeedMetricsFragment
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityMainBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityMainBinding
 
 private const val MENU_ENTRY_ADD_DEVICE = 1 //0 means no-selection
 private const val MENU_ENTRY_SETTINGS = 2

@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.opdl.transfer.Helpers.ThreadHelper;
 import org.opdl.transfer.OpdlTransfer;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 

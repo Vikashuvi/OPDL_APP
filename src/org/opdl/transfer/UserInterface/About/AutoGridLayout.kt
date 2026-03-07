@@ -9,7 +9,7 @@ package org.opdl.transfer.UserInterface.About
 import android.content.Context
 import android.util.AttributeSet
 import androidx.gridlayout.widget.GridLayout
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import kotlin.math.max
 
 /**

@@ -6,7 +6,7 @@
 package org.opdl.transfer;
 
 import org.opdl.transfer.Helpers.WiFiGenerationDetector;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 /**
  * OPDL Device model representing a performance-aware peer device.

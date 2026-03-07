@@ -18,7 +18,7 @@ import androidx.preference.PreferenceManager;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.Helpers.NotificationHelper;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 class UploadNotification {
     private final NotificationManager notificationManager;

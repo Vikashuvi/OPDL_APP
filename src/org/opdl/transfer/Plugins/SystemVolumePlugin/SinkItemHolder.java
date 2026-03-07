@@ -17,8 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Consumer;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.ListItemSystemvolumeBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.ListItemSystemvolumeBinding;
 
 class SinkItemHolder extends RecyclerView.ViewHolder
         implements

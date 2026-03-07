@@ -39,7 +39,7 @@ import org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandActivity
 import org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandPlugin
 import org.opdl.transfer.Plugins.SharePlugin.SendFileActivity
 import org.opdl.transfer.UserInterface.MainActivity
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 /**
  * This class (still) does 3 things:

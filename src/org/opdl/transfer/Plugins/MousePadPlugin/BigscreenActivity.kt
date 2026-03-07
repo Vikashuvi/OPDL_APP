@@ -20,8 +20,8 @@ import org.opdl.transfer.UserInterface.MainActivity
 import org.opdl.transfer.UserInterface.PermissionsAlertDialogFragment
 import org.opdl.transfer.base.BaseActivity
 import org.opdl.transfer.extensions.viewBinding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityBigscreenBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityBigscreenBinding
 
 class BigscreenActivity : BaseActivity<ActivityBigscreenBinding>() {
 

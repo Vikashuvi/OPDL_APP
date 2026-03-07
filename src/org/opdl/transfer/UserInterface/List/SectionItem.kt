@@ -7,7 +7,7 @@ package org.opdl.transfer.UserInterface.List
 
 import android.view.LayoutInflater
 import android.view.View
-import org.opdl.transfer_tp.databinding.ListItemCategoryBinding
+import org.opdl.transfer.databinding.ListItemCategoryBinding
 
 class SectionItem : ListAdapter.Item {
     private val title: String

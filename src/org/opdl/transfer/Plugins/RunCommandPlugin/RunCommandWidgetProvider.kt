@@ -18,8 +18,8 @@ import android.widget.RemoteViews
 import androidx.core.net.toUri
 import org.opdl.transfer.Device
 import org.opdl.transfer.OpdlTransfer
-import org.opdl.transfer_tp.BuildConfig
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.BuildConfig
+import org.opdl.transfer.R
 
 const val RUN_COMMAND_ACTION = "RUN_COMMAND_ACTION"
 const val TARGET_COMMAND = "TARGET_COMMAND"

@@ -27,8 +27,8 @@ import org.opdl.transfer.Device;
 import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.UserInterface.List.ListAdapter;
 import org.opdl.transfer.base.BaseActivity;
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.ActivityRunCommandBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.ActivityRunCommandBinding;
 
 import java.util.ArrayList;
 import java.util.Collections;

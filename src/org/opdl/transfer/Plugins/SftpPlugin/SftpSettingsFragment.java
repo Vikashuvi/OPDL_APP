@@ -35,7 +35,7 @@ import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.UserInterface.PluginSettingsActivity;
 import org.opdl.transfer.UserInterface.PluginSettingsFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

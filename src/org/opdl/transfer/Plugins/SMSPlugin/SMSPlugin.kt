@@ -48,8 +48,8 @@ import org.opdl.transfer.Plugins.SMSPlugin.SmsMmsUtils.partIdToMessageAttachment
 import org.opdl.transfer.Plugins.SMSPlugin.SmsMmsUtils.sendMessage
 import org.opdl.transfer.Plugins.TelephonyPlugin.TelephonyPlugin
 import org.opdl.transfer.UserInterface.PluginSettingsFragment
-import org.opdl.transfer_tp.BuildConfig
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.BuildConfig
+import org.opdl.transfer.R
 import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
 

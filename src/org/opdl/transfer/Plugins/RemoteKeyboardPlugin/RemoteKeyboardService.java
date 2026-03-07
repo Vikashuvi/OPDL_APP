@@ -23,7 +23,7 @@ import androidx.core.content.ContextCompat;
 
 import org.opdl.transfer.UserInterface.MainActivity;
 import org.opdl.transfer.UserInterface.PluginSettingsActivity;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 import java.util.List;

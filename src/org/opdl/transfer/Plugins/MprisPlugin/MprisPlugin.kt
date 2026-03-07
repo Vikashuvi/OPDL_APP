@@ -31,7 +31,7 @@ import org.opdl.transfer.Plugins.MprisPlugin.AlbumArtCache.registerPlugin
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory.LoadablePlugin
 import org.opdl.transfer.UserInterface.PluginSettingsFragment
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import java.net.MalformedURLException
 import java.util.concurrent.ConcurrentHashMap
 

@@ -53,7 +53,7 @@ import org.opdl.transfer.UserInterface.compose.KdeButton
 import org.opdl.transfer.UserInterface.compose.KdeTheme
 import org.opdl.transfer.UserInterface.compose.KdeTopAppBar
 import org.opdl.transfer.extensions.safeDrawPadding
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 private const val VOLUME_UP = 1
 private const val VOLUME_DOWN = -1

@@ -49,7 +49,7 @@ import org.opdl.transfer.Plugins.PluginFactory;
 import org.opdl.transfer.UserInterface.MainActivity;
 import org.opdl.transfer.UserInterface.PluginSettingsFragment;
 import org.opdl.transfer.UserInterface.StartActivityAlertDialogFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
@@ -221,7 +221,7 @@ public class NotificationsPlugin extends Plugin implements NotificationReceiver.
             }
         }
 
-        if ("org.opdl.transfer_tp".equals(packageName) || "org.opdl.transfer_tp.debug".equals(packageName)) {
+        if ("org.opdl.transfer".equals(packageName) || "org.opdl.transfer.debug".equals(packageName)) {
             // Don't send our own notifications
             return;
         }

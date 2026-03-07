@@ -8,7 +8,7 @@ package org.opdl.transfer.UserInterface.List
 import android.view.LayoutInflater
 import android.view.View
 import org.opdl.transfer.Device
-import org.opdl.transfer_tp.databinding.ListItemDeviceEntryBinding
+import org.opdl.transfer.databinding.ListItemDeviceEntryBinding
 
 open class DeviceItem(
     val device: Device,

@@ -19,7 +19,7 @@ import android.os.Looper;
 import androidx.core.content.ContextCompat;
 
 import org.opdl.transfer.Helpers.ThreadHelper;
-import org.opdl.transfer_tp.BuildConfig;
+import org.opdl.transfer.BuildConfig;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

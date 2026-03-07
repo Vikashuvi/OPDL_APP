@@ -7,7 +7,7 @@ package org.opdl.transfer.UserInterface.List
 
 import android.view.LayoutInflater
 import android.view.View
-import org.opdl.transfer_tp.databinding.ListItemEntryBinding
+import org.opdl.transfer.databinding.ListItemEntryBinding
 
 open class EntryItem protected constructor(protected val title: String, protected val subtitle: String?) : ListAdapter.Item {
 

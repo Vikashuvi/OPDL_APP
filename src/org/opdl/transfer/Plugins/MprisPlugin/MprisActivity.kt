@@ -14,8 +14,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumeFragment
 import org.opdl.transfer.base.BaseActivity
 import org.opdl.transfer.extensions.viewBinding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityMprisBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityMprisBinding
 
 class MprisActivity : BaseActivity<ActivityMprisBinding>() {
 

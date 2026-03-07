@@ -21,7 +21,7 @@ import org.opdl.transfer.Plugins.PluginFactory;
 import org.opdl.transfer.Plugins.RemoteKeyboardPlugin.RemoteKeyboardPlugin;
 import org.opdl.transfer.UserInterface.MainActivity;
 import org.opdl.transfer.UserInterface.StartActivityAlertDialogFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 @PluginFactory.LoadablePlugin
 @RequiresApi(api = Build.VERSION_CODES.N)

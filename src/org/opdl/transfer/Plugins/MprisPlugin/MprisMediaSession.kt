@@ -36,7 +36,7 @@ import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumeProvider
 import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumeProvider.Companion.currentProvider
 import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumeProvider.Companion.fromPlugin
 import org.opdl.transfer.Plugins.SystemVolumePlugin.SystemVolumeProvider.ProviderStateListener
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 /**
  * Controls the mpris media control notification
@@ -523,7 +523,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
 
         private const val MPRIS_MEDIA_NOTIFICATION_ID =
             0x91b70463.toInt() // echo MprisNotification | md5sum | head -c 8
-        private const val MPRIS_MEDIA_SESSION_TAG = "org.opdl.transfer_tp.media_session"
+        private const val MPRIS_MEDIA_SESSION_TAG = "org.opdl.transfer.media_session"
 
         private const val SPOTIFY_PACKAGE_NAME = "com.spotify.music"
 

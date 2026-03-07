@@ -17,8 +17,8 @@ import androidx.appcompat.app.AlertDialog
 import org.opdl.transfer.Helpers.TrustedNetworkHelper
 import org.opdl.transfer.base.BaseActivity
 import org.opdl.transfer.extensions.viewBinding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.TrustedNetworkListBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.TrustedNetworkListBinding
 
 class TrustedNetworksActivity : BaseActivity<TrustedNetworkListBinding>() {
     override val binding: TrustedNetworkListBinding by viewBinding(TrustedNetworkListBinding::inflate)

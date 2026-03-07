@@ -18,7 +18,7 @@ import androidx.cardview.widget.CardView;
 import org.opdl.transfer.Helpers.PerformanceMetricsEngine;
 import org.opdl.transfer.Helpers.TransferMetrics;
 import org.opdl.transfer.Helpers.WiFiGenerationDetector;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 /**
  * OPDL Benchmark-Driven Transfer Panel.

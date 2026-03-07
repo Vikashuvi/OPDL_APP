@@ -23,8 +23,8 @@ import androidx.core.content.FileProvider;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.Helpers.NotificationHelper;
-import org.opdl.transfer_tp.BuildConfig;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.BuildConfig;
+import org.opdl.transfer.R;
 
 import java.io.File;
 import java.io.IOException;

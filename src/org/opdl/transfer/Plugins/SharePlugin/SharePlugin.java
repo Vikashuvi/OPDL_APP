@@ -44,7 +44,7 @@ import org.opdl.transfer.UserInterface.MainActivity;
 import org.opdl.transfer.UserInterface.PluginSettingsFragment;
 import org.opdl.transfer.async.BackgroundJob;
 import org.opdl.transfer.async.BackgroundJobHandler;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;

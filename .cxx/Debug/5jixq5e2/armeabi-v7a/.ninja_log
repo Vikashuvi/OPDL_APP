@@ -1,3 +1,7 @@
 # ninja log v5
-0	37	1772734950814688383	CMakeFiles/opdl_jni.dir/opdl_jni.c.o	85646269f1dbf6b0
-38	54	1772734950832692895	/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/armeabi-v7a/libopdl_jni.so	4282c71f150eb614
+77	99	1772900415456435105	/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/armeabi-v7a/libopdl_jni.so	4282c71f150eb614
+4	63	1772902415613796224	build.ninja	51722237d1431a3a
+2	76	1772900415433434073	CMakeFiles/opdl_jni.dir/opdl_jni.c.o	85646269f1dbf6b0
+0	2	0	clean	c71f680396b6d17b
+1	80	1772902415718148299	CMakeFiles/opdl_jni.dir/opdl_jni.c.o	85646269f1dbf6b0
+80	111	1772902415748203245	/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/armeabi-v7a/libopdl_jni.so	4282c71f150eb614

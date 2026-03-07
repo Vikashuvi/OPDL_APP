@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.OPDLDevice;
 import org.opdl.transfer.OPDLPerformanceDashboard;
 import org.opdl.transfer.Helpers.OpdlKernelManager;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.List;
 

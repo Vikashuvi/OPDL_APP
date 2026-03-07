@@ -22,7 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import org.opdl.transfer.NetworkPacket.Payload
-import org.opdl.transfer_tp.BuildConfig
+import org.opdl.transfer.BuildConfig
 import java.io.File
 import java.io.IOException
 import java.io.InputStream

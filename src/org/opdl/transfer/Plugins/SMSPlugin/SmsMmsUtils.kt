@@ -44,7 +44,7 @@ import org.opdl.transfer.Helpers.SMSHelper
 import org.opdl.transfer.Helpers.TelephonyHelper
 import org.opdl.transfer.Helpers.TelephonyHelper.LocalPhoneNumber
 import org.opdl.transfer.NetworkPacket
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File

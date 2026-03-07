@@ -22,7 +22,7 @@ import org.opdl.transfer.NetworkPacket
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory.LoadablePlugin
 import org.opdl.transfer.UserInterface.MainActivity
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 @LoadablePlugin
 class ReceiveNotificationsPlugin : Plugin() {

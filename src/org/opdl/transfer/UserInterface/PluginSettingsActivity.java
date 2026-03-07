@@ -25,8 +25,8 @@ import org.opdl.transfer.DeviceStats;
 import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.base.BaseActivity;
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.ActivityPluginSettingsBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.ActivityPluginSettingsBinding;
 
 import java.util.Objects;
 

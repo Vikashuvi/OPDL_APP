@@ -62,8 +62,8 @@ import org.opdl.transfer.Plugins.RunCommandPlugin.RunCommandPlugin
 import org.opdl.transfer.UserInterface.compose.KdeTheme
 import org.opdl.transfer.base.BaseFragment
 import org.opdl.transfer.extensions.setupBottomPadding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityDeviceBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityDeviceBinding
 
 /**
  * Main view. Displays the current device and its plugins

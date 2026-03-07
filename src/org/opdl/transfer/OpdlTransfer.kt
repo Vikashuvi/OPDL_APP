@@ -25,7 +25,7 @@ import org.opdl.transfer.PairingHandler.PairingCallback
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory
 import org.opdl.transfer.UserInterface.ThemeUtil
-import org.opdl.transfer_tp.BuildConfig
+import org.opdl.transfer.BuildConfig
 import org.slf4j.impl.HandroidLoggerAdapter
 import java.security.cert.CertificateException
 import java.security.cert.X509Certificate

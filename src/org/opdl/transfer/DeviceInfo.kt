@@ -13,7 +13,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import org.opdl.transfer.Helpers.DeviceHelper
 import org.opdl.transfer.Helpers.SecurityHelpers.SslHelper
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import java.security.cert.Certificate
 import java.security.cert.CertificateEncodingException
 import java.security.cert.CertificateException

@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 
 import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.base.BaseActivity;
-import org.opdl.transfer_tp.databinding.ActivityFindMyPhoneBinding;
+import org.opdl.transfer.databinding.ActivityFindMyPhoneBinding;
 
 import java.util.Objects;
 

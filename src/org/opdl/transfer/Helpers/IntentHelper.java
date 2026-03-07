@@ -15,7 +15,7 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 public class IntentHelper {
 

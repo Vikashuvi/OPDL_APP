@@ -11,8 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import org.opdl.transfer.base.BaseFragment
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.FragmentSpeedMetricsBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.FragmentSpeedMetricsBinding
 
 class SpeedMetricsFragment : BaseFragment<FragmentSpeedMetricsBinding>() {
 

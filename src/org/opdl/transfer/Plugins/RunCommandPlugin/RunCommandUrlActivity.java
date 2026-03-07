@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.OpdlTransfer;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 public class RunCommandUrlActivity extends AppCompatActivity {
 

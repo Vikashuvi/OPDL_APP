@@ -16,7 +16,7 @@ import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import android.widget.RemoteViewsService.RemoteViewsFactory
 import org.opdl.transfer.OpdlTransfer
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 internal class RunCommandWidgetDataProvider(private val context: Context, val intent: Intent?) : RemoteViewsFactory {
 

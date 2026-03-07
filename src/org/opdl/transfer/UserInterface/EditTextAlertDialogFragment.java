@@ -15,8 +15,8 @@ import androidx.annotation.StringRes;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.EditTextAlertDialogViewBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.EditTextAlertDialogViewBinding;
 
 public class EditTextAlertDialogFragment extends AlertDialogFragment {
     private static final String KEY_HINT_RES_ID = "HintResId";

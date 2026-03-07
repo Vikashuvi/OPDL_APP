@@ -34,9 +34,9 @@ import org.opdl.transfer.Helpers.VideoUrlsHelper
 import org.opdl.transfer.Helpers.calculateNewVolume
 import org.opdl.transfer.OpdlTransfer
 import org.opdl.transfer.Plugins.MprisPlugin.MprisPlugin.MprisPlayer
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.MprisControlBinding
-import org.opdl.transfer_tp.databinding.MprisNowPlayingBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.MprisControlBinding
+import org.opdl.transfer.databinding.MprisNowPlayingBinding
 import java.net.MalformedURLException
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds

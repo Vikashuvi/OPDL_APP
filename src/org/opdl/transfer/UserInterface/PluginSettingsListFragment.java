@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.opdl.transfer.Device;
 import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.Plugins.PluginFactory;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.List;
 

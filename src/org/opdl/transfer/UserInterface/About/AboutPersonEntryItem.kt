@@ -13,8 +13,8 @@ import android.view.View
 import androidx.appcompat.widget.TooltipCompat
 import androidx.core.net.toUri
 import org.opdl.transfer.UserInterface.List.ListAdapter
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.AboutPersonListItemEntryBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.AboutPersonListItemEntryBinding
 
 class AboutPersonEntryItem(val person: AboutPerson) : ListAdapter.Item {
     override fun inflateView(layoutInflater: LayoutInflater): View {

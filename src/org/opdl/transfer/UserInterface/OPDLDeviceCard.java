@@ -15,7 +15,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 
 import org.opdl.transfer.OPDLDevice;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 /**
  * Performance-Aware Peer Device Card for OPDL Dashboard.

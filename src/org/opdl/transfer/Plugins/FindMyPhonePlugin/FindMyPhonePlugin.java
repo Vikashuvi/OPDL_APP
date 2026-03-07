@@ -34,7 +34,7 @@ import org.opdl.transfer.NetworkPacket;
 import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.Plugins.PluginFactory;
 import org.opdl.transfer.UserInterface.PluginSettingsFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.io.IOException;
 

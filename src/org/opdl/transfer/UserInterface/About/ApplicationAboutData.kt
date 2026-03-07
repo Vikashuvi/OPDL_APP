@@ -7,8 +7,8 @@
 package org.opdl.transfer.UserInterface.About
 
 import android.content.Context
-import org.opdl.transfer_tp.BuildConfig
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.BuildConfig
+import org.opdl.transfer.R
 
 /**
 * Add authors and credits here

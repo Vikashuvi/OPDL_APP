@@ -27,8 +27,8 @@ import org.opdl.transfer.OpdlTransfer
 import org.opdl.transfer.UserInterface.PluginSettingsActivity
 import org.opdl.transfer.base.BaseActivity
 import org.opdl.transfer.extensions.viewBinding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityDigitizerBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityDigitizerBinding
 import kotlin.math.roundToInt
 
 class DigitizerActivity : BaseActivity<ActivityDigitizerBinding>(), DrawingPadView.EventListener {

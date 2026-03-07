@@ -13,7 +13,7 @@ import androidx.preference.SwitchPreference
 import org.opdl.transfer.Device
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory.getPluginInfo
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 class PluginPreference : SwitchPreference {
     private val device: Device

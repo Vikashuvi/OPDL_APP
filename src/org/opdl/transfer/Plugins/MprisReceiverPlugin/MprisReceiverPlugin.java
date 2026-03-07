@@ -28,7 +28,7 @@ import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.Plugins.PluginFactory;
 import org.opdl.transfer.UserInterface.MainActivity;
 import org.opdl.transfer.UserInterface.StartActivityAlertDialogFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -18,7 +18,7 @@ import org.opdl.transfer.Device
 import org.opdl.transfer.OpdlTransfer
 import org.opdl.transfer.UserInterface.List.DeviceItem
 import org.opdl.transfer.UserInterface.List.ListAdapter
-import org.opdl.transfer_tp.databinding.WidgetRemoteCommandPluginDialogBinding
+import org.opdl.transfer.databinding.WidgetRemoteCommandPluginDialogBinding
 
 class RunCommandWidgetConfigActivity : AppCompatActivity() {
 
@@ -61,7 +61,7 @@ class RunCommandWidgetConfigActivity : AppCompatActivity() {
     }
 }
 
-private const val PREFS_NAME = "org.opdl.transfer_tp.WidgetProvider"
+private const val PREFS_NAME = "org.opdl.transfer.WidgetProvider"
 private const val PREF_PREFIX_KEY = "appwidget_"
 
 internal fun saveWidgetDeviceIdPref(context: Context, appWidgetId: Int, deviceName: String) {

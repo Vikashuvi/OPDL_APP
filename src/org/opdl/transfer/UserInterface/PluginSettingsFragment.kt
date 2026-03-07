@@ -12,7 +12,7 @@ import org.opdl.transfer.Device
 import org.opdl.transfer.OpdlTransfer.Companion.getInstance
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 open class PluginSettingsFragment : PreferenceFragmentCompat() {
     private var pluginKey: String? = null

@@ -26,7 +26,7 @@ import android.widget.ImageView;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

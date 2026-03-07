@@ -20,7 +20,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 
 import org.opdl.transfer.UserInterface.PluginSettingsFragment;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 public class FindMyPhoneSettingsFragment extends PluginSettingsFragment {
     private static final int REQUEST_CODE_SELECT_RINGTONE = 1000;

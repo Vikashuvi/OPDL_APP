@@ -13,7 +13,7 @@ import org.opdl.transfer.Plugins.ConnectivityReportPlugin.ConnectivityListener.C
 import org.opdl.transfer.Plugins.ConnectivityReportPlugin.ConnectivityListener.SubscriptionState
 import org.opdl.transfer.Plugins.Plugin
 import org.opdl.transfer.Plugins.PluginFactory.LoadablePlugin
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 @LoadablePlugin
 class ConnectivityReportPlugin : Plugin() {

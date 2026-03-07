@@ -17,8 +17,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityEasterEggBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityEasterEggBinding
 import kotlin.math.PI
 import kotlin.math.atan2
 

@@ -28,7 +28,7 @@ import org.json.JSONObject
 import org.opdl.transfer.Device
 import org.opdl.transfer.OpdlTransfer
 import org.opdl.transfer.UserInterface.MainActivity
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import org.reactivestreams.FlowAdapters
 import java.util.concurrent.Flow
 import java.util.function.Consumer

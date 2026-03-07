@@ -31,8 +31,8 @@ import org.json.JSONException
 import org.json.JSONObject
 import org.opdl.transfer.Helpers.StorageHelper
 import org.opdl.transfer.Plugins.SftpPlugin.SftpPlugin.StorageInfo.Companion.fromJSON
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.FragmentStoragePreferenceDialogBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.FragmentStoragePreferenceDialogBinding
 
 class StoragePreferenceDialogFragment : PreferenceDialogFragmentCompat(), TextWatcher {
     private var binding: FragmentStoragePreferenceDialogBinding? = null

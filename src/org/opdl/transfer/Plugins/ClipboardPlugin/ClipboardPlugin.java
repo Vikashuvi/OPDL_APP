@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import org.opdl.transfer.NetworkPacket;
 import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.Plugins.PluginFactory;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.Collections;
 import java.util.List;

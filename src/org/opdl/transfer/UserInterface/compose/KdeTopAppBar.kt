@@ -17,7 +17,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

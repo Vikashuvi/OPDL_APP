@@ -10,7 +10,7 @@ import android.os.Build
 import android.preference.PreferenceManager
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationManagerCompat
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 object NotificationHelper {
     fun initializeChannels(context: Context) {

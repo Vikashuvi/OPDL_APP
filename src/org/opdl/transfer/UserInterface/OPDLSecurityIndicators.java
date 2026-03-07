@@ -16,7 +16,7 @@ import androidx.cardview.widget.CardView;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.Helpers.SecurityHelpers.SslHelper;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 /**
  * Security indicators component for OPDL system.

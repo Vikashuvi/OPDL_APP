@@ -21,7 +21,7 @@ import org.opdl.transfer.UserInterface.AlertDialogFragment
 import org.opdl.transfer.UserInterface.MainActivity
 import org.opdl.transfer.UserInterface.PermissionsAlertDialogFragment
 import org.opdl.transfer.UserInterface.PluginSettingsFragment
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 abstract class Plugin {
     protected lateinit var device: Device

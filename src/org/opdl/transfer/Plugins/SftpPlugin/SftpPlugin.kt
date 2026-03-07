@@ -26,8 +26,8 @@ import org.opdl.transfer.UserInterface.DeviceSettingsAlertDialogFragment
 import org.opdl.transfer.UserInterface.MainActivity
 import org.opdl.transfer.UserInterface.PluginSettingsFragment
 import org.opdl.transfer.UserInterface.StartActivityAlertDialogFragment
-import org.opdl.transfer_tp.BuildConfig
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.BuildConfig
+import org.opdl.transfer.R
 import java.security.GeneralSecurityException
 
 @LoadablePlugin

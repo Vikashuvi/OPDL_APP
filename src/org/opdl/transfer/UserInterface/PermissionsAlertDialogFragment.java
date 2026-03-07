@@ -11,7 +11,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 public class PermissionsAlertDialogFragment extends AlertDialogFragment {
     private static final String KEY_PERMISSIONS = "Permissions";

@@ -8,7 +8,7 @@ package org.opdl.transfer.Helpers
 
 import android.os.Looper
 import android.util.Log
-import org.opdl.transfer_tp.BuildConfig
+import org.opdl.transfer.BuildConfig
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

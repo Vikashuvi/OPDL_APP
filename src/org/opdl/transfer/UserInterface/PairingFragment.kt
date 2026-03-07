@@ -35,13 +35,13 @@ import org.opdl.transfer.UserInterface.List.PairingDeviceItem
 import org.opdl.transfer.UserInterface.List.SectionItem
 import org.opdl.transfer.base.BaseFragment
 import org.opdl.transfer.extensions.setupBottomPadding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.DevicesListBinding
-import org.opdl.transfer_tp.databinding.PairingExplanationDuplicateNamesBinding
-import org.opdl.transfer_tp.databinding.PairingExplanationNotTrustedBinding
-import org.opdl.transfer_tp.databinding.PairingExplanationTextBinding
-import org.opdl.transfer_tp.databinding.PairingExplanationTextNoNotificationsBinding
-import org.opdl.transfer_tp.databinding.PairingExplanationTextNoWifiBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.DevicesListBinding
+import org.opdl.transfer.databinding.PairingExplanationDuplicateNamesBinding
+import org.opdl.transfer.databinding.PairingExplanationNotTrustedBinding
+import org.opdl.transfer.databinding.PairingExplanationTextBinding
+import org.opdl.transfer.databinding.PairingExplanationTextNoNotificationsBinding
+import org.opdl.transfer.databinding.PairingExplanationTextNoWifiBinding
 
 /**
  * The view that the user will see when there are no devices paired, or when you choose "add a new device" from the sidebar.

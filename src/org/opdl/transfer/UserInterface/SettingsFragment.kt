@@ -43,8 +43,8 @@ import org.opdl.transfer.Helpers.DeviceHelper.getDeviceName
 import org.opdl.transfer.Helpers.NotificationHelper
 import org.opdl.transfer.UserInterface.ThemeUtil.applyTheme
 import org.opdl.transfer.extensions.setupBottomPadding
-import org.opdl.transfer_tp.BuildConfig
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.BuildConfig
+import org.opdl.transfer.R
 import java.io.InputStreamReader
 
 class SettingsFragment : PreferenceFragmentCompat() {

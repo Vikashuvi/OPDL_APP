@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import org.opdl.transfer.Device;
 import org.opdl.transfer.NetworkPacket;
 import org.opdl.transfer.async.BackgroundJob;
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 import java.util.ArrayList;
 import java.util.List;

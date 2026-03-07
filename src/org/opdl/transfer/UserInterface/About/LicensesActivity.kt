@@ -16,8 +16,8 @@ import org.apache.commons.io.IOUtils
 import org.opdl.transfer.base.BaseActivity
 import org.opdl.transfer.extensions.setupBottomPadding
 import org.opdl.transfer.extensions.viewBinding
-import org.opdl.transfer_tp.R
-import org.opdl.transfer_tp.databinding.ActivityLicensesBinding
+import org.opdl.transfer.R
+import org.opdl.transfer.databinding.ActivityLicensesBinding
 import java.nio.charset.Charset
 
 class LicensesActivity : BaseActivity<ActivityLicensesBinding>() {

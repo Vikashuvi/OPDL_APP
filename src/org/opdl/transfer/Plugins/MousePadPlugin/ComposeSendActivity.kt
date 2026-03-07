@@ -29,7 +29,7 @@ import org.opdl.transfer.UserInterface.compose.KdeTextField
 import org.opdl.transfer.UserInterface.compose.KdeTheme
 import org.opdl.transfer.UserInterface.compose.KdeTopAppBar
 import org.opdl.transfer.extensions.safeDrawPadding
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 private const val INPUT_CACHE_KEY = "compose_send_input_cache"
 

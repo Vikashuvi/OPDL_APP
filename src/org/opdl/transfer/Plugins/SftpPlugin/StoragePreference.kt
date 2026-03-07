@@ -12,7 +12,7 @@ import android.view.View
 import android.widget.CheckBox
 import androidx.preference.DialogPreference
 import androidx.preference.PreferenceViewHolder
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 
 class StoragePreference @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     DialogPreference(

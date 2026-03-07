@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.opdl.transfer_tp.R;
+import org.opdl.transfer.R;
 
 /*
     An activity to access the clipboard on Android 10 and later by raising over other apps.
@@ -28,12 +28,12 @@ import org.opdl.transfer_tp.R;
     https://www.reddit.com/r/AndroidBusters/comments/fh60lt/how_to_solve_a_problem_with_the_clipboard_on/
     Like:
     # Enable the READ_LOGS permission. There is no other way to do this for a regular user app.
-    adb -d shell pm grant org.opdl.transfer_tp android.permission.READ_LOGS;
+    adb -d shell pm grant org.opdl.transfer android.permission.READ_LOGS;
     # Allow "Drawing over other apps", also accessible from Settings on the phone.
     # Optional, but makes the feature much more reliable.
-    adb -d shell appops set org.opdl.transfer_tp SYSTEM_ALERT_WINDOW allow;
+    adb -d shell appops set org.opdl.transfer SYSTEM_ALERT_WINDOW allow;
     # Kill the app, new permissions take effect on restart.
-    adb -d shell am force-stop org.opdl.transfer_tp;
+    adb -d shell am force-stop org.opdl.transfer;
 
     Currently this activity is bering triggered from a button in Foreground Notification or quick settings tile.
 * */

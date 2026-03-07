@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.opdl.transfer.DeviceHost;
-import org.opdl.transfer_tp.R;
-import org.opdl.transfer_tp.databinding.CustomDeviceItemBinding;
+import org.opdl.transfer.R;
+import org.opdl.transfer.databinding.CustomDeviceItemBinding;
 
 import java.util.ArrayList;
 

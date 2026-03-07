@@ -15,7 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.bouncycastle.util.Arrays
 import org.opdl.transfer.Helpers.SecurityHelpers.SslHelper
-import org.opdl.transfer_tp.R
+import org.opdl.transfer.R
 import java.security.MessageDigest
 import java.security.cert.Certificate
 import java.util.Formatter
