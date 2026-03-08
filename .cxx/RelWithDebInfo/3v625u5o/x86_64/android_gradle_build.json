@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/RelWithDebInfo/3v625u5o/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/RelWithDebInfo/3v625u5o/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opdl_jni::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "opdl_jni",
+      "output": "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/RelWithDebInfo/3v625u5o/obj/x86_64/libopdl_jni.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

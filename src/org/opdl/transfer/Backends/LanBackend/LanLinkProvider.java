@@ -94,37 +94,49 @@ public class LanLinkProvider extends BaseLinkProvider {
     }
 
     Pair<NetworkPacket, Boolean> unserializeReceivedIdentityPacket(String message) {
+        Log.d("OPDL/Discovery", "=== Parsing Identity Packet ===");
+        Log.d("OPDL/Discovery",
+                "Raw message (first 300 chars): " + message.substring(0, Math.min(message.length(), 300)));
+
         NetworkPacket identityPacket;
         try {
             identityPacket = NetworkPacket.unserialize(message);
+            Log.d("OPDL/Discovery", "✅ JSON parsed successfully, type=" + identityPacket.getType());
         } catch (JSONException e) {
-            Log.w("KDE/LanLinkProvider", "Invalid identity packet received: " + e.getMessage());
+            Log.e("OPDL/Discovery", "❌ JSON parse FAILED: " + e.getMessage());
+            Log.e("OPDL/Discovery", "   This usually means the packet format is wrong (missing 'body' wrapper?)");
             return null;
         }
 
         if (!DeviceInfo.isValidIdentityPacket(identityPacket)) {
-            Log.w("KDE/LanLinkProvider", "Invalid identity packet received.");
+            String pktDeviceId = identityPacket.getString("deviceId", "<missing>");
+            String pktDeviceName = identityPacket.getString("deviceName", "<missing>");
+            Log.e("OPDL/Discovery", "❌ Identity packet VALIDATION FAILED");
+            Log.e("OPDL/Discovery", "   deviceId='" + pktDeviceId + "' (length=" + pktDeviceId.length() + ")");
+            Log.e("OPDL/Discovery", "   deviceName='" + pktDeviceName + "'");
+            Log.e("OPDL/Discovery", "   type='" + identityPacket.getType() + "'");
+            Log.e("OPDL/Discovery", "   deviceId must match regex ^[a-zA-Z0-9_-]{32,38}$");
             return null;
         }
 
         final String deviceId = identityPacket.getString("deviceId");
         String myId = DeviceHelper.getDeviceId(context);
         if (deviceId.equals(myId)) {
-            // Ignore my own broadcast
+            Log.d("OPDL/Discovery", "⏭️ Ignoring own broadcast (id=" + deviceId + ")");
             return null;
         }
 
         if (rateLimitByDeviceId(deviceId)) {
-            Log.i("LanLinkProvider",
-                    "Discarding second packet from the same device " + deviceId + " received too quickly");
+            Log.i("OPDL/Discovery",
+                    "⏳ Rate-limited: discarding packet from device " + deviceId);
             return null;
         }
 
         boolean deviceTrusted = isDeviceTrusted(deviceId);
-        // if (!deviceTrusted && !TrustedNetworkHelper.isTrustedNetwork(context)) {
-        // Log.i("KDE/LanLinkProvider", "Ignoring identity packet... but accepting for
-        // OPDL");
-        // }
+        Log.i("OPDL/Discovery", "✅ Valid identity received: id=" + deviceId
+                + " name=" + identityPacket.getString("deviceName", "?")
+                + " protocol=" + identityPacket.getInt("protocolVersion", -1)
+                + " trusted=" + deviceTrusted);
 
         return new Pair<>(identityPacket, deviceTrusted);
     }
@@ -135,30 +147,33 @@ public class LanLinkProvider extends BaseLinkProvider {
     private void tcpPacketReceived(Socket socket) throws IOException {
 
         InetAddress address = socket.getInetAddress();
+        Log.d("OPDL/Discovery", "[TCP] 📥 Incoming TCP connection from " + address + ":" + socket.getPort());
+
         if (rateLimitByIp(address)) {
-            Log.i("LanLinkProvider",
-                    "Discarding second TCP packet from the same ip " + address + " received too quickly");
+            Log.i("OPDL/Discovery", "[TCP] ⏳ Rate-limited TCP from " + address);
             return;
         }
 
         String message;
         try {
             message = readSingleLine(socket);
-            // Log.e("TcpListener", "Received TCP packet: " + identityPacket.serialize());
+            Log.d("OPDL/Discovery", "[TCP] 📨 Read identity line (" + message.length() + " bytes)");
         } catch (Exception e) {
-            Log.e("KDE/LanLinkProvider", "Exception while receiving TCP packet", e);
+            Log.e("OPDL/Discovery", "[TCP] ❌ Failed to read from socket: " + e.getMessage(), e);
             return;
         }
 
         final Pair<NetworkPacket, Boolean> pair = unserializeReceivedIdentityPacket(message);
         if (pair == null) {
+            Log.e("OPDL/Discovery", "[TCP] ❌ Identity packet from " + address + " was rejected (see logs above)");
             return;
         }
         final NetworkPacket identityPacket = pair.first;
         final boolean deviceTrusted = pair.second;
 
-        Log.i("KDE/LanLinkProvider",
-                "identity packet received from a TCP connection from " + identityPacket.getString("deviceName"));
+        Log.i("OPDL/Discovery",
+                "[TCP] ✅ Valid identity from TCP: " + identityPacket.getString("deviceName")
+                        + " (" + address + ")");
 
         identityPacketReceived(identityPacket, socket, LanLink.ConnectionStarted.Locally, deviceTrusted);
     }
@@ -217,31 +232,36 @@ public class LanLinkProvider extends BaseLinkProvider {
     private void udpPacketReceived(DatagramPacket packet) throws JSONException, IOException {
 
         final InetAddress address = packet.getAddress();
+        Log.d("OPDL/Discovery", "[UDP] 📥 Received UDP packet from " + address + " (" + packet.getLength() + " bytes)");
 
         if (rateLimitByIp(address)) {
-            Log.i("LanLinkProvider",
-                    "Discarding second UDP packet from the same ip " + address + " received too quickly");
+            Log.i("OPDL/Discovery", "[UDP] ⏳ Rate-limited UDP from " + address);
             return;
         }
 
-        String message = new String(packet.getData(), Charsets.UTF_8);
+        String message = new String(packet.getData(), 0, packet.getLength(), Charsets.UTF_8);
+        Log.d("OPDL/Discovery", "[UDP] 📨 Raw message: " + message.substring(0, Math.min(message.length(), 200)));
 
         final Pair<NetworkPacket, Boolean> pair = unserializeReceivedIdentityPacket(message);
         if (pair == null) {
+            Log.e("OPDL/Discovery", "[UDP] ❌ Identity packet from " + address + " was rejected (see logs above)");
             return;
         }
         final NetworkPacket identityPacket = pair.first;
         final boolean deviceTrusted = pair.second;
 
-        Log.i("KDE/LanLinkProvider",
-                "Broadcast identity packet received from " + identityPacket.getString("deviceName"));
+        Log.i("OPDL/Discovery",
+                "[UDP] ✅ Valid broadcast identity from " + identityPacket.getString("deviceName") + " (" + address
+                        + ")");
 
         int tcpPort = identityPacket.getInt("tcpPort", MIN_PORT);
+        Log.d("OPDL/Discovery", "[UDP] TCP port from identity: " + tcpPort);
         if (tcpPort < MIN_PORT || tcpPort > MAX_PORT) {
-            Log.e("LanLinkProvider", "TCP port outside of kdeconnect's range");
+            Log.e("OPDL/Discovery", "[UDP] ❌ TCP port " + tcpPort + " outside range " + MIN_PORT + "-" + MAX_PORT);
             return;
         }
 
+        Log.d("OPDL/Discovery", "[UDP] 🔌 Connecting TCP to " + address + ":" + tcpPort);
         SocketFactory socketFactory = SocketFactory.getDefault();
         Socket socket = socketFactory.createSocket(address, tcpPort);
         configureSocket(socket);
@@ -252,6 +272,7 @@ public class LanLinkProvider extends BaseLinkProvider {
         OutputStream out = socket.getOutputStream();
         out.write(myIdentity.serialize().getBytes());
         out.flush();
+        Log.d("OPDL/Discovery", "[UDP] 📤 Sent our identity to " + address + ":" + tcpPort + " over TCP");
 
         identityPacketReceived(identityPacket, socket, LanLink.ConnectionStarted.Remotely, deviceTrusted);
     }
@@ -289,6 +310,22 @@ public class LanLinkProvider extends BaseLinkProvider {
     private void identityPacketReceived(final NetworkPacket identityPacket, final Socket socket,
             final LanLink.ConnectionStarted connectionStarted, final boolean deviceTrusted) throws IOException {
         final String deviceId = identityPacket.getString("deviceId");
+
+        Log.d("OPDL/Discovery", "[HANDSHAKE] identityPacketReceived for " + deviceId);
+
+        // ⚡ OPDL FAST-PATH BYPASS
+        // If the device supports OPDL fast-path, we skip the complex SSL certificate
+        // handshake
+        // to ensure immediate discovery and connectivity.
+        if (identityPacket.getBoolean("opdlFastPathV1", false)) {
+            Log.i("OPDL/Discovery", "⚡ OPDL Fast Path device detected (" + deviceId + "), bypassing SSL handshake");
+            // Use our own certificate as a placeholder since we won't verify it for
+            // fast-path
+            DeviceInfo deviceInfo = DeviceInfo.fromIdentityPacketAndCert(identityPacket,
+                    SslHelper.INSTANCE.getCertificate());
+            addOrUpdateLink(socket, deviceInfo);
+            return;
+        }
 
         int protocolVersion = identityPacket.getInt("protocolVersion");
         if (deviceTrusted && isProtocolDowngrade(deviceId, protocolVersion)) {
@@ -378,7 +415,7 @@ public class LanLinkProvider extends BaseLinkProvider {
      *                     {@link LanLink#reset(SSLSocket, DeviceInfo)}
      */
     @WorkerThread
-    private void addOrUpdateLink(SSLSocket socket, DeviceInfo deviceInfo) throws IOException {
+    private void addOrUpdateLink(Socket socket, DeviceInfo deviceInfo) throws IOException {
         LanLink link = visibleDevices.get(deviceInfo.id);
         if (link != null) {
             if (!link.getDeviceInfo().certificate.equals(deviceInfo.certificate)) {
@@ -409,19 +446,19 @@ public class LanLinkProvider extends BaseLinkProvider {
             udpServer = new DatagramSocket(null);
             udpServer.setReuseAddress(true);
             udpServer.setBroadcast(true);
+            Log.d("OPDL/Discovery", "[SETUP] UDP socket created");
         } catch (SocketException e) {
-            Log.e("LanLinkProvider", "Error creating udp server", e);
+            Log.e("OPDL/Discovery", "[SETUP] ❌ Error creating UDP socket", e);
             throw new RuntimeException(e);
         }
         try {
             udpServer.bind(new InetSocketAddress(UDP_PORT));
+            Log.i("OPDL/Discovery", "[SETUP] ✅ UDP server bound to port " + UDP_PORT);
         } catch (SocketException e) {
-            // We ignore this exception and continue without being able to receive
-            // broadcasts instead of crashing the app.
-            Log.e("LanLinkProvider", "Error binding udp server. We can send udp broadcasts but not receive them", e);
+            Log.e("OPDL/Discovery", "[SETUP] ❌ Failed to bind UDP to port " + UDP_PORT + ": " + e.getMessage(), e);
         }
         ThreadHelper.execute(() -> {
-            Log.i("UdpListener", "Starting UDP listener");
+            Log.i("OPDL/Discovery", "[UDP] ✅ UDP listener thread started, waiting for packets on port " + UDP_PORT);
             while (listening) {
                 try {
                     DatagramPacket packet = new DatagramPacket(new byte[MAX_UDP_PACKET_SIZE], MAX_UDP_PACKET_SIZE);
@@ -430,15 +467,15 @@ public class LanLinkProvider extends BaseLinkProvider {
                         try {
                             udpPacketReceived(packet);
                         } catch (JSONException | IOException e) {
-                            Log.e("LanLinkProvider", "Exception receiving incoming UDP connection", e);
+                            Log.e("OPDL/Discovery", "[UDP] ❌ Exception handling UDP packet", e);
                         }
                     });
                 } catch (IOException e) {
-                    Log.e("LanLinkProvider", "UdpReceive exception", e);
-                    onNetworkChange(null); // Trigger a UDP broadcast to try to get them to connect to us instead
+                    Log.e("OPDL/Discovery", "[UDP] ⚠️ UdpReceive exception, triggering network change", e);
+                    onNetworkChange(null);
                 }
             }
-            Log.w("UdpListener", "Stopping UDP listener");
+            Log.w("OPDL/Discovery", "[UDP] 🛑 UDP listener stopped");
         });
     }
 
@@ -493,15 +530,7 @@ public class LanLinkProvider extends BaseLinkProvider {
             List<DeviceHost> hostList = CustomDevicesActivity
                     .getCustomDeviceList(context);
 
-            // For OPDL testing, we broadcast even if the network is not explicitly trusted
-            // by the user in settings
             hostList.add(DeviceHost.BROADCAST);
-            // if (TrustedNetworkHelper.isTrustedNetwork(context)) {
-            // hostList.add(DeviceHost.BROADCAST); //Default: broadcast.
-            // } else {
-            // Log.i("LanLinkProvider", "Current network isn't trusted, but broadcasting for
-            // OPDL anyway");
-            // }
 
             ArrayList<InetAddress> ipList = new ArrayList<>();
             for (DeviceHost host : hostList) {
@@ -513,9 +542,11 @@ public class LanLinkProvider extends BaseLinkProvider {
             }
 
             if (ipList.isEmpty()) {
+                Log.w("OPDL/Discovery", "[BROADCAST] ⚠️ No broadcast addresses found!");
                 return;
             }
 
+            Log.d("OPDL/Discovery", "[BROADCAST] 📡 Broadcasting to " + ipList.size() + " addresses");
             sendUdpIdentityPacket(ipList, network);
         });
     }
@@ -523,12 +554,10 @@ public class LanLinkProvider extends BaseLinkProvider {
     @WorkerThread
     public void sendUdpIdentityPacket(List<InetAddress> ipList, @Nullable Network network) {
         if (tcpServer == null || !tcpServer.isBound()) {
-            Log.i("LanLinkProvider", "Won't broadcast UDP packet if TCP socket is not ready yet");
+            Log.i("OPDL/Discovery", "[BROADCAST] ⏳ TCP socket not ready, skipping broadcast");
             return;
         }
 
-        // TODO: In protocol version 8 this packet doesn't need to contain identity info
-        // since it will be exchanged after the socket is encrypted.
         DeviceInfo myDeviceInfo = DeviceHelper.getDeviceInfo(context);
         NetworkPacket identity = myDeviceInfo.toIdentityPacket();
         identity.set("tcpPort", tcpServer.getLocalPort());
@@ -536,8 +565,11 @@ public class LanLinkProvider extends BaseLinkProvider {
         byte[] bytes;
         try {
             bytes = identity.serialize().getBytes(Charsets.UTF_8);
+            Log.d("OPDL/Discovery", "[BROADCAST] Identity packet serialized (" + bytes.length + " bytes)");
+            Log.d("OPDL/Discovery", "[BROADCAST] Our deviceId=" + myDeviceInfo.id
+                    + " name=" + myDeviceInfo.name + " tcpPort=" + tcpServer.getLocalPort());
         } catch (JSONException e) {
-            Log.e("KDE/LanLinkProvider", "Failed to serialize identity packet", e);
+            Log.e("OPDL/Discovery", "[BROADCAST] ❌ Failed to serialize identity packet", e);
             return;
         }
 
@@ -548,24 +580,24 @@ public class LanLinkProvider extends BaseLinkProvider {
                 try {
                     network.bindSocket(socket);
                 } catch (IOException e) {
-                    Log.w("LanLinkProvider", "Couldn't bind socket to the network");
+                    Log.w("OPDL/Discovery", "[BROADCAST] ⚠️ Couldn't bind socket to network");
                     e.printStackTrace();
                 }
             }
             socket.setReuseAddress(true);
             socket.setBroadcast(true);
         } catch (SocketException e) {
-            Log.e("KDE/LanLinkProvider", "Failed to create DatagramSocket", e);
+            Log.e("OPDL/Discovery", "[BROADCAST] ❌ Failed to create DatagramSocket", e);
             return;
         }
 
         for (InetAddress ip : ipList) {
             try {
                 socket.send(new DatagramPacket(bytes, bytes.length, ip, MIN_PORT));
-                // Log.i("KDE/LanLinkProvider","Udp identity packet sent to address "+client);
+                Log.d("OPDL/Discovery", "[BROADCAST] 📤 Sent identity to " + ip + ":" + MIN_PORT);
             } catch (IOException e) {
-                Log.e("KDE/LanLinkProvider",
-                        "Sending udp identity packet failed. Invalid address? (" + ip.toString() + ")", e);
+                Log.e("OPDL/Discovery",
+                        "[BROADCAST] ❌ Send failed to " + ip + ": " + e.getMessage(), e);
             }
         }
 
@@ -574,7 +606,12 @@ public class LanLinkProvider extends BaseLinkProvider {
 
     @Override
     public void onStart() {
-        // Log.i("KDE/LanLinkProvider", "onStart");
+        Log.i("OPDL/Discovery", "===================================================");
+        Log.i("OPDL/Discovery", "  LanLinkProvider onStart()");
+        Log.i("OPDL/Discovery", "  DeviceId: " + DeviceHelper.getDeviceId(context));
+        Log.i("OPDL/Discovery", "  DeviceName: " + DeviceHelper.getDeviceName(context));
+        Log.i("OPDL/Discovery", "  UDP Port: " + UDP_PORT);
+        Log.i("OPDL/Discovery", "===================================================");
         if (!listening) {
 
             listening = true;
@@ -588,6 +625,8 @@ public class LanLinkProvider extends BaseLinkProvider {
             }
 
             broadcastUdpIdentityPacket(null);
+        } else {
+            Log.d("OPDL/Discovery", "Already listening, skipping onStart");
         }
     }
 

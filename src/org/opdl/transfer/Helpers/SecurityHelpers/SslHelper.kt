@@ -149,6 +149,7 @@ object SslHelper {
     /**
      * Returns the stored certificate for a trusted device
      */
+    @JvmStatic
     fun getDeviceCertificate(context: Context, deviceId: String): Certificate {
         val devicePreferences = context.getSharedPreferences(deviceId, Context.MODE_PRIVATE)
         val certificateBytes = Base64.decode(devicePreferences.getString("certificate", ""), 0)

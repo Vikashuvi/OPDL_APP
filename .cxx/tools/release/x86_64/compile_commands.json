@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/RelWithDebInfo/3v625u5o/x86_64",
+  "command": "/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android22 --sysroot=/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dopdl_jni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -Wall -Wextra -Werror -o CMakeFiles/opdl_jni.dir/opdl_jni.c.o -c /home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/opdl_jni.c",
+  "file": "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/opdl_jni.c"
+}
+]
