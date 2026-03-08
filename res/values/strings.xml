@@ -660,5 +660,5 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
     <string name="device_host_duplicate">Host already exists in the list</string>
 
     <string name="enable_fullscreen">Enable fullscreen</string>
-
+    <string name="history">History</string>
 </resources>

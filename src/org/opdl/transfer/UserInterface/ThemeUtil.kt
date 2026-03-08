@@ -23,29 +23,8 @@ object ThemeUtil {
     const val DEFAULT_MODE: String = "default"
 
     fun applyTheme(themePref: String) {
-        when (themePref) {
-            LIGHT_MODE -> {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-
-            DARK_MODE -> {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            }
-
-            else -> {
-                if (themePref == DEFAULT_MODE) {
-                    Log.d("ThemeUtil", "Theme preference not set, using system default.")
-                } else {
-                    Log.w("ThemeUtil", "Unknown theme preference: $themePref, falling back to system default.")
-                }
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-                }
-            }
-        }
+        // Always force dark mode for OPDL monochrome B&W theme
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
 
     /**

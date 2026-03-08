@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- OPDL Primary Color Scheme -->
-    <color name="opdl_primary">#6200EE</color>
-    <color name="opdl_primary_variant">#3700B3</color>
-    <color name="opdl_secondary">#03DAC6</color>
-    <color name="opdl_secondary_variant">#018786</color>
-    <color name="opdl_accent">#BB86FC</color>
+    <!-- OPDL Monochrome B&W Palette -->
+    <color name="opdl_primary">#FFFFFF</color>
+    <color name="opdl_primary_variant">#E0E0E0</color>
+    <color name="opdl_secondary">#888888</color>
+    <color name="opdl_secondary_variant">#555555</color>
+    <color name="opdl_accent">#FFFFFF</color>
     
     <!-- OPDL Dark Theme Backgrounds -->
-    <color name="opdl_background">#121212</color>
-    <color name="opdl_surface">#1E1E1E</color>
-    <color name="opdl_surface_variant">#2D2D2D</color>
-    <color name="opdl_card_background">#252525</color>
+    <color name="opdl_background">#0D0D0D</color>
+    <color name="opdl_surface">#1A1A1A</color>
+    <color name="opdl_surface_variant">#222222</color>
+    <color name="opdl_card_background">#222222</color>
     
     <!-- OPDL Text Colors -->
-    <color name="opdl_on_primary">#FFFFFF</color>
-    <color name="opdl_on_secondary">#000000</color>
-    <color name="opdl_on_background">#E0E0E0</color>
+    <color name="opdl_on_primary">#0D0D0D</color>
+    <color name="opdl_on_secondary">#FFFFFF</color>
+    <color name="opdl_on_background">#FFFFFF</color>
     <color name="opdl_on_surface">#FFFFFF</color>
-    <color name="opdl_text_secondary">#B3B3B3</color>
+    <color name="opdl_text_secondary">#888888</color>
     
-    <!-- OPDL Performance Status Colors -->
-    <color name="opdl_performance_optimal">#4CAF50</color>
-    <color name="opdl_performance_warning">#FF9800</color>
-    <color name="opdl_performance_error">#F44336</color>
+    <!-- Color Psychology: Functional Accents Only -->
+    <color name="opdl_performance_optimal">#4ADE80</color>
+    <color name="opdl_performance_warning">#F59E0B</color>
+    <color name="opdl_performance_error">#EF4444</color>
     
-    <!-- OPDL Network Colors -->
-    <color name="opdl_wifi_4">#2196F3</color>
-    <color name="opdl_wifi_5">#9C27B0</color>
-    <color name="opdl_wifi_6e">#FF4081</color>
+    <!-- Network Colors (monochrome) -->
+    <color name="opdl_wifi_4">#888888</color>
+    <color name="opdl_wifi_5">#BBBBBB</color>
+    <color name="opdl_wifi_6e">#FFFFFF</color>
     
-    <!-- OPDL Gradient Colors -->
-    <color name="opdl_gradient_start">#6200EE</color>
-    <color name="opdl_gradient_end">#03DAC6</color>
-    <color name="opdl_gradient_blue_purple">#7E57C2</color>
+    <!-- Gradient Colors (monochrome) -->
+    <color name="opdl_gradient_start">#333333</color>
+    <color name="opdl_gradient_end">#1A1A1A</color>
+    <color name="opdl_gradient_blue_purple">#555555</color>
     
-    <!-- OPDL Metrics Visualization -->
-    <color name="opdl_metric_throughput">#4CAF50</color>
-    <color name="opdl_metric_latency">#FFC107</color>
-    <color name="opdl_metric_efficiency">#2196F3</color>
+    <!-- Metrics Visualization (minimal color) -->
+    <color name="opdl_metric_throughput">#FFFFFF</color>
+    <color name="opdl_metric_latency">#888888</color>
+    <color name="opdl_metric_efficiency">#BBBBBB</color>
     
-    <!-- Legacy KDE Color (to be phased out) -->
-    <color name="launcher_background">#6200EE</color>
+    <!-- Legacy -->
+    <color name="launcher_background">#0D0D0D</color>
     
     <!-- Additional OPDL UI Colors -->
-    <color name="opdl_divider">#333333</color>
-    <color name="opdl_selected_item">#336200EE</color>
-    <color name="opdl_ripple">#4D6200EE</color>
+    <color name="opdl_divider">#2E2E2E</color>
+    <color name="opdl_selected_item">#33FFFFFF</color>
+    <color name="opdl_ripple">#4DFFFFFF</color>
     
 </resources>

@@ -144,7 +144,7 @@ public class LanLinkProvider extends BaseLinkProvider {
     // They received my UDP broadcast and are connecting to me. The first thing they
     // send should be their identity packet.
     @WorkerThread
-    private void tcpPacketReceived(Socket socket) throws IOException {
+    private void tcpPacketReceived(Socket socket) throws IOException, JSONException {
 
         InetAddress address = socket.getInetAddress();
         Log.d("OPDL/Discovery", "[TCP] 📥 Incoming TCP connection from " + address + ":" + socket.getPort());
@@ -249,6 +249,13 @@ public class LanLinkProvider extends BaseLinkProvider {
         }
         final NetworkPacket identityPacket = pair.first;
         final boolean deviceTrusted = pair.second;
+        final String deviceId = identityPacket.getString("deviceId");
+
+        if (visibleDevices.containsKey(deviceId)) {
+            Log.d("OPDL/Discovery",
+                    "[UDP] ⏭️ Already have a link for " + deviceId + ", skipping redundant TCP connection");
+            return;
+        }
 
         Log.i("OPDL/Discovery",
                 "[UDP] ✅ Valid broadcast identity from " + identityPacket.getString("deviceName") + " (" + address
@@ -308,7 +315,8 @@ public class LanLinkProvider extends BaseLinkProvider {
      */
     @WorkerThread
     private void identityPacketReceived(final NetworkPacket identityPacket, final Socket socket,
-            final LanLink.ConnectionStarted connectionStarted, final boolean deviceTrusted) throws IOException {
+            final LanLink.ConnectionStarted connectionStarted, final boolean deviceTrusted)
+            throws IOException, JSONException {
         final String deviceId = identityPacket.getString("deviceId");
 
         Log.d("OPDL/Discovery", "[HANDSHAKE] identityPacketReceived for " + deviceId);
@@ -319,6 +327,38 @@ public class LanLinkProvider extends BaseLinkProvider {
         // to ensure immediate discovery and connectivity.
         if (identityPacket.getBoolean("opdlFastPathV1", false)) {
             Log.i("OPDL/Discovery", "⚡ OPDL Fast Path device detected (" + deviceId + "), bypassing SSL handshake");
+
+            // In Fast Path bypass, we must still ensure the identity exchange is completed
+            // unencrypted.
+            // If we are the TCP receiver, we haven't sent our identity yet.
+            // If we are the TCP initiator, we sent ours but haven't read theirs from the
+            // TCP stream yet.
+            if (connectionStarted == LanLink.ConnectionStarted.Locally) {
+                // We are the TCP Server: read identity -> send ours back
+                DeviceInfo myDeviceInfo = DeviceHelper.getDeviceInfo(context);
+                NetworkPacket myIdentity = myDeviceInfo.toIdentityPacket();
+                OutputStream out = socket.getOutputStream();
+                out.write(myIdentity.serialize().getBytes(Charsets.UTF_8));
+                out.flush();
+                Log.d("OPDL/Discovery", "[HANDSHAKE] Sent our identity back to " + deviceId);
+            } else {
+                // We are the TCP Client: send identity -> read theirs back
+                // Note: udpPacketReceived already sent ours. We just need to consume theirs
+                // from TCP.
+                try {
+                    String line = readSingleLine(socket);
+                    NetworkPacket tcpIdentity = NetworkPacket.unserialize(line);
+                    Log.d("OPDL/Discovery",
+                            "[HANDSHAKE] Consumed peer identity from TCP: " + tcpIdentity.getString("deviceId"));
+                    // Use the TCP identity as the authoritative one if they differ (unlikely)
+                    if (tcpIdentity.has("deviceId") && !tcpIdentity.getString("deviceId").equals(deviceId)) {
+                        Log.w("OPDL/Discovery", "Device ID mismatch between UDP and TCP identity!");
+                    }
+                } catch (Exception e) {
+                    Log.w("OPDL/Discovery", "Failed to read identity response from " + deviceId + " over TCP", e);
+                }
+            }
+
             // Use our own certificate as a placeholder since we won't verify it for
             // fast-path
             DeviceInfo deviceInfo = DeviceInfo.fromIdentityPacketAndCert(identityPacket,
@@ -494,7 +534,7 @@ public class LanLinkProvider extends BaseLinkProvider {
                     ThreadHelper.execute(() -> {
                         try {
                             tcpPacketReceived(socket);
-                        } catch (IOException e) {
+                        } catch (IOException | JSONException e) {
                             Log.e("LanLinkProvider", "Exception receiving incoming TCP connection", e);
                         }
                     });
