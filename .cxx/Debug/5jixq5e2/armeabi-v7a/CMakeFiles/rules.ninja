@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/errorboy/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp -B/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/armeabi-v7a
+  command = /home/errorboy/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp -B/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/armeabi-v7a
   description = Re-running CMake...
   generator = 1
 

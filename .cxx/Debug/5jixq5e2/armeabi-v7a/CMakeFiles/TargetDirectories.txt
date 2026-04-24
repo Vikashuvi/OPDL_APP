@@ -1,3 +1,3 @@
-/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/opdl_jni.dir
-/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/edit_cache.dir
-/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/opdl_jni.dir
+/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/armeabi-v7a/CMakeFiles/rebuild_cache.dir

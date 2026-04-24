@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "x86_64"
+			"value" : "arm64-v8a"
 		},
 		{
 			"name" : "ANDROID_NDK",
@@ -63,7 +63,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "x86_64"
+			"value" : "arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_ANDROID_NDK",
@@ -151,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86_64"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -887,7 +887,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86_64"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1127,10 +1127,10 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "The CMake toolchain file"
 				}
 			],
-			"type" : "UNINITIALIZED",
+			"type" : "FILEPATH",
 			"value" : "/home/errorboy/Android/Sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake"
 		},
 		{
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/22/liblog.so"
+			"value" : "/home/errorboy/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/22/liblog.so"
 		},
 		{
 			"name" : "opdl_jni_BINARY_DIR",
@@ -1183,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/arm64-v8a"
 		},
 		{
 			"name" : "opdl_jni_IS_TOP_LEVEL",
@@ -1207,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp"
+			"value" : "/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp"
 		}
 	],
 	"kind" : "cache",

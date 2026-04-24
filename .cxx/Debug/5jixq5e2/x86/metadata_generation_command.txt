@@ -1,4 +1,4 @@
-                        -H/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp
+                        -H/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 -DCMAKE_SYSTEM_VERSION=22
@@ -9,10 +9,10 @@
 -DCMAKE_ANDROID_NDK=/home/errorboy/Android/Sdk/ndk/27.0.12077973
 -DCMAKE_TOOLCHAIN_FILE=/home/errorboy/Android/Sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake
 -DCMAKE_MAKE_PROGRAM=/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86
--DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86
 -DCMAKE_BUILD_TYPE=Debug
--B/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86
+-B/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/x86
 -GNinja
                         Build command args: []
                         Version: 2

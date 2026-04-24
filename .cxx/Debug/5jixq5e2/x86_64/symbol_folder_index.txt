@@ -1,1 +1,1 @@
-/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86_64
+/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86_64

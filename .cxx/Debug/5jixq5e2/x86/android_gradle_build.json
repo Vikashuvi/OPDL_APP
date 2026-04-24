@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/CMakeLists.txt"
+    "/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
       "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
       "-C",
-      "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86",
+      "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/x86",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "/home/errorboy/Android/Sdk/cmake/3.22.1/bin/ninja",
     "-C",
-    "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86",
+    "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/x86",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -21,7 +21,7 @@
       "toolchain": "toolchain",
       "abi": "x86",
       "artifactName": "opdl_jni",
-      "output": "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86/libopdl_jni.so",
+      "output": "/home/errorboy/projects/opdl-transfer/opdl-android/build/intermediates/cxx/Debug/5jixq5e2/obj/x86/libopdl_jni.so",
       "runtimeFiles": []
     }
   },

@@ -1,4 +1,4 @@
-# Install script for directory: /home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp
+# Install script for directory: /home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/x86_64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/x86_64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

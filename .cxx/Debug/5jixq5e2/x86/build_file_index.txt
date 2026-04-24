@@ -1,1 +1,1 @@
-/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp/CMakeLists.txt
+/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp/CMakeLists.txt

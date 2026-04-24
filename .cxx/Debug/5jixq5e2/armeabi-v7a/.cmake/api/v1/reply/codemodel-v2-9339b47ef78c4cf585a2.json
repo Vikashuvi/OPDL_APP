@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "opdl_jni::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-opdl_jni-Debug-f6199668c70ace05ba33.json",
+					"jsonFile" : "target-opdl_jni-Debug-30189e49ac07e5ed8195.json",
 					"name" : "opdl_jni",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/.cxx/Debug/5jixq5e2/arm64-v8a",
-		"source" : "/home/errorboy/projects/kdeconnect-android/kdeconnect-android/src/main/cpp"
+		"build" : "/home/errorboy/projects/opdl-transfer/opdl-android/.cxx/Debug/5jixq5e2/armeabi-v7a",
+		"source" : "/home/errorboy/projects/opdl-transfer/opdl-android/src/main/cpp"
 	},
 	"version" : 
 	{
