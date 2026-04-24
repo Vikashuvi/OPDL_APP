@@ -3,13 +3,13 @@
 <!--
 SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:theme="@style/KdeConnectTheme"
+    android:theme="@style/OpdlTransferTheme"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="?colorSurface"

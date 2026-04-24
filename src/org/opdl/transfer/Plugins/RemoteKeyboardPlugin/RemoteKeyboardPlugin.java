@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2017 Holger Kaelberer <holger.k@elberer.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.RemoteKeyboardPlugin;
@@ -41,9 +41,9 @@ import java.util.concurrent.locks.ReentrantLock;
 @PluginFactory.LoadablePlugin
 public class RemoteKeyboardPlugin extends Plugin implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private final static String PACKET_TYPE_MOUSEPAD_REQUEST = "kdeconnect.mousepad.request";
-    private final static String PACKET_TYPE_MOUSEPAD_ECHO = "kdeconnect.mousepad.echo";
-    private final static String PACKET_TYPE_MOUSEPAD_KEYBOARDSTATE = "kdeconnect.mousepad.keyboardstate";
+    private final static String PACKET_TYPE_MOUSEPAD_REQUEST = "opdltransfer.mousepad.request";
+    private final static String PACKET_TYPE_MOUSEPAD_ECHO = "opdltransfer.mousepad.echo";
+    private final static String PACKET_TYPE_MOUSEPAD_KEYBOARDSTATE = "opdltransfer.mousepad.keyboardstate";
 
     /**
      * Track and expose plugin instances to allow for a 'connected'-indicator in the IME:

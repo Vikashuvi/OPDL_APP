@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Backends;
@@ -42,7 +42,7 @@ public abstract class BaseLinkProvider {
      */
     @WorkerThread
     protected void onConnectionReceived(@NonNull final BaseLink link) {
-        //Log.i("KDE/LinkProvider", "onConnectionReceived");
+        //Log.i("OPDL/LinkProvider", "onConnectionReceived");
         for(ConnectionReceiver cr : connectionReceivers) {
             cr.onConnectionReceived(link);
         }
@@ -53,7 +53,7 @@ public abstract class BaseLinkProvider {
      */
     @WorkerThread
     public void onConnectionLost(BaseLink link) {
-        //Log.i("KDE/LinkProvider", "connectionLost");
+        //Log.i("OPDL/LinkProvider", "connectionLost");
         for(ConnectionReceiver cr : connectionReceivers) {
             cr.onConnectionLost(link);
         }

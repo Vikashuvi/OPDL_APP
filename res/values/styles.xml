@@ -6,24 +6,24 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
 
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- NoActionBar because we use a Toolbar widget as ActionBar -->
-    <style name="KdeConnectThemeBase" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+    <style name="OpdlTransferThemeBase" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
         <!-- The main color attributes -->
         <!-- Drawable definitions and overrides -->
 
-        <item name="materialCardViewStyle">@style/KdeConnectCardStyle</item>
+        <item name="materialCardViewStyle">@style/OpdlTransferCardStyle</item>
 
         <!-- https://github.com/material-components/material-components-android/issues/2732 -->
-        <item name="alertDialogTheme">@style/KdeConnectDialogStyle</item>
+        <item name="alertDialogTheme">@style/OpdlTransferDialogStyle</item>
     </style>
 
-    <style name="KdeConnectTheme" parent="KdeConnectThemeBase" />
+    <style name="OpdlTransferTheme" parent="OpdlTransferThemeBase" />
 
-    <style name="KdeConnectThemeBase.NoActionBar" parent="KdeConnectTheme">
+    <style name="OpdlTransferThemeBase.NoActionBar" parent="OpdlTransferTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="KdeConnectTheme.NoActionBar" parent="KdeConnectThemeBase.NoActionBar" />
+    <style name="OpdlTransferTheme.NoActionBar" parent="OpdlTransferThemeBase.NoActionBar" />
     
     <!-- OPDL Theme Styles -->
     <style name="OpdlTheme" parent="Theme.Material3.Dark">
@@ -55,27 +55,27 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="KdeConnectTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="OpdlTransferTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
     </style>
 
-    <style name="KdeConnectDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="OpdlTransferDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:layout" tools:ignore="PrivateResource">@layout/m3_alert_dialog</item>
         <item name="dialogCornerRadius" tools:ignore="PrivateResource">@dimen/m3_alert_dialog_corner_size</item>
     </style>
 
-    <style name="KdeConnectCardStyle" parent="@style/Widget.Material3.CardView.Elevated"/>
+    <style name="OpdlTransferCardStyle" parent="@style/Widget.Material3.CardView.Elevated"/>
 
-    <style name="KdeConnectCardStyle.Filled" parent="@style/Widget.Material3.CardView.Filled"/>
+    <style name="OpdlTransferCardStyle.Filled" parent="@style/Widget.Material3.CardView.Filled"/>
 
     <style name="MainNavigationView">
     </style>
 
-    <style name="KdeConnectButton.IconButton" parent="Widget.Material3.Button.IconButton.Filled">
+    <style name="OpdlTransferButton.IconButton" parent="Widget.Material3.Button.IconButton.Filled">
         <item name="iconGravity">textStart</item>
         <item name="cornerRadius">24dp</item>
     </style>
 
-    <style name="KdeConnectButton.IconButton.Secondary" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+    <style name="OpdlTransferButton.IconButton.Secondary" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
         <item name="iconGravity">textStart</item>
         <item name="cornerRadius">12dp</item>
     </style>

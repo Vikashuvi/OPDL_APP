@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2025 Martin Sh <hemisputnik@proton.me>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.DigitizerPlugin
@@ -92,8 +92,8 @@ class DigitizerPlugin : Plugin() {
         )
 
     companion object {
-        private const val PACKET_TYPE_DIGITIZER_SESSION = "kdeconnect.digitizer.session"
-        private const val PACKET_TYPE_DIGITIZER = "kdeconnect.digitizer"
+        private const val PACKET_TYPE_DIGITIZER_SESSION = "opdltransfer.digitizer.session"
+        private const val PACKET_TYPE_DIGITIZER = "opdltransfer.digitizer"
 
         private const val TAG = "DigitizerPlugin"
     }

@@ -17,6 +17,6 @@ Permisos de información persoal:
 • Permiso de accesibilidade: necesario para recibir entrada doutro dispositivo para controlar o teléfono Android, se usa a funcionalidade de entrada remota.
 • Permiso de localización en segundo plano: necesario para saber con que rede WiFi ten conexión, se usa a funcionalidade de redes de confianza.
 
-OPDL Transfer nunca envía información a KDE nin a terceiras partes. OPDL Transfer envía os datos dun dispositivo a outro directamente pola rede local, nunca a través de Internet, e usando cifraxe de extremo a extremo.
+OPDL Transfer nunca envía información a OPDL nin a terceiras partes. OPDL Transfer envía os datos dun dispositivo a outro directamente pola rede local, nunca a través de Internet, e usando cifraxe de extremo a extremo.
 
 Esta aplicación é parte dun proxecto de software libre e existe grazas á xente que colaborou no proxecto. Visite o sitio web para obter o código fonte.

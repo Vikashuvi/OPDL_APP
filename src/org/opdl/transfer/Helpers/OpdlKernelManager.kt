@@ -9,7 +9,7 @@ import java.io.InputStreamReader
  * Manages the OPDL kernel module lifecycle and device node access.
  */
 object OpdlKernelManager {
-    private const val LOG_TAG = "KDE/OPDLManager"
+    private const val LOG_TAG = "OPDL/OPDLManager"
     private const val MODULE_PATH = "/data/local/tmp/modules/opdl.ko"
     private const val DEVICE_NODE = "/dev/opdl0"
 

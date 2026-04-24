@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.BatteryPlugin
 
@@ -107,9 +107,9 @@ class BatteryPlugin : Plugin() {
     override val outgoingPacketTypes: Array<String> = arrayOf(PACKET_TYPE_BATTERY)
 
     companion object {
-        const val PACKET_TYPE_BATTERY = "kdeconnect.battery"
+        const val PACKET_TYPE_BATTERY = "opdltransfer.battery"
 
-        // keep these fields in sync with kdeconnect-kded:BatteryPlugin.h:ThresholdBatteryEvent
+        // keep these fields in sync with opdltransfer-kded:BatteryPlugin.h:ThresholdBatteryEvent
         private const val THRESHOLD_EVENT_NONE = 0
         private const val THRESHOLD_EVENT_BATTERY_LOW = 1
 

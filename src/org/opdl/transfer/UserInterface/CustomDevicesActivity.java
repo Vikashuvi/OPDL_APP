@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2014 Achilleas Koutsou <achilleas.k@gmail.com>
  * SPDX-FileCopyrightText: 2019 Erik Duisters <e.duisters1@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.UserInterface;

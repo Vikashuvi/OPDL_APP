@@ -16,6 +16,6 @@ Informatie over gevoelige rechten:
 * Rechten voor toegang: vereist om invoer van een ander apparaat te ontvangen voor het besturen van uw Android telefoon, als u mogelijkheid invoer van afstand gebruikt.
 * Rechten voor achtergrondlocatie: vereist om te weten met welk WiFi-network u bent verbonden, als u de mogelijkheid vertrouwde netwerken gebruikt.
 
-OPDL Transfer verzendt nooit enige informatie naar KDE of naar een derde. OPDL Transfer verzendt gegevens van het ene apparaat direct naar het andere met gebruik van het lokale netwerk, nooit via het internet en gebruikt end-to-end versleuteling.
+OPDL Transfer verzendt nooit enige informatie naar OPDL of naar een derde. OPDL Transfer verzendt gegevens van het ene apparaat direct naar het andere met gebruik van het lokale netwerk, nooit via het internet en gebruikt end-to-end versleuteling.
 
 Deze toepassing is onderdeel van een open-source project en het bestaat dankzij alle mensen die er aan hebben bijgedragen. Bezoek de website om de broncode te verkrijgen.

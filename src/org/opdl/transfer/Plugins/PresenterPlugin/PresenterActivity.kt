@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2023 Dmitry Yudin <dgyudin@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.PresenterPlugin
@@ -62,7 +62,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener {
 
     private val offScreenControlsSupported = Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU
     private val mediaSession by lazy {
-        if (offScreenControlsSupported) MediaSessionCompat(this, "kdeconnect") else null
+        if (offScreenControlsSupported) MediaSessionCompat(this, "opdltransfer") else null
     }
     private val powerManager by lazy { getSystemService(POWER_SERVICE) as PowerManager }
     private lateinit var plugin : PresenterPlugin

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.PingPlugin
 
@@ -95,7 +95,7 @@ class PingPlugin : Plugin() {
     override val outgoingPacketTypes: Array<String> = arrayOf(PACKET_TYPE_PING)
 
     companion object {
-        private const val PACKET_TYPE_PING = "kdeconnect.ping"
+        private const val PACKET_TYPE_PING = "opdltransfer.ping"
         private const val LOG_TAG = "PingPlugin"
     }
 }

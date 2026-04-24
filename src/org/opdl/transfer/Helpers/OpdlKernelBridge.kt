@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2026 OPDL Project Team
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Helpers
 
@@ -27,7 +27,7 @@ import java.io.File
  * - Exposes hooks so JNI/native OPDL transport can be enabled incrementally.
  */
 object OpdlKernelBridge {
-    private const val LOG_TAG = "KDE/OPDLBridge"
+    private const val LOG_TAG = "OPDL/OPDLBridge"
     const val IDENTITY_KEY_FAST_PATH = "opdlFastPathV1"
     const val PAYLOAD_TRANSFER_MODE_KEY = "mode"
     const val PAYLOAD_TRANSFER_MODE_FAST_PATH = "opdl-fastpath"

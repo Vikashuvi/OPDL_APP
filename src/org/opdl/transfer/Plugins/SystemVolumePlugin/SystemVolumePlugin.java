@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Plugins.SystemVolumePlugin;
@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @PluginFactory.LoadablePlugin
 public class SystemVolumePlugin extends Plugin {
 
-    private final static String PACKET_TYPE_SYSTEMVOLUME = "kdeconnect.systemvolume";
-    private final static String PACKET_TYPE_SYSTEMVOLUME_REQUEST = "kdeconnect.systemvolume.request";
+    private final static String PACKET_TYPE_SYSTEMVOLUME = "opdltransfer.systemvolume";
+    private final static String PACKET_TYPE_SYSTEMVOLUME_REQUEST = "opdltransfer.systemvolume.request";
 
     public interface SinkListener {
         void sinksChanged();

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Ahmed I. Khalil <ahmedibrahimkhali@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.Plugins.PresenterPlugin
 
@@ -82,7 +82,7 @@ class PresenterPlugin : Plugin() {
     }
 
     companion object {
-        private const val PACKET_TYPE_PRESENTER = "kdeconnect.presenter"
-        private const val PACKET_TYPE_MOUSEPAD_REQUEST = "kdeconnect.mousepad.request"
+        private const val PACKET_TYPE_PRESENTER = "opdltransfer.presenter"
+        private const val PACKET_TYPE_MOUSEPAD_REQUEST = "opdltransfer.mousepad.request"
     }
 }

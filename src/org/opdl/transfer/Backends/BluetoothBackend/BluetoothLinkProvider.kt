@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2016 Saikrishna Arcot <saiarcot895@gmail.com>
  * SPDX-FileCopyrightText: 2024 Rob Emery <git@mintsoft.net>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Backends.BluetoothBackend
 
@@ -281,7 +281,7 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
 
             // Loop through Bluetooth paired devices
             for (device in pairedDevices) {
-                // If a socket exists for this, then it has been paired in KDE
+                // If a socket exists for this, then it has been paired in OPDL
                 if (sockets.containsKey(device)) {
                     continue
                 }

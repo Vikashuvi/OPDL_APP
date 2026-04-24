@@ -16,6 +16,6 @@ Informações sobre permissões sensíveis:
 * Permissão de acessibilidade: necessária para receber entrada de outro dispositivo para controlar seu telefone Android, se você usar o recurso de entrada remota.
 * Permissão de localização em segundo plano: necessária para saber a qual rede Wi-Fi você está conectado, se você usar o recurso de redes confiáveis.
 
-O OPDL Transfer nunca envia nenhuma informação ao KDE ou a terceiros. O OPDL Transfer envia dados de um dispositivo para outro diretamente usando a rede local, nunca pela Internet e usando criptografia de ponta a ponta.
+O OPDL Transfer nunca envia nenhuma informação ao OPDL ou a terceiros. O OPDL Transfer envia dados de um dispositivo para outro diretamente usando a rede local, nunca pela Internet e usando criptografia de ponta a ponta.
 
 Este aplicativo faz parte de um projeto de código aberto e existe graças a todas as pessoas que contribuíram para ele. Visite o site para obter o código-fonte.

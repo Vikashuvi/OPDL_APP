@@ -17,6 +17,6 @@ Informazioni sensibili sui permessi:
 * Permesso di accessibilità: necessario per ricevere input da un altro dispositivo per controllare il tuo telefono Android, se utilizzi la funzione di immissione remota.
 * Permesso alla posizione in background: necessario per sapere a quale rete WiFi sei collegato, se utilizzi la funzionalità Reti affidabili.
 
-OPDL Transfer non invia mai alcuna informazione a KDE né a terze parti. OPDL Transfer invia i dati da un dispositivo all'altro direttamente utilizzando la rete locale, mai attraverso Internet, e utilizzando la cifratura end-to-end.
+OPDL Transfer non invia mai alcuna informazione a OPDL né a terze parti. OPDL Transfer invia i dati da un dispositivo all'altro direttamente utilizzando la rete locale, mai attraverso Internet, e utilizzando la cifratura end-to-end.
 
 Questa applicazione fa parte di un progetto open source ed esiste grazie a tutte le persone che vi hanno contribuito. Visita il sito web per ottenere il codice sorgente.

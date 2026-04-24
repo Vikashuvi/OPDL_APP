@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.MprisReceiverPlugin;
@@ -52,7 +52,7 @@ class MprisReceiverCallback extends MediaController.Callback {
         // there's probably a better way to do this, but meh
         // TODO: do we want to include the player name?
         return new Uri.Builder()
-                .scheme("kdeconnect")
+                .scheme("opdltransfer")
                 .path("/artUri")
                 .appendQueryParameter(kind, data)
                 .build().toString();
@@ -122,7 +122,7 @@ class MprisReceiverCallback extends MediaController.Callback {
     MprisReceiverCallback(MprisReceiverPlugin plugin, MprisReceiverPlayer player) {
         this.player = player;
         this.plugin = plugin;
-        // fetch the initial art, when player is already running and we start kdeconnect
+        // fetch the initial art, when player is already running and we start opdltransfer
         Pair<Bitmap, String> artAndUri = getArtAndUri(player.getMetadata());
         if (artAndUri != null) {
             Bitmap bitmap = artAndUri.first;

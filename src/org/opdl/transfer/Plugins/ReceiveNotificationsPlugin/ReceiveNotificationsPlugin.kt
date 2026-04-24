@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.ReceiveNotificationsPlugin
 
@@ -83,13 +83,13 @@ class ReceiveNotificationsPlugin : Plugin() {
                 .setSmallIcon(R.drawable.ic_notification)
                 .setLargeIcon(largeIcon)
                 .setAutoCancel(true)
-                .setLocalOnly(true) // to avoid bouncing the notification back to other kdeconnect nodes
+                .setLocalOnly(true) // to avoid bouncing the notification back to other opdltransfer nodes
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setStyle(NotificationCompat.BigTextStyle().bigText(np.getString("ticker")))
                 .build()
 
         val id = np.getInt("id", 0)
-        notificationManager.notify("kdeconnectId:${id}", id, noti)
+        notificationManager.notify("opdltransferId:${id}", id, noti)
 
         return true
     }
@@ -107,7 +107,7 @@ class ReceiveNotificationsPlugin : Plugin() {
     override val permissionExplanation: Int = R.string.receive_notifications_permission_explanation
 
     companion object {
-        private const val PACKET_TYPE_NOTIFICATION = "kdeconnect.notification"
-        private const val PACKET_TYPE_NOTIFICATION_REQUEST = "kdeconnect.notification.request"
+        private const val PACKET_TYPE_NOTIFICATION = "opdltransfer.notification"
+        private const val PACKET_TYPE_NOTIFICATION_REQUEST = "opdltransfer.notification.request"
     }
 }

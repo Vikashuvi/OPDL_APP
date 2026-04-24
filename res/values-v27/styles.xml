@@ -3,17 +3,17 @@
 <!--
 SPDX-FileCopyrightText: 2023 Dmitry Yudin <dgyudin@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <resources>
-    <style name="KdeConnectThemeBase.V27" parent="KdeConnectThemeBase">
+    <style name="OpdlTransferThemeBase.V27" parent="OpdlTransferThemeBase">
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightNavigationBar">?attr/isLightTheme</item>
     </style>
 
-    <style name="KdeConnectTheme" parent="KdeConnectThemeBase.V27" />
+    <style name="OpdlTransferTheme" parent="OpdlTransferThemeBase.V27" />
 
     <style name="PreferenceThemeOverlay" parent="BasePreferenceThemeOverlay">
         <item name="preferenceCategoryTitleTextColor">?android:attr/colorAccent</item>

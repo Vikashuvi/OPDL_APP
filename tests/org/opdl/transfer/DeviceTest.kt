@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2015 Vineet Garg <grg.vineet@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer
 
@@ -109,8 +109,8 @@ class DeviceTest {
         val settings = context.getSharedPreferences(deviceId, Context.MODE_PRIVATE)
         val deviceInfo = loadFromSettings(context, deviceId, settings)
         deviceInfo.protocolVersion = DeviceHelper.PROTOCOL_VERSION
-        deviceInfo.incomingCapabilities = hashSetOf("kdeconnect.plugin1State", "kdeconnect.plugin2State")
-        deviceInfo.outgoingCapabilities = hashSetOf("kdeconnect.plugin1State.request", "kdeconnect.plugin2State.request")
+        deviceInfo.incomingCapabilities = hashSetOf("opdltransfer.plugin1State", "opdltransfer.plugin2State")
+        deviceInfo.outgoingCapabilities = hashSetOf("opdltransfer.plugin1State.request", "opdltransfer.plugin2State.request")
 
         val networkPacket = deviceInfo.toIdentityPacket()
         Assert.assertEquals(deviceInfo.id, networkPacket.getString("deviceId"))

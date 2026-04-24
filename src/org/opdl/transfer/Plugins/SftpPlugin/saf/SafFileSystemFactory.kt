@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2018 Erik Duisters <e.duisters1@gmail.com>
  * SPDX-FileCopyrightText: 2024 ShellWen Chen <me@shellwen.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.SftpPlugin.saf
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # The name of catalog we create (without the.pot extension), sourced from the scripty scripts
-FILENAME="kdeconnect-android"
+FILENAME="opdltransfer-android"
 
 function export_pot_file # First parameter will be the path of the pot file we have to create, includes $FILENAME
 {

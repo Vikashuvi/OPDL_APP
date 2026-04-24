@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2021 Maxim Leshchenko <cnmaks90@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.UserInterface.About
@@ -102,7 +102,7 @@ class AboutFragment : BaseFragment<FragmentAboutBinding>() {
         }
 
         binding.aboutKdeButton.setOnClickListener {
-            startActivity(Intent(context, AboutKDEActivity::class.java))
+            startActivity(Intent(context, AboutOPDLActivity::class.java))
         }
 
         setupInfoButton(aboutData.websiteURL, binding.websiteButton)

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.UserInterface
 
@@ -73,7 +73,7 @@ class DeviceFragment : BaseFragment<ActivityDeviceBinding>() {
     companion object {
         private const val ARG_DEVICE_ID = "deviceId"
         private const val ARG_FROM_DEVICE_LIST = "fromDeviceList"
-        private const val TAG = "KDE/DeviceFragment"
+        private const val TAG = "OPDL/DeviceFragment"
         fun newInstance(deviceId: String?, fromDeviceList: Boolean): DeviceFragment {
             val frag = DeviceFragment()
             val args = Bundle()

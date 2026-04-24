@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2018 Erik Duisters <e.duisters1@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.SharePlugin;
@@ -410,7 +410,7 @@ public class CompositeReceiveFileJob extends BackgroundJob<Device, Void> {
             intent.setDataAndType(fileDocument.getUri(), mimeType);
         }
 
-        // Open files for KDE Itinerary explicitly because Android's activity resolution
+        // Open files for OPDL Itinerary explicitly because Android's activity resolution
         // sucks
         if (fileDocument.getName().endsWith(".itinerary")) {
             intent.setClassName("org.kde.itinerary", "org.kde.itinerary.Activity");

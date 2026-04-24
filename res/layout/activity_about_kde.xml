@@ -3,7 +3,7 @@
 <!--
 SPDX-FileCopyrightText: 2021 Maxim Leshchenko <cnmaks90@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -12,7 +12,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="org.opdl.transfer.UserInterface.About.AboutKDEActivity"
+    tools:context="org.opdl.transfer.UserInterface.About.AboutOPDLActivity"
     android:fitsSystemWindows="true">
 
     <include layout="@layout/toolbar" android:id="@+id/toolbar_layout" />

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2015 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.Helpers.SecurityHelpers
 
@@ -47,7 +47,7 @@ object RsaHelper {
                 keyPair = generator.generateKeyPair()
             }
             catch (e: Exception) {
-                Log.e("KDE/initializeRsaKeys", "Exception", e)
+                Log.e("OPDL/initializeRsaKeys", "Exception", e)
                 return
             }
 

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer
 
@@ -200,14 +200,14 @@ class OpdlTransfer : Application() {
         @WorkerThread
         override fun onConnectionLost(link: BaseLink) {
             val device = devices[link.deviceId]
-            Log.i("KDE/onConnectionLost", "removeLink, deviceId: ${link.deviceId}")
+            Log.i("OPDL/onConnectionLost", "removeLink, deviceId: ${link.deviceId}")
             if (device != null) {
                 device.removeLink(link)
                 if (!device.isReachable && !device.isPaired) {
                     scheduleForDeletion(device)
                 }
             } else {
-                Log.d("KDE/onConnectionLost", "Removing connection to unknown device")
+                Log.d("OPDL/onConnectionLost", "Removing connection to unknown device")
             }
             onDeviceListChanged()
         }

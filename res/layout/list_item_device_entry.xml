@@ -3,7 +3,7 @@
 <!--
 SPDX-FileCopyrightText: 2023 Dmitry Yudin <dgyudin@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,7 +15,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     android:focusable="true"
     android:clickable="true"
     android:background="?android:attr/selectableItemBackground"
-    style="@style/KdeConnectCardStyle.Filled"
+    style="@style/OpdlTransferCardStyle.Filled"
     app:contentPadding="@dimen/view_default_padding">
 
     <LinearLayout

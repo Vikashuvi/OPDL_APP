@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Ahmed I. Khalil <ahmedibrahimkhali@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.MousePadPlugin
 
@@ -186,7 +186,7 @@ class MousePadPlugin : Plugin() {
     override val outgoingPacketTypes = arrayOf(PACKET_TYPE_MOUSEPAD_REQUEST)
 
     companion object {
-        const val PACKET_TYPE_MOUSEPAD_REQUEST: String = "kdeconnect.mousepad.request"
-        private const val PACKET_TYPE_MOUSEPAD_KEYBOARDSTATE = "kdeconnect.mousepad.keyboardstate"
+        const val PACKET_TYPE_MOUSEPAD_REQUEST: String = "opdltransfer.mousepad.request"
+        private const val PACKET_TYPE_MOUSEPAD_KEYBOARDSTATE = "opdltransfer.mousepad.keyboardstate"
     }
 }

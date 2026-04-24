@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2015 Vineet Garg <grg.vineet@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.Helpers.SecurityHelpers
 
@@ -105,7 +105,7 @@ object SslHelper {
             val nameBuilder = X500NameBuilder(BCStyle.INSTANCE)
             nameBuilder.addRDN(BCStyle.CN, deviceId)
             nameBuilder.addRDN(BCStyle.OU, "OPDL")
-            nameBuilder.addRDN(BCStyle.O, "KDE")
+            nameBuilder.addRDN(BCStyle.O, "OPDL")
             val localDate = LocalDate.now()
             val notBefore = localDate.minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant()
             val notAfter = localDate.plusYears(10).atStartOfDay(ZoneId.systemDefault()).toInstant()
@@ -231,5 +231,5 @@ object SslHelper {
         return IETFUtils.valueToString(rdn.getFirst().value)
     }
 
-    private const val LOG_TAG = "KDE/SslHelper"
+    private const val LOG_TAG = "OPDL/SslHelper"
 }

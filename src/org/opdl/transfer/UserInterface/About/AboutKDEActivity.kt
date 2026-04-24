@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2021 Maxim Leshchenko <cnmaks90@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.UserInterface.About
@@ -16,7 +16,7 @@ import org.opdl.transfer.extensions.viewBinding
 import org.opdl.transfer.R
 import org.opdl.transfer.databinding.ActivityAboutKdeBinding
 
-class AboutKDEActivity : BaseActivity<ActivityAboutKdeBinding>() {
+class AboutOPDLActivity : BaseActivity<ActivityAboutKdeBinding>() {
 
     override val binding: ActivityAboutKdeBinding by viewBinding(ActivityAboutKdeBinding::inflate)
 

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2021 SohnyBohny <sohny.bean@streber24.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.MouseReceiverPlugin;
@@ -26,7 +26,7 @@ import org.opdl.transfer.R;
 @PluginFactory.LoadablePlugin
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class MouseReceiverPlugin extends Plugin {
-    private final static String PACKET_TYPE_MOUSEPAD_REQUEST = "kdeconnect.mousepad.request";
+    private final static String PACKET_TYPE_MOUSEPAD_REQUEST = "opdltransfer.mousepad.request";
 
     @Override
     public boolean checkRequiredPermissions() {

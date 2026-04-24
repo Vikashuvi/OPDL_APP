@@ -3,7 +3,7 @@
 <!--
 SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,7 +58,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:clickable="false"
             android:contentDescription="@string/mpris_loop"
             app:icon="@drawable/ic_loop_none_black"
-            style="@style/KdeConnectButton.IconButton"
+            style="@style/OpdlTransferButton.IconButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.20" />
@@ -73,7 +73,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:clickable="false"
             android:contentDescription="@string/mpris_play"
             app:icon="@drawable/ic_play_black"
-            style="@style/KdeConnectButton.IconButton"
+            style="@style/OpdlTransferButton.IconButton"
             app:layout_constraintEnd_toStartOf="@id/shuffle_button"
             app:layout_constraintStart_toEndOf="@id/loop_button"
             app:layout_constraintTop_toTopOf="parent" />
@@ -88,7 +88,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:clickable="false"
             android:contentDescription="@string/mpris_shuffle"
             app:icon="@drawable/ic_shuffle_off_black"
-            style="@style/KdeConnectButton.IconButton"
+            style="@style/OpdlTransferButton.IconButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.20" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -106,7 +106,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:layout_weight="0.25"
             android:contentDescription="@string/mpris_previous"
             app:icon="@drawable/ic_previous_black"
-            style="@style/KdeConnectButton.IconButton.Secondary" />
+            style="@style/OpdlTransferButton.IconButton.Secondary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/rew_button"
@@ -115,7 +115,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:layout_weight="0.25"
             android:contentDescription="@string/mpris_rew"
             app:icon="@drawable/ic_rewind_black"
-            style="@style/KdeConnectButton.IconButton.Secondary" />
+            style="@style/OpdlTransferButton.IconButton.Secondary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop_button"
@@ -124,7 +124,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:layout_weight="0.25"
             android:contentDescription="@string/mpris_stop"
             app:icon="@drawable/ic_stop"
-            style="@style/KdeConnectButton.IconButton.Secondary" />
+            style="@style/OpdlTransferButton.IconButton.Secondary" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -134,7 +134,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:layout_weight="0.25"
             android:contentDescription="@string/mpris_ff"
             app:icon="@drawable/ic_fast_forward_black"
-            style="@style/KdeConnectButton.IconButton.Secondary" />
+            style="@style/OpdlTransferButton.IconButton.Secondary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/next_button"
@@ -143,7 +143,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:layout_weight="0.25"
             android:contentDescription="@string/mpris_next"
             app:icon="@drawable/ic_next_black"
-            style="@style/KdeConnectButton.IconButton.Secondary" />
+            style="@style/OpdlTransferButton.IconButton.Secondary" />
     </LinearLayout>
 
     <LinearLayout

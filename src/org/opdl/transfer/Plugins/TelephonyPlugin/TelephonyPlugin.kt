@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.TelephonyPlugin
 
@@ -226,14 +226,14 @@ class TelephonyPlugin : Plugin() {
          *
          * Depending on the event, other fields may be defined
          */
-        const val PACKET_TYPE_TELEPHONY: String = "kdeconnect.telephony"
+        const val PACKET_TYPE_TELEPHONY: String = "opdltransfer.telephony"
 
         /**
          * Packet sent to indicate the user has requested the device mute its ringer
          *
          * The body should be empty
          */
-        private const val PACKET_TYPE_TELEPHONY_REQUEST_MUTE = "kdeconnect.telephony.request_mute"
+        private const val PACKET_TYPE_TELEPHONY_REQUEST_MUTE = "opdltransfer.telephony.request_mute"
 
         private const val KEY_PREF_BLOCKED_NUMBERS = "telephony_blocked_numbers"
     }

@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2014 Samoilenko Yuri <kinnalru@gmail.com>
  * SPDX-FileCopyrightText: 2024 ShellWen Chen <me@shellwen.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.Plugins.SftpPlugin
 
@@ -252,8 +252,8 @@ class SftpPlugin : Plugin(), OnSharedPreferenceChangeListener {
     }
 
     companion object {
-        private const val PACKET_TYPE_SFTP = "kdeconnect.sftp"
-        private const val PACKET_TYPE_SFTP_REQUEST = "kdeconnect.sftp.request"
+        private const val PACKET_TYPE_SFTP = "opdltransfer.sftp"
+        private const val PACKET_TYPE_SFTP_REQUEST = "opdltransfer.sftp.request"
 
         @JvmField
         val PREFERENCE_KEY_STORAGE_INFO_LIST: Int = R.string.sftp_preference_key_storage_info_list

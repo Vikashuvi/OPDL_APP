@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2014 Samoilenko Yuri <kinnalru@gmail.com>
  * SPDX-FileCopyrightText: 2024 ShellWen Chen <me@shellwen.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 package org.opdl.transfer.Plugins.SftpPlugin
 
@@ -264,7 +264,7 @@ internal class SimpleSftpServer {
         val SUPPORTS_NATIVEFS = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
         private val PORT_RANGE = 1739..1764
-        const val USER: String = "kdeconnect"
+        const val USER: String = "opdltransfer"
 
         init {
             System.setProperty(SECURITY_PROVIDER_REGISTRARS, "") // disable BouncyCastle

@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Backends.LanBackend;
@@ -369,18 +369,18 @@ public class LanLinkProvider extends BaseLinkProvider {
 
         int protocolVersion = identityPacket.getInt("protocolVersion");
         if (deviceTrusted && isProtocolDowngrade(deviceId, protocolVersion)) {
-            Log.w("KDE/LanLinkProvider",
+            Log.w("OPDL/LanLinkProvider",
                     "Refusing to connect to a device using an older protocol version:" + protocolVersion);
             return;
         }
 
         if (deviceTrusted && !SslHelper.isCertificateStored(context, deviceId)) {
-            Log.e("KDE/LanLinkProvider", "Device trusted but no cert stored. This should not happen.");
+            Log.e("OPDL/LanLinkProvider", "Device trusted but no cert stored. This should not happen.");
             return;
         }
 
         String deviceName = identityPacket.getString("deviceName", "unknown");
-        Log.i("KDE/LanLinkProvider", "Starting SSL handshake with " + deviceName + " trusted:" + deviceTrusted);
+        Log.i("OPDL/LanLinkProvider", "Starting SSL handshake with " + deviceName + " trusted:" + deviceTrusted);
 
         // If I'm the TCP server I will be the SSL client and vice-versa.
         final boolean clientMode = (connectionStarted == LanLink.ConnectionStarted.Locally);
@@ -406,13 +406,13 @@ public class LanLinkProvider extends BaseLinkProvider {
                         }
                         int newProtocolVersion = secureIdentityPacket.getInt("protocolVersion");
                         if (newProtocolVersion != protocolVersion) {
-                            Log.e("KDE/LanLinkProvider", "Protocol version changed half-way through the handshake: "
+                            Log.e("OPDL/LanLinkProvider", "Protocol version changed half-way through the handshake: "
                                     + protocolVersion + " ->" + newProtocolVersion);
                             return;
                         }
                         String newDeviceId = secureIdentityPacket.getString("deviceId");
                         if (!newDeviceId.equals(deviceId)) {
-                            Log.e("KDE/LanLinkProvider", "Device ID changed half-way through the handshake: "
+                            Log.e("OPDL/LanLinkProvider", "Device ID changed half-way through the handshake: "
                                     + protocolVersion + " ->" + newProtocolVersion);
                             return;
                         }
@@ -421,13 +421,13 @@ public class LanLinkProvider extends BaseLinkProvider {
                     }
                     Certificate certificate = event.getPeerCertificates()[0];
                     DeviceInfo deviceInfo = DeviceInfo.fromIdentityPacketAndCert(secureIdentityPacket, certificate);
-                    Log.i("KDE/LanLinkProvider", "Handshake as " + mode + " successful with " + deviceName
+                    Log.i("OPDL/LanLinkProvider", "Handshake as " + mode + " successful with " + deviceName
                             + " secured with " + event.getCipherSuite());
                     addOrUpdateLink(sslSocket, deviceInfo);
                 } catch (JSONException e) {
-                    Log.e("KDE/LanLinkProvider", "Remote device doesn't correctly implement protocol version 8", e);
+                    Log.e("OPDL/LanLinkProvider", "Remote device doesn't correctly implement protocol version 8", e);
                 } catch (IOException e) {
-                    Log.e("KDE/LanLinkProvider", "Handshake as " + mode + " failed with " + deviceName, e);
+                    Log.e("OPDL/LanLinkProvider", "Handshake as " + mode + " failed with " + deviceName, e);
                 }
             });
         });
@@ -464,12 +464,12 @@ public class LanLinkProvider extends BaseLinkProvider {
                 return;
             }
             // Update existing link
-            Log.d("KDE/LanLinkProvider", "Reusing same link for device " + deviceInfo.id);
+            Log.d("OPDL/LanLinkProvider", "Reusing same link for device " + deviceInfo.id);
             link.reset(socket, deviceInfo);
             onDeviceInfoUpdated(deviceInfo);
         } else {
             // Create a new link
-            Log.d("KDE/LanLinkProvider", "Creating a new link for device " + deviceInfo.id);
+            Log.d("OPDL/LanLinkProvider", "Creating a new link for device " + deviceInfo.id);
             link = new LanLink(context, deviceInfo, this, socket);
             visibleDevices.put(deviceInfo.id, link);
             onConnectionReceived(link);
@@ -552,12 +552,12 @@ public class LanLinkProvider extends BaseLinkProvider {
         while (tcpPort <= MAX_PORT) {
             try {
                 ServerSocket candidateServer = new ServerSocket(tcpPort);
-                Log.i("KDE/LanLink", "Using port " + tcpPort);
+                Log.i("OPDL/LanLink", "Using port " + tcpPort);
                 return candidateServer;
             } catch (IOException e) {
                 tcpPort++;
                 if (tcpPort == MAX_PORT) {
-                    Log.e("KDE/LanLink", "No ports available");
+                    Log.e("OPDL/LanLink", "No ports available");
                     throw e; // Propagate exception
                 }
             }
@@ -685,7 +685,7 @@ public class LanLinkProvider extends BaseLinkProvider {
 
     @Override
     public void onStop() {
-        // Log.i("KDE/LanLinkProvider", "onStop");
+        // Log.i("OPDL/LanLinkProvider", "onStop");
         listening = false;
         mdnsDiscovery.stopAnnouncing();
         mdnsDiscovery.stopDiscovering();

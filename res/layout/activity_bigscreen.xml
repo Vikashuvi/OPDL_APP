@@ -3,7 +3,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 Sylvia van Os <sylvia@hackerchick.me>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -32,7 +32,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_home"
             grid:iconSize="32dp"
             app:icon="@drawable/ic_home_black_24dp"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/up_button"
@@ -43,7 +43,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_up"
             grid:iconSize="42dp"
             app:icon="@drawable/outline_arrow_drop_up_24"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mic_button"
@@ -54,7 +54,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_mic"
             grid:iconSize="32dp"
             app:icon="@drawable/ic_mic_black"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/left_button"
@@ -65,7 +65,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_left"
             grid:iconSize="42dp"
             app:icon="@drawable/outline_arrow_left_24"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/select_button"
@@ -76,7 +76,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_select"
             grid:iconSize="32dp"
             app:icon="@drawable/ic_keyboard_return_black_24dp"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/right_button"
@@ -87,7 +87,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_right"
             grid:iconSize="42dp"
             app:icon="@drawable/outline_arrow_right_24"
-            style="@style/KdeConnectButton.IconButton" />
+            style="@style/OpdlTransferButton.IconButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/down_button"
@@ -98,7 +98,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_down"
             grid:iconSize="42dp"
             app:icon="@drawable/outline_arrow_drop_down_24"
-            style="@style/KdeConnectButton.IconButton"  />
+            style="@style/OpdlTransferButton.IconButton"  />
 
 
         <com.google.android.material.button.MaterialButton
@@ -110,6 +110,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             android:contentDescription="@string/bigscreen_back"
             grid:iconSize="32dp"
             app:icon="@drawable/ic_arrow_back_black_24dp"
-            style="@style/KdeConnectButton.IconButton"  />
+            style="@style/OpdlTransferButton.IconButton"  />
     </androidx.gridlayout.widget.GridLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

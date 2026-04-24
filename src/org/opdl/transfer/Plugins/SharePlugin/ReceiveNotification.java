@@ -3,7 +3,7 @@ package org.opdl.transfer.Plugins.SharePlugin;
 /*
  * SPDX-FileCopyrightText: 2017 Nicolas Fella <nicolas.fella@gmx.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 import android.app.Notification;

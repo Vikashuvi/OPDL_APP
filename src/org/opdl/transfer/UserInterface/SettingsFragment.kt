@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.UserInterface
 
@@ -235,7 +235,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         setTitle(R.string.settings_export_logs)
         setSummary(R.string.settings_export_logs_text)
         onPreferenceClickListener = Preference.OnPreferenceClickListener {
-            exportLogs.launch(CreateFileParams("text/plain", "kdeconnect-log.txt"))
+            exportLogs.launch(CreateFileParams("text/plain", "opdltransfer-log.txt"))
             true
         }
     }

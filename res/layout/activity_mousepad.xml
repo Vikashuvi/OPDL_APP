@@ -3,7 +3,7 @@
 <!--
 SPDX-FileCopyrightText: 2014 Ahmed I. Khalil <ahmedibrahimkhali@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 -->
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -57,7 +57,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                     android:contentDescription="@string/left_click"
                     android:layout_weight="3"
                     app:icon="@drawable/left_click_48dp"
-                    style="@style/KdeConnectButton.IconButton" />
+                    style="@style/OpdlTransferButton.IconButton" />
 
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/mouse_click_middle"
@@ -65,7 +65,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                     android:contentDescription="@string/middle_click"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    style="@style/KdeConnectButton.IconButton.Secondary" />
+                    style="@style/OpdlTransferButton.IconButton.Secondary" />
 
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/mouse_click_right"
@@ -74,7 +74,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     app:icon="@drawable/right_click_48dp"
-                    style="@style/KdeConnectButton.IconButton" />
+                    style="@style/OpdlTransferButton.IconButton" />
 
         </LinearLayout>
     </RelativeLayout>

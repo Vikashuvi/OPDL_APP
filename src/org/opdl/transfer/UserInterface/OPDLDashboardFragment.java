@@ -173,7 +173,7 @@ public class OPDLDashboardFragment extends Fragment implements PerformanceMetric
     }
 
     /**
-     * Convert KDE Device to OPDL Device
+     * Convert OPDL Device to OPDL Device
      */
     private OPDLDevice convertToOPDLDevice(org.opdl.transfer.Device kdeDevice) {
         OPDLDevice opdlDevice = new OPDLDevice(

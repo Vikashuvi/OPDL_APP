@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer
 
@@ -46,7 +46,7 @@ object DeviceStats {
             packetStats.summaries.stream().sorted { o1, o2 ->
                 o2.total compareTo o1.total // Sort them by total number of events
             }.forEach { count ->
-                append(count.packetType.removePrefix("kdeconnect."))
+                append(count.packetType.removePrefix("opdltransfer."))
                 append("\n• ")
                 append(count.received)
                 append(" received\n• ")

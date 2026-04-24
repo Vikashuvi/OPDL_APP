@@ -16,6 +16,6 @@ Informations sur les permissions sensibles :
 * Permission d'accessibilité : nécessaire pour recevoir les informations d'un autre périphérique pour contrôler votre téléphone Android, si vous utilisez la fonction de télécommande.
 * Permission pour emplacement en arrière-plan : nécessaire pour savoir à quel réseau Wifi auquel vous êtes connecté, si vous utilisez la fonctionnalité de réseaux de confiance.
 
-OPDL Transfer n'envoie jamais d'informations à KDE ni à aucun tiers. OPDL Transfer envoie des données d'un périphérique à un autre à l'aide du réseau local, mais jamais par Internet et en utilisant le chiffrement de bout en bout.
+OPDL Transfer n'envoie jamais d'informations à OPDL ni à aucun tiers. OPDL Transfer envoie des données d'un périphérique à un autre à l'aide du réseau local, mais jamais par Internet et en utilisant le chiffrement de bout en bout.
 
 Cette application fait partie d'un projet « Open source ». Il existe grâce à toutes les personnes qui y ont contribué. Veuillez visiter le site Internet pour accéder au code source.

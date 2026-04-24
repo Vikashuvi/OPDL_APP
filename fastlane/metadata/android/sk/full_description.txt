@@ -16,6 +16,6 @@ Citlivé informácie o povoleniach:
 * Povolenie na prístupnosť: Vyžaduje sa na príjem vstupu z iného zariadeniaovládať svoj telefón s Androidom, ak používate funkciu vzdialeného vstupu.
 * Povolenie polohy na pozadí: Vyžaduje sa, aby ste vedeli, do ktorej siete WiFi sa pripájatesú pripojené, ak používate funkciu dôveryhodných sietí.
 
-OPDL Transfer nikdy neposiela žiadne informácie do KDE ani žiadnej tretej strane. OPDL Transfer odosiela údaje z jedného zariadenia do druhého priamo pomocou lokálnehosieť, nikdy cez internet a pomocou end-to-end šifrovania.
+OPDL Transfer nikdy neposiela žiadne informácie do OPDL ani žiadnej tretej strane. OPDL Transfer odosiela údaje z jedného zariadenia do druhého priamo pomocou lokálnehosieť, nikdy cez internet a pomocou end-to-end šifrovania.
 
 Táto aplikácia je súčasťou projektu s otvoreným zdrojovým kódom a existuje vďaka všetkýmľudí, ktorí k tomu prispeli. Navštívte webovú stránku a získajte zdrojový kód.

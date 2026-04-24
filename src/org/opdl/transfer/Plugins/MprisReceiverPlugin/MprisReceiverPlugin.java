@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.MprisReceiverPlugin;
@@ -39,8 +39,8 @@ import java.util.stream.Stream;
 
 @PluginFactory.LoadablePlugin
 public class MprisReceiverPlugin extends Plugin {
-    private final static String PACKET_TYPE_MPRIS = "kdeconnect.mpris";
-    private final static String PACKET_TYPE_MPRIS_REQUEST = "kdeconnect.mpris.request";
+    private final static String PACKET_TYPE_MPRIS = "opdltransfer.mpris";
+    private final static String PACKET_TYPE_MPRIS_REQUEST = "opdltransfer.mpris.request";
 
     private static final String TAG = "MprisReceiver";
 

@@ -16,6 +16,6 @@ Babes bereziko baimenei buruzko informazioa:
 * Irisgarritasun baimena: Beharrezkoa zure Android telefonoa kontrolatzeko beste gailu baten sarrera jasotzeko, urrutiko sarrera ezaugarria erabiltzen baduzu.
 * Atzeko planoko kokapen baimena: Beharrezkoa zein Wi-Fi sarera konektatuta zauden jakiteko, Konfiantzazko sareen ezaugarria erabiltzen baduzu.
 
-«OPDL Transfer»ek ez dio sekula KDEri edo beste inori informaziorik bidaltzen. «OPDL Transfer»ek datuak gailu batetik beste batera zuzenean bidaltzen ditu sare lokala erabiliz, sekula ez Internet bidez, eta betiere muturren artean zifratuta.
+«OPDL Transfer»ek ez dio sekula OPDLri edo beste inori informaziorik bidaltzen. «OPDL Transfer»ek datuak gailu batetik beste batera zuzenean bidaltzen ditu sare lokala erabiliz, sekula ez Internet bidez, eta betiere muturren artean zifratuta.
 
 Aplikazio hau sorburu irekiko proiektu baten zati da, eta horretan lagundu duten lagun guztiei esker existitzen da. Bisitatu webgunea sorburu-kodea hartzeko.

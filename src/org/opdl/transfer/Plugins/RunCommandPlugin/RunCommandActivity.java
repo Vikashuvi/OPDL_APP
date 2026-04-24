@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2015 Aleix Pol Gonzalez <aleixpol@kde.org>
  * SPDX-FileCopyrightText: 2015 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.RunCommandPlugin;
@@ -131,7 +131,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         if (item.getItemId() == R.id.copy_url_to_clipboard) {
             CommandEntry entry = commandItems.get(info.position);
-            String url = "kdeconnect://runcommand/" + deviceId + "/" + entry.getKey();
+            String url = "opdltransfer://runcommand/" + deviceId + "/" + entry.getKey();
             ClipboardManager cm = ContextCompat.getSystemService(this, ClipboardManager.class);
             cm.setText(url);
             Toast toast = Toast.makeText(this, R.string.clipboard_toast, Toast.LENGTH_SHORT);

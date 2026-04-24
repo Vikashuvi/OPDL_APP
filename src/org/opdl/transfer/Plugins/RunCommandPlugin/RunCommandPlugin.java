@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2015 Aleix Pol Gonzalez <aleixpol@kde.org>
  * SPDX-FileCopyrightText: 2015 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Plugins.RunCommandPlugin;
@@ -40,8 +40,8 @@ import kotlin.Unit;
 @PluginFactory.LoadablePlugin
 public class RunCommandPlugin extends Plugin {
 
-    private final static String PACKET_TYPE_RUNCOMMAND = "kdeconnect.runcommand";
-    private final static String PACKET_TYPE_RUNCOMMAND_REQUEST = "kdeconnect.runcommand.request";
+    private final static String PACKET_TYPE_RUNCOMMAND = "opdltransfer.runcommand";
+    private final static String PACKET_TYPE_RUNCOMMAND_REQUEST = "opdltransfer.runcommand.request";
     public final static String KEY_COMMANDS_PREFERENCE = "commands_preference_";
 
     private final ArrayList<JSONObject> commandList = new ArrayList<>();

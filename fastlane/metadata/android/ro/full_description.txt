@@ -16,6 +16,6 @@ Informații despre permisiunile sensibile:
 * Accesibilitate: necesară pentru a primi comenzi de pe alt dispozitiv pentru a vă controla telefonul Android, dacă folosiți funcționalitate de control de la distanță.
 * Localizare în fundal: necesară pentru a ști la ce rețea WiFi v-ați conectat, dacă folosiți funcționalitatea pentru rețele de încredere.
 
-OPDL Transfer nu trimite niciodată vreun fel de informații spre KDE sau alte părți terțe. OPDL Transfer trimite direct datele de pe un dispozitiv pe altul folosind rețeaua locală, niciodată prin internet, și folosește criptare de la un capăt la celălalt.
+OPDL Transfer nu trimite niciodată vreun fel de informații spre OPDL sau alte părți terțe. OPDL Transfer trimite direct datele de pe un dispozitiv pe altul folosind rețeaua locală, niciodată prin internet, și folosește criptare de la un capăt la celălalt.
 
 Această aplicație face parte dintr-un proiect cu sursă deschisă și există datorită tuturor celor care au contribuit la ea. Vizitați-ne saitul pentru a obține codul sursă.

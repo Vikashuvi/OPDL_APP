@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 package org.opdl.transfer.Plugins.MprisPlugin
 
@@ -505,7 +505,7 @@ class MprisPlugin : Plugin() {
 
     companion object {
         const val DEVICE_ID_KEY: String = "deviceId"
-        private const val PACKET_TYPE_MPRIS = "kdeconnect.mpris"
-        private const val PACKET_TYPE_MPRIS_REQUEST = "kdeconnect.mpris.request"
+        private const val PACKET_TYPE_MPRIS = "opdltransfer.mpris"
+        private const val PACKET_TYPE_MPRIS_REQUEST = "opdltransfer.mpris.request"
     }
 }

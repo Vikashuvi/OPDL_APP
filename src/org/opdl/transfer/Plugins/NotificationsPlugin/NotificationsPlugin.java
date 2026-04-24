@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.Plugins.NotificationsPlugin;
@@ -64,14 +64,14 @@ import java.util.Set;
 @PluginFactory.LoadablePlugin
 public class NotificationsPlugin extends Plugin implements NotificationReceiver.NotificationListener {
 
-    private final static String PACKET_TYPE_NOTIFICATION = "kdeconnect.notification";
-    private final static String PACKET_TYPE_NOTIFICATION_REQUEST = "kdeconnect.notification.request";
-    private final static String PACKET_TYPE_NOTIFICATION_REPLY = "kdeconnect.notification.reply";
-    private final static String PACKET_TYPE_NOTIFICATION_ACTION = "kdeconnect.notification.action";
+    private final static String PACKET_TYPE_NOTIFICATION = "opdltransfer.notification";
+    private final static String PACKET_TYPE_NOTIFICATION_REQUEST = "opdltransfer.notification.request";
+    private final static String PACKET_TYPE_NOTIFICATION_REPLY = "opdltransfer.notification.reply";
+    private final static String PACKET_TYPE_NOTIFICATION_ACTION = "opdltransfer.notification.action";
     private final static String PREF_KEY = "prefKey";
     protected static final int PREF_NOTIFICATION_SCREEN_OFF = R.string.screen_off_notification_state;
 
-    private final static String TAG = "KDE/NotificationsPlugin";
+    private final static String TAG = "OPDL/NotificationsPlugin";
 
     private AppDatabase appDatabase;
 
@@ -596,7 +596,7 @@ public class NotificationsPlugin extends Plugin implements NotificationReceiver.
         String result;
         // first check if it's one of our remoteIds
         String tag = statusBarNotification.getTag();
-        if (tag != null && tag.startsWith("kdeconnectId:"))
+        if (tag != null && tag.startsWith("opdltransferId:"))
             result = Integer.toString(statusBarNotification.getId());
         else {
             result = statusBarNotification.getKey();

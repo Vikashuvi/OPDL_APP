@@ -17,6 +17,6 @@ Tietoa arkaluontoisista käyttöoikeuksista:
 – Saavutettavuuskäyttöoikeus: vaaditaan, jotta toisen laitteen syötteellä voisi hallita Android-puhelinta (jos käytetään etäsyöttöominaisuutta).
 – Sijaintitiedon käyttöoikeus taustalla: vaaditaan, jotta tiedetään, mihin verkkoon on yhdistetty (jos käytetään luotettujen verkkojen ominaisuutta).
 
-OPDL Transfer ei koskaan lähetä tietoa KDE:lle tai kolmansille osapuolille. Tieto lähetetään suoraan laitteesta toiseen paikallisverkossa, ei koskaan internetissä, ja käytössä on salaus päästä päähän.
+OPDL Transfer ei koskaan lähetä tietoa OPDL:lle tai kolmansille osapuolille. Tieto lähetetään suoraan laitteesta toiseen paikallisverkossa, ei koskaan internetissä, ja käytössä on salaus päästä päähän.
 
 Sovellus on avoimen lähdekoodin projekti ja on olemassa sitä avustaneiden ihmisten ansiosta. Lähdekoodin saat noudettua kotisivulta.

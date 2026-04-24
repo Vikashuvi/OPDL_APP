@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2021 Maxim Leshchenko <cnmaks90@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
  */
 
 package org.opdl.transfer.UserInterface.About
@@ -22,7 +22,7 @@ import org.opdl.transfer.databinding.ActivityEasterEggBinding
 import kotlin.math.PI
 import kotlin.math.atan2
 
-private val KDE_ICON_BACKGROUND_COLOR = Color.rgb(29, 153, 243)
+private val OPDL_ICON_BACKGROUND_COLOR = Color.rgb(29, 153, 243)
 private val KONQI_BACKGROUND_COLOR = Color.rgb(191, 255, 0)
 
 class EasterEggActivity : AppCompatActivity(), SensorEventListener {
@@ -38,7 +38,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
 
-        setBgColor(KDE_ICON_BACKGROUND_COLOR)
+        setBgColor(OPDL_ICON_BACKGROUND_COLOR)
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         if (hasAccelerometer()) {
@@ -85,7 +85,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
                 setBgColor(KONQI_BACKGROUND_COLOR)
             } else {
                 binding!!.logo.setColorFilter(ContextCompat.getColor(this, android.R.color.white))
-                setBgColor(KDE_ICON_BACKGROUND_COLOR)
+                setBgColor(OPDL_ICON_BACKGROUND_COLOR)
             }
 
             binding!!.logo.setImageResource(icon)

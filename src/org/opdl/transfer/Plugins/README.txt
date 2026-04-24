@@ -4,7 +4,7 @@ Writing a plugin for OPDL Transfer
 For Android (this project):
 -----------------------------------------
 
-1. Change directory to src/org/kde/kdeconnect/Plugins.
+1. Change directory to src/org/kde/opdltransfer/Plugins.
 2. Copy "PingPlugin" under a different name ("FindMyPhonePlugin" in this example).
 1. Enter the new "FindMyPhonePlugin" directory.
 4. Rename "PingPlugin.java" to "FindMyPhonePlugin.java"
@@ -12,14 +12,14 @@ For Android (this project):
    and "plugin_ping" with "plugin_findmyphone".
 6. Open res/values/strings.xml. Find and copy the lines "pref_plugin_ping_desc" and "pref_plugin_ping" replacing "ping"
    with "findmyphone" and edit the plugin name and description between <string> </string>).
-7. Open src/org/kde/kdeconnect/Plugins/PluginFactory.java.
+7. Open src/org/kde/opdltransfer/Plugins/PluginFactory.java.
   A. Copy "import … PingPlugin" line with replacing "PingPlugin" with "FindMyPhonePlugin".
   B. Copy "PluginFactory.registerPlugin(PingPlugin.class);" line with replacing "PingPlugin" with "FindMyPhonePlugin".
-8. Open src/org/kde/kdeconnect/NetworkPacket.java. Copy a "public final static String PACKET_TYPE_PING = …" line
+8. Open src/org/kde/opdltransfer/NetworkPacket.java. Copy a "public final static String PACKET_TYPE_PING = …" line
    replacing "PING" with the packet type you will be using (should match the desktop client).
 9. Now you have an empty skeleton to implement your new plugin logic.
 
-For the desktop client (project kdeconnect-kde):
+For the desktop client (project opdltransfer-kde):
 --------------------------------------
 
 1. Enter the "plugins" directory.
@@ -32,12 +32,12 @@ For the desktop client (project kdeconnect-kde):
 8. Edit findmyphoneplugin.cpp and findmyphoneplugin.h.
   A. Change license header.
   B. Replace (case sensitive) "ping" with "findmyphone", "PingPlugin" with "FindMyPhonePlugin" and "PING" with "FINDMYPHONE".
-9. Edit kdeconnect_findmyphone.desktop file:
+9. Edit opdltransfer_findmyphone.desktop file:
   A. Replace "ping" with "findmyphone".
   B. Change name, description, icon, author, email, version, website, license info.
   C. Remove all the translations
   D. Set X-OPDL Transfer-SupportedPacketType and X-OPDL Transfer-OutgoingPacketType to the packet type your plugin will receive
-     and send, respectively. In this example this is "kdeconnect.findmyphone". Make sure that this matches what is defined in
+     and send, respectively. In this example this is "opdltransfer.findmyphone". Make sure that this matches what is defined in
      the findmyplugin.h file (in the line "#define PACKET_TYPE_..."), and also in Android.
 10. Now you have an empty skeleton to implement your new plugin logic.
 

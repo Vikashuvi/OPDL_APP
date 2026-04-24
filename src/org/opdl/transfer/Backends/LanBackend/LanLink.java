@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Backends.LanBackend;
@@ -139,7 +139,7 @@ public class LanLink extends BaseLink {
     public boolean sendPacket(@NonNull NetworkPacket np, @NonNull final Device.SendPacketStatusCallback callback,
             boolean sendPayloadFromSameThread) {
         if (socket == null) {
-            Log.e("KDE/sendPacket", "Not yet connected");
+            Log.e("OPDL/sendPacket", "Not yet connected");
             callback.onFailure(new NotYetConnectedException());
             return false;
         }
@@ -239,7 +239,7 @@ public class LanLink extends BaseLink {
                 outputStream = payloadSocket.getOutputStream();
                 inputStream = np.getPayload().getInputStream();
 
-                Log.i("KDE/LanLink", "Beginning to send payload for " + np.getType());
+                Log.i("OPDL/LanLink", "Beginning to send payload for " + np.getType());
                 byte[] buffer = new byte[PAYLOAD_IO_BUFFER_SIZE];
                 int bytesRead;
                 long size = np.getPayloadSize();
@@ -259,7 +259,7 @@ public class LanLink extends BaseLink {
                     }
                 }
                 outputStream.flush();
-                Log.i("KDE/LanLink", "Finished sending payload (" + progress + " bytes written)");
+                Log.i("OPDL/LanLink", "Finished sending payload (" + progress + " bytes written)");
             }
         } catch (SocketTimeoutException e) {
             Log.e("LanLink", "Socket for payload in packet " + np.getType()
@@ -316,7 +316,7 @@ public class LanLink extends BaseLink {
                     payloadSocket.close();
                 } catch (Exception ignored) {
                 }
-                Log.e("KDE/LanLink", "Exception connecting to payload remote socket", e);
+                Log.e("OPDL/LanLink", "Exception connecting to payload remote socket", e);
             }
 
         }

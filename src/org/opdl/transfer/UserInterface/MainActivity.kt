@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2023 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.UserInterface
@@ -242,23 +242,23 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private fun updateTransfersUI(jobs: List<org.opdl.transfer.async.BackgroundJob<*, *>>) {
         val container = binding.activeTransfersContainer
         if (jobs.isEmpty()) {
-            container.visibility = View.GONE
-            container.removeAllViews()
+            container?.visibility = View.GONE
+            container?.removeAllViews()
             return
         }
 
-        container.visibility = View.VISIBLE
+        container?.visibility = View.VISIBLE
         // Simple reconciliation: for now just clear and rebuild for simplicity in this demo/hack
         // In a real app we'd use a RecyclerView but this fits the current XML layout structure better for a quick fix
-        container.removeAllViews()
+        container?.removeAllViews()
         for (job in jobs) {
             val itemView = layoutInflater.inflate(R.layout.item_transfer_progress, container, false)
             val nameView = itemView.findViewById<TextView>(R.id.transfer_name)
             val progressBar = itemView.findViewById<android.widget.ProgressBar>(R.id.transfer_progress_bar)
             
-            nameView.text = job.jobName
+            nameView.text = job.getJobName()
             progressBar.progress = job.progress
-            container.addView(itemView)
+            container?.addView(itemView)
         }
     }
 

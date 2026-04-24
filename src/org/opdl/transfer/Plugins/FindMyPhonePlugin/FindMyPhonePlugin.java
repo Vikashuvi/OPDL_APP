@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2015 David Edmundson <david@davidedmundson.co.uk>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Plugins.FindMyPhonePlugin;
@@ -40,7 +40,7 @@ import java.io.IOException;
 
 @PluginFactory.LoadablePlugin
 public class FindMyPhonePlugin extends Plugin {
-    public final static String PACKET_TYPE_FINDMYPHONE_REQUEST = "kdeconnect.findmyphone.request";
+    public final static String PACKET_TYPE_FINDMYPHONE_REQUEST = "opdltransfer.findmyphone.request";
 
     private NotificationManager notificationManager;
     private int notificationId;

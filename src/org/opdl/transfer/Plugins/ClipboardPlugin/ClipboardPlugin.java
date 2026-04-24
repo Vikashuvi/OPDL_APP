@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2014 Albert Vaca Cintora <albertvaka@gmail.com>
  *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepted-GPL
 */
 
 package org.opdl.transfer.Plugins.ClipboardPlugin;
@@ -39,7 +39,7 @@ public class ClipboardPlugin extends Plugin {
      * "content": "password"
      * }
      */
-    private final static String PACKET_TYPE_CLIPBOARD = "kdeconnect.clipboard";
+    private final static String PACKET_TYPE_CLIPBOARD = "opdltransfer.clipboard";
 
     /**
      * Packet containing clipboard contents and a timestamp that the contents were last updated, sent
@@ -54,7 +54,7 @@ public class ClipboardPlugin extends Plugin {
      * "content": "password"
      * }
      */
-    private final static String PACKET_TYPE_CLIPBOARD_CONNECT = "kdeconnect.clipboard.connect";
+    private final static String PACKET_TYPE_CLIPBOARD_CONNECT = "opdltransfer.clipboard.connect";
 
     @Override
     public @NonNull String getDisplayName() {
