@@ -382,10 +382,10 @@ class MprisNowPlayingFragment : Fragment(), VolumeKeyListener {
                         targetPlayer.sendPause()
                         return true
                     } catch (e: MalformedURLException) {
-                        e.printStackTrace()
+                        Log.e("MprisNowPlayingFragment", "Invalid URL format", e)
                         Toast.makeText(requireContext(), getString(R.string.cant_open_url), Toast.LENGTH_LONG).show()
                     } catch (e: ActivityNotFoundException) {
-                        e.printStackTrace()
+                        Log.e("MprisNowPlayingFragment", "No activity found to handle URL", e)
                         Toast.makeText(requireContext(), getString(R.string.cant_open_url), Toast.LENGTH_LONG).show()
                     }
                 }

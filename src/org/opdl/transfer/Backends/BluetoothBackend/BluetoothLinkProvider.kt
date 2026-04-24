@@ -407,7 +407,7 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
                         try {
                             addLink(identityPacket, link)
                         } catch (e: CertificateException) {
-                            e.printStackTrace()
+                            Log.e("BTLinkProvider", "Certificate exception while adding link", e)
                         }
                     }
 

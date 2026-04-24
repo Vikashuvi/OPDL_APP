@@ -226,7 +226,8 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
             ActivityCompat.requestPermissions(this, missingPermissions.toTypedArray(), RESULT_NOTIFICATIONS_ENABLED)
         }
 
-        observeActiveTransfers()
+        // Disabled in-app transfer UI to avoid duplication with system notifications
+        // observeActiveTransfers()
     }
 
     private fun observeActiveTransfers() {
@@ -239,26 +240,45 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
         }
     }
 
+    private val transferViewMap = HashMap<Long, View>()
+
     private fun updateTransfersUI(jobs: List<org.opdl.transfer.async.BackgroundJob<*, *>>) {
         val container = binding.activeTransfersContainer
         if (jobs.isEmpty()) {
             container?.visibility = View.GONE
             container?.removeAllViews()
+            transferViewMap.clear()
             return
         }
 
         container?.visibility = View.VISIBLE
-        // Simple reconciliation: for now just clear and rebuild for simplicity in this demo/hack
-        // In a real app we'd use a RecyclerView but this fits the current XML layout structure better for a quick fix
-        container?.removeAllViews()
+
+        // Remove views for jobs that no longer exist
+        val currentJobIds = jobs.map { it.id }.toSet()
+        val toRemove = transferViewMap.keys.filter { it !in currentJobIds }
+        for (jobId in toRemove) {
+            val view = transferViewMap.remove(jobId)
+            view?.let { container?.removeView(it) }
+        }
+
+        // Update or create views for current jobs
         for (job in jobs) {
-            val itemView = layoutInflater.inflate(R.layout.item_transfer_progress, container, false)
+            var itemView = transferViewMap[job.id]
+            if (itemView == null) {
+                itemView = layoutInflater.inflate(R.layout.item_transfer_progress, container, false)
+                transferViewMap[job.id] = itemView
+                container?.addView(itemView)
+            }
+
             val nameView = itemView.findViewById<TextView>(R.id.transfer_name)
+            val percentageView = itemView.findViewById<TextView>(R.id.transfer_percentage)
+            val detailsView = itemView.findViewById<TextView>(R.id.transfer_details)
             val progressBar = itemView.findViewById<android.widget.ProgressBar>(R.id.transfer_progress_bar)
-            
+
             nameView.text = job.getJobName()
+            percentageView.text = "${job.progress}%"
+            detailsView.text = "Transfer in progress..."
             progressBar.progress = job.progress
-            container?.addView(itemView)
         }
     }
 

@@ -435,7 +435,7 @@ object SmsMmsUtils {
                 }
             }
         } catch (e: IOException) {
-            e.printStackTrace()
+            Log.e("SmsMmsUtils", "Failed to load attachment", e)
         }
 
         return byteArray
@@ -476,7 +476,7 @@ object SmsMmsUtils {
                 markAsRead(context, ContentUris.withAppendedId(Telephony.Threads.CONTENT_URI, threadId), threadId)
             } catch (e: Exception) {
                 // the conversation doesn't exist
-                e.printStackTrace()
+                Log.e("SmsMmsUtils", "Failed to mark conversation as read", e)
             }
         }.start()
     }

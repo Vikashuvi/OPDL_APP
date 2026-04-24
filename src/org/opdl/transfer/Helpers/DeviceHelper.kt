@@ -113,9 +113,9 @@ object DeviceHelper {
                     }
                 }
             } catch (e: IOException) {
-                e.printStackTrace()
+                Log.e("DeviceHelper", "Failed to read device name file", e)
             } catch (e: TextParsingException) {
-                e.printStackTrace()
+                Log.e("DeviceHelper", "Failed to parse device name", e)
             }
             fetchingName = false
         }

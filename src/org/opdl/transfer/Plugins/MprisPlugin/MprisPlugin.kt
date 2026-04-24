@@ -387,7 +387,7 @@ class MprisPlugin : Plugin() {
                         )
                     }
                 } catch (e: MalformedURLException) {
-                    e.printStackTrace()
+                    Log.e("MprisPlugin", "Invalid album art URL", e)
                 }
             }
         }

@@ -6,6 +6,7 @@
 package org.opdl.transfer.Plugins.ConnectivityReportPlugin
 
 import android.Manifest
+import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 import org.opdl.transfer.NetworkPacket
@@ -60,7 +61,7 @@ class ConnectivityReportPlugin : Plugin() {
                     subInfo.put("signalStrength", subscriptionState.signalStrength)
                     signalStrengths.put(subID.toString(), subInfo)
                 } catch (e: JSONException) {
-                    e.printStackTrace()
+                    Log.e("ConnectivityReportPlugin", "Failed to build signal strength JSON", e)
                 }
             }
             connectivityInfo["signalStrengths"] = signalStrengths

@@ -96,6 +96,8 @@ android {
     signingConfigs {
         getByName("debug") {
             storeFile = file("debug.keystore")
+            // Note: 'android' is the standard Android debug keystore password (well-known default)
+            // This is acceptable for debug builds. Release builds should use proper signing configuration.
             storePassword = "android"
             keyAlias = "androiddebugkey"
             keyPassword = "android"
@@ -307,7 +309,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.common.java8)
     implementation(libs.androidx.gridlayout)
     implementation(libs.google.android.material)
-    implementation(libs.disklrucache) //For caching album art bitmaps. FIXME: Not updated in 10+ years. Replace with Kache.
+    implementation(libs.disklrucache) //For caching album art bitmaps. TODO: Library not updated in 10+ years. Consider replacing with modern alternative like Kache or Room database for better maintenance.
     implementation(libs.slf4j.handroid)
 
     implementation(libs.apache.sshd.core)

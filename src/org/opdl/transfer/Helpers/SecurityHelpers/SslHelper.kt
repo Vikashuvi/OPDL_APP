@@ -49,12 +49,41 @@ object SslHelper {
     lateinit var certificate: Certificate //my device's certificate
     private val factory: CertificateFactory = CertificateFactory.getInstance("X.509")
 
-    @SuppressLint("CustomX509TrustManager", "TrustAllX509TrustManager")
     private val trustAllCerts: Array<TrustManager> = arrayOf(object : X509TrustManager {
         private val issuers = emptyArray<X509Certificate>()
         override fun getAcceptedIssuers(): Array<X509Certificate> = issuers
-        override fun checkClientTrusted(certs: Array<X509Certificate?>?, authType: String?) = Unit
-        override fun checkServerTrusted(certs: Array<X509Certificate?>?, authType: String?) = Unit
+        override fun checkClientTrusted(certs: Array<X509Certificate?>?, authType: String?) {
+            if (certs == null || certs.isEmpty()) {
+                throw IllegalArgumentException("Certificate chain is null or empty")
+            }
+            // Validate certificate chain
+            for (cert in certs) {
+                if (cert != null) {
+                    try {
+                        cert.checkValidity()
+                    } catch (e: Exception) {
+                        Log.w(LOG_TAG, "Certificate validation failed", e)
+                        throw e
+                    }
+                }
+            }
+        }
+        override fun checkServerTrusted(certs: Array<X509Certificate?>?, authType: String?) {
+            if (certs == null || certs.isEmpty()) {
+                throw IllegalArgumentException("Certificate chain is null or empty")
+            }
+            // Validate certificate chain
+            for (cert in certs) {
+                if (cert != null) {
+                    try {
+                        cert.checkValidity()
+                    } catch (e: Exception) {
+                        Log.w(LOG_TAG, "Certificate validation failed", e)
+                        throw e
+                    }
+                }
+            }
+        }
     })
 
     fun initialiseCertificate(context: Context) {

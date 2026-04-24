@@ -631,7 +631,7 @@ object SMSHelper {
                 }
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e("SMSHelper", "Failed to parse MMS message attachments", e)
         }
 
         // Determine whether the message was in- our out- bound
@@ -714,7 +714,7 @@ object SMSHelper {
                 PduPersister.getPduPersister(context).load(uri) as MultimediaMessagePdu
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e("SMSHelper", "Failed to load MMS PDU", e)
             null
         }
     }
@@ -766,7 +766,7 @@ object SMSHelper {
                 attachedFiles.add(Attachment(-1, mimeType, base64EncodedFile, fileName))
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e("SMSHelper", "Failed to parse attachment JSON array", e)
         }
         return attachedFiles
     }
@@ -783,7 +783,7 @@ object SMSHelper {
                 addresses.add(Address(context, address))
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e("SMSHelper", "Failed to parse address JSON array", e)
         }
         return addresses
     }
