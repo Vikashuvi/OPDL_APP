@@ -16,6 +16,10 @@ import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.RejectedExecutionException
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 /**
  * Scheduler for [BackgroundJob] objects.
@@ -32,6 +36,14 @@ class BackgroundJobHandler {
 
     private val jobMap: MutableMap<BackgroundJob<*, *>, Future<*>> = HashMap()
     private val jobMapLock: Any = Any()
+
+    private fun registerJobGlobally(job: BackgroundJob<*, *>) {
+        _activeJobs.update { it + job }
+    }
+
+    private fun unregisterJobGlobally(job: BackgroundJob<*, *>) {
+        _activeJobs.update { it - job }
+    }
 
     private inner class MyThreadPoolExecutor(corePoolSize: Int, maxPoolSize: Int, keepAliveTime: Long, unit: TimeUnit, workQueue: BlockingQueue<Runnable>) : ThreadPoolExecutor(corePoolSize, maxPoolSize, keepAliveTime, unit, workQueue) {
         override fun afterExecute(runnable: Runnable, throwable: Throwable?) {
@@ -75,6 +87,7 @@ class BackgroundJobHandler {
             synchronized(jobMapLock) {
                 val future: Future<*> = threadPoolExecutor.submit(bgJob)
                 jobMap.put(bgJob, future)
+                registerJobGlobally(bgJob)
             }
         }
         catch (e: RejectedExecutionException) {
@@ -102,6 +115,7 @@ class BackgroundJobHandler {
                     threadPoolExecutor.purge()
                 }
                 jobMap.remove(job)
+                unregisterJobGlobally(job)
             }
         }
     }
@@ -115,6 +129,7 @@ class BackgroundJobHandler {
     fun onFinished(job: BackgroundJob<*, *>) {
         synchronized(jobMapLock) {
             jobMap.remove(job)
+            unregisterJobGlobally(job)
         }
     }
 
@@ -128,6 +143,15 @@ class BackgroundJobHandler {
         @JvmStatic
         fun newFixedThreadPoolBackgroundJobHandler(numThreads: Int): BackgroundJobHandler {
             return BackgroundJobHandler(numThreads, numThreads, 0L, TimeUnit.MILLISECONDS, LinkedBlockingQueue())
+        }
+
+        private val _activeJobs = MutableStateFlow<List<BackgroundJob<*, *>>>(emptyList())
+        val activeJobs: StateFlow<List<BackgroundJob<*, *>>> = _activeJobs.asStateFlow()
+
+        @JvmStatic
+        fun onProgressChanged(job: BackgroundJob<*, *>) {
+            // Trigger an update to the flow to notify observers
+            _activeJobs.update { it.toList() }
         }
     }
 }

@@ -81,6 +81,11 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
         sendPacketStatusCallback = new SendPacketStatusCallback();
     }
 
+    @Override
+    public String getJobName() {
+        return currentFileName != null && !currentFileName.isEmpty() ? currentFileName : "Sending Files";
+    }
+
     private Device getDevice() {
         return getRequestInfo();
     }
@@ -179,6 +184,7 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
     }
 
     private void setProgress(int progress) {
+        setJobProgress(progress);
         setProgress(progress, totalSend);
     }
 

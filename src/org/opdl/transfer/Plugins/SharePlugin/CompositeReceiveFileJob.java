@@ -100,6 +100,11 @@ public class CompositeReceiveFileJob extends BackgroundJob<Device, Void> {
         return isRunning;
     }
 
+    @Override
+    public String getJobName() {
+        return currentFileName != null ? currentFileName : "File Transfer";
+    }
+
     void updateTotals(int numberOfFiles, long totalPayloadSize) {
         synchronized (lock) {
             this.totalNumFiles = numberOfFiles;
@@ -365,6 +370,7 @@ public class CompositeReceiveFileJob extends BackgroundJob<Device, Void> {
     }
 
     private void setProgress(int progress) {
+        setJobProgress(progress);
         synchronized (lock) {
             String speed = getMeasuredSpeed(totalReceived);
             String message = getDevice().getContext().getResources()

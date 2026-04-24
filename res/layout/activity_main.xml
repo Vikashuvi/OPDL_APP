@@ -21,6 +21,20 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         android:fitsSystemWindows="true">
 
         <include layout="@layout/toolbar" android:id="@+id/toolbar_layout"/>
+        
+        <LinearLayout
+            android:id="@+id/active_transfers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#121212"
+            android:elevation="4dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:visibility="gone"
+            />
 
         <FrameLayout
             android:id="@+id/container"

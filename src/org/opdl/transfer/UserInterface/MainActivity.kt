@@ -32,6 +32,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.google.android.material.navigation.NavigationView
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -222,6 +224,41 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
 
         if(missingPermissions.isNotEmpty()){
             ActivityCompat.requestPermissions(this, missingPermissions.toTypedArray(), RESULT_NOTIFICATIONS_ENABLED)
+        }
+
+        observeActiveTransfers()
+    }
+
+    private fun observeActiveTransfers() {
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+                org.opdl.transfer.async.BackgroundJobHandler.activeJobs.collect { jobs ->
+                    updateTransfersUI(jobs)
+                }
+            }
+        }
+    }
+
+    private fun updateTransfersUI(jobs: List<org.opdl.transfer.async.BackgroundJob<*, *>>) {
+        val container = binding.activeTransfersContainer
+        if (jobs.isEmpty()) {
+            container.visibility = View.GONE
+            container.removeAllViews()
+            return
+        }
+
+        container.visibility = View.VISIBLE
+        // Simple reconciliation: for now just clear and rebuild for simplicity in this demo/hack
+        // In a real app we'd use a RecyclerView but this fits the current XML layout structure better for a quick fix
+        container.removeAllViews()
+        for (job in jobs) {
+            val itemView = layoutInflater.inflate(R.layout.item_transfer_progress, container, false)
+            val nameView = itemView.findViewById<TextView>(R.id.transfer_name)
+            val progressBar = itemView.findViewById<android.widget.ProgressBar>(R.id.transfer_progress_bar)
+            
+            nameView.text = job.jobName
+            progressBar.progress = job.progress
+            container.addView(itemView)
         }
     }
 

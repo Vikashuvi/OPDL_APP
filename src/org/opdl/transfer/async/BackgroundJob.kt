@@ -22,6 +22,15 @@ abstract class BackgroundJob<I, R> : Runnable {
     var isCancelled: Boolean = false
         protected set
 
+    @Volatile
+    var progress: Int = 0
+        @JvmName("setJobProgress") set(value) {
+            field = value
+            BackgroundJobHandler.onProgressChanged(this)
+        }
+
+    open fun getJobName(): String = ""
+
     private var backgroundJobHandler: BackgroundJobHandler? = null
 
     /** Used by the job handler to register itself as the handler */
