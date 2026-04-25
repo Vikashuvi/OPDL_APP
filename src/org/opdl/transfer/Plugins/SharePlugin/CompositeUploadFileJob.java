@@ -6,11 +6,13 @@
 
 package org.opdl.transfer.Plugins.SharePlugin;
 
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 
 import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
+import androidx.preference.PreferenceManager;
 
 import org.opdl.transfer.Device;
 import org.opdl.transfer.NetworkPacket;

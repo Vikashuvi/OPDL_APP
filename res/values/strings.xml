@@ -316,6 +316,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
     <string name="undo">Undo</string>
     <string name="share_notification_preference">Noisy notifications</string>
     <string name="share_notification_preference_summary">Vibrate and play a sound when receiving a file</string>
+    <string name="demo_mode_preference">Demo mode (166.61 Mbps)</string>
+    <string name="demo_mode_preference_summary">Show transfer speed of 166.61 Mbps for demo purposes</string>
     <string name="share_destination_customize">Customize destination directory</string>
     <string name="share_destination_customize_summary_disabled">Received files will appear in Downloads</string>
     <string name="share_destination_customize_summary_enabled">Files will be stored in the directory below</string>
