@@ -380,6 +380,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
     <string name="device_rename_title">Rename device</string>
     <string name="device_rename_confirm">Rename</string>
     <string name="refresh">Refresh</string>
+    <string name="select_multiple">Select Multiple</string>
+    <string name="share_to_selected">Share to Selected</string>
     <string name="unreachable_description">This paired device is not reachable. Make sure it is connected to your same network.</string>
     <string name="no_wifi">No WiFi connection detected. OPDL requires WiFi for peer discovery and optimized transport.</string>
     <string name="on_non_trusted_message">Untrusted network: WiFi generation detection and performance metrics disabled.</string>

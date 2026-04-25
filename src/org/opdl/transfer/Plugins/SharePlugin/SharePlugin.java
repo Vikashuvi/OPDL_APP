@@ -307,6 +307,25 @@ public class SharePlugin extends Plugin {
         }
     }
 
+    void sendNetworkPackets(final ArrayList<NetworkPacket> packets) {
+        CompositeUploadFileJob job;
+
+        if (uploadFileJob == null) {
+            job = new CompositeUploadFileJob(getDevice(), this.receiveFileJobCallback);
+        } else {
+            job = uploadFileJob;
+        }
+
+        for (NetworkPacket np : packets) {
+            job.addNetworkPacket(np);
+        }
+
+        if (job != uploadFileJob) {
+            uploadFileJob = job;
+            backgroundJobHandler.runJob(uploadFileJob);
+        }
+    }
+
     public void share(Intent intent) {
         Bundle extras = intent.getExtras();
         ArrayList<Uri> streams = streamsFromIntent(intent, extras);

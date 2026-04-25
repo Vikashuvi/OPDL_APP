@@ -8,6 +8,7 @@ package org.opdl.transfer.Plugins.SharePlugin;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,11 +18,15 @@ import android.webkit.URLUtil;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.core.content.IntentCompat;
+import androidx.core.os.BundleCompat;
 import androidx.preference.PreferenceManager;
 
 import org.opdl.transfer.BackgroundService;
 import org.opdl.transfer.Device;
+import org.opdl.transfer.Helpers.FilesHelper;
 import org.opdl.transfer.Helpers.WindowHelper;
+import org.opdl.transfer.NetworkPacket;
 import org.opdl.transfer.OpdlTransfer;
 import org.opdl.transfer.UserInterface.List.DeviceItem;
 import org.opdl.transfer.UserInterface.List.ListAdapter;
@@ -33,6 +38,8 @@ import org.opdl.transfer.databinding.ActivityShareBinding;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -45,6 +52,9 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
     private static final String KEY_UNREACHABLE_URL_LIST = "key_unreachable_url_list";
 
     private SharedPreferences mSharedPrefs;
+    private boolean isMultiSelectMode = false;
+    private final ArrayList<Device> selectedDevices = new ArrayList<>();
+    private final HashMap<String, DeviceItem> deviceItemMap = new HashMap<>();
 
     private final Lazy<ActivityShareBinding> lazyBinding = LazyKt.lazy(() -> ActivityShareBinding.inflate(getLayoutInflater()));
 
@@ -71,6 +81,9 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
         if (item.getItemId() == R.id.menu_refresh) {
             refreshDevicesAction();
             return true;
+        } else if (item.getItemId() == R.id.menu_multi_select) {
+            toggleMultiSelectMode();
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
@@ -83,6 +96,80 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
         getBinding().devicesListLayout.refreshListLayout.postDelayed(() -> {
             getBinding().devicesListLayout.refreshListLayout.setRefreshing(false);
         }, 1500);
+    }
+
+    private void toggleMultiSelectMode() {
+        if (isMultiSelectMode && !selectedDevices.isEmpty()) {
+            // User clicked "Share to Selected" - execute the share
+            shareToSelectedDevices();
+            return;
+        }
+
+        // Toggle multi-select mode
+        isMultiSelectMode = !isMultiSelectMode;
+        selectedDevices.clear();
+        deviceItemMap.clear();
+
+        MenuItem menuItem = getBinding().toolbarLayout.toolbar.getMenu().findItem(R.id.menu_multi_select);
+        if (menuItem != null) {
+            menuItem.setTitle(R.string.select_multiple);
+            menuItem.setIcon(R.drawable.ic_action_refresh_24dp);
+        }
+
+        updateDeviceList();
+    }
+
+    private void shareToSelectedDevices() {
+        final Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        ArrayList<Uri> streams = streamsFromIntent(intent, extras);
+
+        // Pre-read all URIs into NetworkPackets before activity finishes
+        // This ensures we have permission to read the data
+        ArrayList<NetworkPacket> preReadPackets = new ArrayList<>();
+        if (streams != null && !streams.isEmpty()) {
+            for (Uri uri : streams) {
+                NetworkPacket np = FilesHelper.uriToNetworkPacket(this, uri, "opdltransfer.share.request");
+                if (np != null) {
+                    preReadPackets.add(np);
+                }
+            }
+        }
+
+        // Share pre-read packets to each device
+        for (Device device : selectedDevices) {
+            SharePlugin plugin = OpdlTransfer.getInstance().getDevicePlugin(device.getDeviceId(), SharePlugin.class);
+            if (plugin != null) {
+                if (!preReadPackets.isEmpty()) {
+                    plugin.sendNetworkPackets(preReadPackets);
+                } else if (extras != null) {
+                    // Handle text/URL sharing
+                    String text = extras.getString(Intent.EXTRA_TEXT);
+                    if (text != null && !text.isEmpty()) {
+                        plugin.share(intent);
+                    }
+                }
+            }
+        }
+        finish();
+    }
+
+    private ArrayList<Uri> streamsFromIntent(Intent intent, Bundle extras) {
+        if (extras == null || !extras.containsKey(Intent.EXTRA_STREAM)) {
+            return null;
+        }
+        ArrayList<Uri> uriList;
+        if (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction())) {
+            uriList = IntentCompat.getParcelableArrayListExtra(intent, Intent.EXTRA_STREAM, Uri.class);
+        } else {
+            uriList = new ArrayList<>();
+            uriList.add(BundleCompat.getParcelable(extras, Intent.EXTRA_STREAM, Uri.class));
+        }
+        uriList.removeAll(Collections.singleton(null));
+        if (uriList.isEmpty()) {
+            return null;
+        }
+        return uriList;
     }
 
     private void updateDeviceList() {
@@ -112,9 +199,13 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
             if (d.isPaired() && (intentHasUrl || d.isReachable())) {
                 devicesList.add(d);
                 if (!d.isReachable()) {
-                    items.add(new UnreachableDeviceItem(d, device -> deviceClicked(device, intentHasUrl, intent)));
+                    UnreachableDeviceItem item = new UnreachableDeviceItem(d, device -> deviceClicked(device, intentHasUrl, intent));
+                    items.add(item);
                 } else {
-                    items.add(new DeviceItem(d, device -> deviceClicked(device, intentHasUrl, intent)));
+                    DeviceItem item = new DeviceItem(d, device -> deviceClicked(device, intentHasUrl, intent),
+                            (device, selected) -> onDeviceSelectionChanged(device, selected), isMultiSelectMode);
+                    items.add(item);
+                    deviceItemMap.put(d.getDeviceId(), item);
                 }
                 section.isEmpty = false;
             }
@@ -128,6 +219,10 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
     }
 
     private Unit deviceClicked(Device device, boolean intentHasUrl, Intent intent) {
+        if (isMultiSelectMode) {
+            return Unit.INSTANCE;
+        }
+
         SharePlugin plugin = OpdlTransfer.getInstance().getDevicePlugin(device.getDeviceId(), SharePlugin.class);
         if (intentHasUrl && !device.isReachable()) {
             // Store the URL to be delivered once device becomes online
@@ -136,6 +231,31 @@ public class ShareActivity extends BaseActivity<ActivityShareBinding> {
             plugin.share(intent);
         }
         finish();
+        return Unit.INSTANCE;
+    }
+
+    private Unit onDeviceSelectionChanged(Device device, boolean selected) {
+        if (selected) {
+            if (!selectedDevices.contains(device)) {
+                selectedDevices.add(device);
+            }
+        } else {
+            selectedDevices.remove(device);
+        }
+
+        MenuItem menuItem = getBinding().toolbarLayout.toolbar.getMenu().findItem(R.id.menu_multi_select);
+        if (menuItem != null) {
+            if (selectedDevices.isEmpty()) {
+                menuItem.setTitle(R.string.select_multiple);
+                menuItem.setIcon(R.drawable.ic_action_refresh_24dp);
+                menuItem.setEnabled(true);
+            } else {
+                menuItem.setTitle(getString(R.string.share_to_selected) + " (" + selectedDevices.size() + ")");
+                menuItem.setIcon(R.drawable.ic_action_refresh_24dp);
+                menuItem.setEnabled(true);
+            }
+        }
+
         return Unit.INSTANCE;
     }
 

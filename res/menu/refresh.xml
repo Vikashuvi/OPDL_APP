@@ -16,4 +16,11 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-OPDL-Accepte
         android:title="@string/refresh"
         opdltransfer:showAsAction="never" />
 
+    <item
+        android:id="@+id/menu_multi_select"
+        android:icon="@drawable/ic_action_refresh_24dp"
+        android:orderInCategory="100"
+        android:title="@string/select_multiple"
+        opdltransfer:showAsAction="ifRoom" />
+
 </menu>
