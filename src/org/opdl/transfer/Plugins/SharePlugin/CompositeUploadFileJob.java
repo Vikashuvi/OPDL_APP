@@ -90,6 +90,26 @@ public class CompositeUploadFileJob extends BackgroundJob<Device, Void> {
         return getRequestInfo();
     }
 
+    public long getTotalPayloadSize() {
+        synchronized (lock) {
+            return totalPayloadSize;
+        }
+    }
+
+    public long getDuration() {
+        return startTimeMillis > 0 ? (System.currentTimeMillis() - startTimeMillis) / 1000 : 0;
+    }
+
+    public int getTotalNumFiles() {
+        synchronized (lock) {
+            return totalNumFiles;
+        }
+    }
+
+    public String getCurrentFileName() {
+        return currentFileName;
+    }
+
     @Override
     public void run() {
         boolean done;

@@ -37,6 +37,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.opdl.transfer.Helpers.FilesHelper;
 import org.opdl.transfer.Helpers.IntentHelper;
+import org.opdl.transfer.Helpers.TransferHistoryHelper;
 import org.opdl.transfer.NetworkPacket;
 import org.opdl.transfer.Plugins.Plugin;
 import org.opdl.transfer.Plugins.PluginFactory;
@@ -81,6 +82,7 @@ public class SharePlugin extends Plugin {
     private CompositeReceiveFileJob receiveFileJob;
     private CompositeUploadFileJob uploadFileJob;
     private final Callback receiveFileJobCallback;
+    private TransferHistoryHelper historyHelper;
 
     public static final String KEY_UNREACHABLE_URL_LIST = "key_unreachable_url_list";
     private SharedPreferences mSharedPrefs;
@@ -94,6 +96,7 @@ public class SharePlugin extends Plugin {
     @Override
     public boolean onCreate() {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        historyHelper = new TransferHistoryHelper(context);
         createOrUpdateDynamicShortcut(null);
         // Deliver URLs previously shared to this device now that it's connected
         deliverPreviouslySentIntents();
@@ -407,8 +410,42 @@ public class SharePlugin extends Plugin {
         @Override
         public void onResult(@NonNull BackgroundJob job, Void result) {
             if (job == receiveFileJob) {
+                // Save receive history
+                if (receiveFileJob != null && historyHelper != null) {
+                    long totalSize = receiveFileJob.getTotalPayloadSize();
+                    long duration = receiveFileJob.getDuration();
+                    int fileCount = receiveFileJob.getTotalNumFiles();
+                    
+                    String fileName = fileCount > 1 ? fileCount + " files" : receiveFileJob.getCurrentFileName();
+                    String fileSize = historyHelper.formatFileSize(totalSize);
+                    String durationStr = historyHelper.formatDuration(duration);
+                    String fileType = historyHelper.getFileType(fileName);
+                    String source = "from " + device.getName();
+                    
+                    org.opdl.transfer.Helpers.TransferRecord record = new org.opdl.transfer.Helpers.TransferRecord(
+                        fileName, fileType, fileSize, durationStr, source, false, System.currentTimeMillis()
+                    );
+                    historyHelper.addRecord(record);
+                }
                 receiveFileJob = null;
             } else if (job == uploadFileJob) {
+                // Save upload history
+                if (uploadFileJob != null && historyHelper != null) {
+                    long totalSize = uploadFileJob.getTotalPayloadSize();
+                    long duration = uploadFileJob.getDuration();
+                    int fileCount = uploadFileJob.getTotalNumFiles();
+                    
+                    String fileName = fileCount > 1 ? fileCount + " files" : uploadFileJob.getCurrentFileName();
+                    String fileSize = historyHelper.formatFileSize(totalSize);
+                    String durationStr = historyHelper.formatDuration(duration);
+                    String fileType = historyHelper.getFileType(fileName);
+                    String source = "to " + device.getName();
+                    
+                    org.opdl.transfer.Helpers.TransferRecord record = new org.opdl.transfer.Helpers.TransferRecord(
+                        fileName, fileType, fileSize, durationStr, source, true, System.currentTimeMillis()
+                    );
+                    historyHelper.addRecord(record);
+                }
                 uploadFileJob = null;
             }
         }

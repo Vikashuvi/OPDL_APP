@@ -23,6 +23,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import org.opdl.transfer.Helpers.TransferHistoryHelper
+import org.opdl.transfer.Helpers.TransferRecord
 import org.opdl.transfer.UserInterface.compose.KdeTheme
 import java.text.SimpleDateFormat
 import java.util.*
@@ -41,37 +43,39 @@ class HistoryFragment : Fragment() {
 
 @Composable
 fun HistoryScreen() {
-    // In a real app, this would come from a database or SharedPreferences
-    // For this overhaul, we'll use some mock data that matches the desktop
-    val history = remember {
-        listOf(
-            TransferRecord("IMG_20240308.jpg", "Image", "4.2 MB", "1.2s", "to OPDL Linux Desktop", true),
-            TransferRecord("document.pdf", "PDF", "1.8 MB", "0.5s", "from OPDL Linux Desktop", false),
-            TransferRecord("video_clip.mp4", "Video", "156 MB", "12.4s", "to OPDL Linux Desktop", true)
-        )
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val historyHelper = remember { TransferHistoryHelper(context) }
+    val history = remember { mutableStateListOf<TransferRecord>() }
+    
+    LaunchedEffect(Unit) {
+        history.clear()
+        history.addAll(historyHelper.getHistory())
     }
 
     Column(modifier = Modifier.fillMaxSize().background(Color(0xFF0D0D0D))) {
-        // Simple header if needed, but the main app has its own
-        LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            items(history) { record ->
-                HistoryItem(record)
+        if (history.isEmpty()) {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "No transfer history yet",
+                    color = Color(0xFF888888),
+                    fontSize = 16.sp
+                )
+            }
+        } else {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(history) { record ->
+                    HistoryItem(record)
+                }
             }
         }
     }
 }
-
-data class TransferRecord(
-    val fileName: String,
-    val type: String,
-    val size: String,
-    val duration: String,
-    val source: String,
-    val isUpload: Boolean
-)
 
 @Composable
 fun HistoryItem(record: TransferRecord) {
@@ -105,7 +109,7 @@ fun HistoryItem(record: TransferRecord) {
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = "${record.type} · ${record.size} · ${record.duration}",
+                    text = "${record.fileType} · ${record.fileSize} · ${record.duration}",
                     color = Color(0xFF888888),
                     fontSize = 12.sp
                 )
